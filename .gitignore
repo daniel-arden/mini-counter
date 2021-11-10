@@ -30,7 +30,8 @@ DerivedData/
 !default.perspectivev3
 xcuserdata/
 */xcshareddata/*
-*/xcuserdata/*
+*xcworkspace/xcuserdata/*
+*xcodeproj/xcuserdata/*
 *.generated.swift
 
 ## Other

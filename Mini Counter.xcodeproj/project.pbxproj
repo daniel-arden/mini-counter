@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2C492E7D1CDD5990D979B04D /* Pods_Mini_Counter_WatchKit_Extension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11CA49C1796C03ACA8967D50 /* Pods_Mini_Counter_WatchKit_Extension.framework */; };
 		5A097674273B0963007695D3 /* CourierPrimeSans.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5A097673273B0963007695D3 /* CourierPrimeSans.ttf */; };
 		5A097676273B1201007695D3 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A097675273B1201007695D3 /* Colors.xcassets */; };
 		5A2E37F72732D301009D1FAD /* Mini Counter WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 5A2E37F62732D301009D1FAD /* Mini Counter WatchKit App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -28,6 +29,8 @@
 		5A2E38552734757A009D1FAD /* CountEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A2E38542734757A009D1FAD /* CountEntry.swift */; };
 		5A2E3858273479CB009D1FAD /* CountEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A2E3857273479CB009D1FAD /* CountEntryView.swift */; };
 		5A2E385C27348201009D1FAD /* Font+Names.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A2E385B27348201009D1FAD /* Font+Names.swift */; };
+		9A43AE6C1298356857ADA428 /* Pods_Mini_Counter_WatchKit_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B35D93A4A084CC3CF306CF05 /* Pods_Mini_Counter_WatchKit_App.framework */; };
+		A645A692EBB15E0203FFE862 /* Pods_Mini_Counter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BFC4DFD99DDEB2028CF2603 /* Pods_Mini_Counter.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +76,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		11CA49C1796C03ACA8967D50 /* Pods_Mini_Counter_WatchKit_Extension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mini_Counter_WatchKit_Extension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		19AAA77A4DD8F6B6916EC191 /* Pods-Mini Counter WatchKit App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mini Counter WatchKit App.debug.xcconfig"; path = "Target Support Files/Pods-Mini Counter WatchKit App/Pods-Mini Counter WatchKit App.debug.xcconfig"; sourceTree = "<group>"; };
 		5A097673273B0963007695D3 /* CourierPrimeSans.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = CourierPrimeSans.ttf; sourceTree = "<group>"; };
 		5A097675273B1201007695D3 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		5A2E37F22732D301009D1FAD /* Mini Counter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mini Counter.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -96,6 +101,13 @@
 		5A2E38542734757A009D1FAD /* CountEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountEntry.swift; sourceTree = "<group>"; };
 		5A2E3857273479CB009D1FAD /* CountEntryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountEntryView.swift; sourceTree = "<group>"; };
 		5A2E385B27348201009D1FAD /* Font+Names.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Font+Names.swift"; sourceTree = "<group>"; };
+		5BCF3D3C8617DF792528947B /* Pods-Mini Counter WatchKit App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mini Counter WatchKit App.release.xcconfig"; path = "Target Support Files/Pods-Mini Counter WatchKit App/Pods-Mini Counter WatchKit App.release.xcconfig"; sourceTree = "<group>"; };
+		6BFC4DFD99DDEB2028CF2603 /* Pods_Mini_Counter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mini_Counter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B35D93A4A084CC3CF306CF05 /* Pods_Mini_Counter_WatchKit_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mini_Counter_WatchKit_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BDF556E98D4C02DC81954BB9 /* Pods-Mini Counter.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mini Counter.debug.xcconfig"; path = "Target Support Files/Pods-Mini Counter/Pods-Mini Counter.debug.xcconfig"; sourceTree = "<group>"; };
+		C38AC71301EB356B2CBF0FC6 /* Pods-Mini Counter WatchKit Extension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mini Counter WatchKit Extension.release.xcconfig"; path = "Target Support Files/Pods-Mini Counter WatchKit Extension/Pods-Mini Counter WatchKit Extension.release.xcconfig"; sourceTree = "<group>"; };
+		C5276DD8FED950A16919D39F /* Pods-Mini Counter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mini Counter.release.xcconfig"; path = "Target Support Files/Pods-Mini Counter/Pods-Mini Counter.release.xcconfig"; sourceTree = "<group>"; };
+		DC83107363F752644DAE777F /* Pods-Mini Counter WatchKit Extension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mini Counter WatchKit Extension.debug.xcconfig"; path = "Target Support Files/Pods-Mini Counter WatchKit Extension/Pods-Mini Counter WatchKit Extension.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +115,23 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C492E7D1CDD5990D979B04D /* Pods_Mini_Counter_WatchKit_Extension.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7AB668C9EC91165FA21E4351 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9A43AE6C1298356857ADA428 /* Pods_Mini_Counter_WatchKit_App.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8B3C949D66C39EAD12C7F80D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A645A692EBB15E0203FFE862 /* Pods_Mini_Counter.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -115,6 +144,8 @@
 				5A2E37FA2732D301009D1FAD /* Mini Counter WatchKit App */,
 				5A2E38052732D303009D1FAD /* Mini Counter WatchKit Extension */,
 				5A2E37F32732D301009D1FAD /* Products */,
+				68FB5522B22F11EF6D48FE49 /* Pods */,
+				A1B9A0422FF07CDDD2085EB1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -258,6 +289,30 @@
 			path = CountEntry;
 			sourceTree = "<group>";
 		};
+		68FB5522B22F11EF6D48FE49 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BDF556E98D4C02DC81954BB9 /* Pods-Mini Counter.debug.xcconfig */,
+				C5276DD8FED950A16919D39F /* Pods-Mini Counter.release.xcconfig */,
+				19AAA77A4DD8F6B6916EC191 /* Pods-Mini Counter WatchKit App.debug.xcconfig */,
+				5BCF3D3C8617DF792528947B /* Pods-Mini Counter WatchKit App.release.xcconfig */,
+				DC83107363F752644DAE777F /* Pods-Mini Counter WatchKit Extension.debug.xcconfig */,
+				C38AC71301EB356B2CBF0FC6 /* Pods-Mini Counter WatchKit Extension.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		A1B9A0422FF07CDDD2085EB1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6BFC4DFD99DDEB2028CF2603 /* Pods_Mini_Counter.framework */,
+				B35D93A4A084CC3CF306CF05 /* Pods_Mini_Counter_WatchKit_App.framework */,
+				11CA49C1796C03ACA8967D50 /* Pods_Mini_Counter_WatchKit_Extension.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -265,8 +320,10 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5A2E381C2732D304009D1FAD /* Build configuration list for PBXNativeTarget "Mini Counter" */;
 			buildPhases = (
+				C634FFBC149633B7639E548C /* [CP] Check Pods Manifest.lock */,
 				5A2E37F02732D301009D1FAD /* Resources */,
 				5A2E381B2732D304009D1FAD /* Embed Watch Content */,
+				8B3C949D66C39EAD12C7F80D /* Frameworks */,
 			);
 			buildRules = (
 			);
@@ -282,8 +339,10 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5A2E38182732D304009D1FAD /* Build configuration list for PBXNativeTarget "Mini Counter WatchKit App" */;
 			buildPhases = (
+				92B93E2546538CD9F305F55E /* [CP] Check Pods Manifest.lock */,
 				5A2E37F42732D301009D1FAD /* Resources */,
 				5A2E38172732D304009D1FAD /* Embed App Extensions */,
+				7AB668C9EC91165FA21E4351 /* Frameworks */,
 			);
 			buildRules = (
 			);
@@ -299,6 +358,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5A2E38142732D304009D1FAD /* Build configuration list for PBXNativeTarget "Mini Counter WatchKit Extension" */;
 			buildPhases = (
+				1C4FA0F9161418155BDAC200 /* [CP] Check Pods Manifest.lock */,
 				5A2E37FD2732D303009D1FAD /* Sources */,
 				5A2E37FE2732D303009D1FAD /* Frameworks */,
 				5A2E37FF2732D303009D1FAD /* Resources */,
@@ -381,6 +441,75 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1C4FA0F9161418155BDAC200 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Mini Counter WatchKit Extension-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		92B93E2546538CD9F305F55E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Mini Counter WatchKit App-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C634FFBC149633B7639E548C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Mini Counter-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		5A2E37FD2732D303009D1FAD /* Sources */ = {
@@ -536,6 +665,7 @@
 		};
 		5A2E38152732D304009D1FAD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DC83107363F752644DAE777F /* Pods-Mini Counter WatchKit Extension.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_STYLE = Automatic;
@@ -568,6 +698,7 @@
 		};
 		5A2E38162732D304009D1FAD /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C38AC71301EB356B2CBF0FC6 /* Pods-Mini Counter WatchKit Extension.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_STYLE = Automatic;
@@ -600,6 +731,7 @@
 		};
 		5A2E38192732D304009D1FAD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 19AAA77A4DD8F6B6916EC191 /* Pods-Mini Counter WatchKit App.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -625,6 +757,7 @@
 		};
 		5A2E381A2732D304009D1FAD /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5BCF3D3C8617DF792528947B /* Pods-Mini Counter WatchKit App.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -650,6 +783,7 @@
 		};
 		5A2E381D2732D304009D1FAD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BDF556E98D4C02DC81954BB9 /* Pods-Mini Counter.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -663,6 +797,7 @@
 		};
 		5A2E381E2732D304009D1FAD /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C5276DD8FED950A16919D39F /* Pods-Mini Counter.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
