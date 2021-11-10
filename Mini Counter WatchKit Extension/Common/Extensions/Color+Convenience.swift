@@ -9,6 +9,6 @@ import SwiftUI
 
 extension Color {
     static let pewterBlue: Color = Color("Pewter Blue")
-    static let pistachijo: Color = Color("Pistachio")
+    static let pistachio: Color = Color("Pistachio")
     static let terraCotta: Color = Color("Terra Cotta")
 }
