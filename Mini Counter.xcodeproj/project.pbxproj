@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5A097674273B0963007695D3 /* CourierPrimeSans.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5A097673273B0963007695D3 /* CourierPrimeSans.ttf */; };
+		5A097676273B1201007695D3 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A097675273B1201007695D3 /* Colors.xcassets */; };
 		5A2E37F72732D301009D1FAD /* Mini Counter WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 5A2E37F62732D301009D1FAD /* Mini Counter WatchKit App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		5A2E37FC2732D302009D1FAD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A2E37FB2732D302009D1FAD /* Assets.xcassets */; };
 		5A2E38022732D303009D1FAD /* Mini Counter WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 5A2E38012732D303009D1FAD /* Mini Counter WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -15,6 +17,17 @@
 		5A2E380B2732D303009D1FAD /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A2E380A2732D303009D1FAD /* ComplicationController.swift */; };
 		5A2E380D2732D304009D1FAD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A2E380C2732D304009D1FAD /* Assets.xcassets */; };
 		5A2E38102732D304009D1FAD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A2E380F2732D304009D1FAD /* Preview Assets.xcassets */; };
+		5A2E382E2732D756009D1FAD /* CounterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A2E382D2732D756009D1FAD /* CounterView.swift */; };
+		5A2E38342732D80E009D1FAD /* ActionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A2E38332732D80E009D1FAD /* ActionsView.swift */; };
+		5A2E38362732D8B0009D1FAD /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A2E38352732D8B0009D1FAD /* ListView.swift */; };
+		5A2E383C2732D9B0009D1FAD /* Frame+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A2E383B2732D9B0009D1FAD /* Frame+Convenience.swift */; };
+		5A2E38472732E3C5009D1FAD /* OvalActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A2E38462732E3C5009D1FAD /* OvalActionButton.swift */; };
+		5A2E38492732E44C009D1FAD /* OvalButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A2E38482732E44C009D1FAD /* OvalButtonStyle.swift */; };
+		5A2E384D2732EE08009D1FAD /* OvalActionImageButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A2E384C2732EE08009D1FAD /* OvalActionImageButton.swift */; };
+		5A2E384F2732F039009D1FAD /* Color+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A2E384E2732F039009D1FAD /* Color+Convenience.swift */; };
+		5A2E38552734757A009D1FAD /* CountEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A2E38542734757A009D1FAD /* CountEntry.swift */; };
+		5A2E3858273479CB009D1FAD /* CountEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A2E3857273479CB009D1FAD /* CountEntryView.swift */; };
+		5A2E385C27348201009D1FAD /* Font+Names.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A2E385B27348201009D1FAD /* Font+Names.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +73,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		5A097673273B0963007695D3 /* CourierPrimeSans.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = CourierPrimeSans.ttf; sourceTree = "<group>"; };
+		5A097675273B1201007695D3 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		5A2E37F22732D301009D1FAD /* Mini Counter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mini Counter.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A2E37F62732D301009D1FAD /* Mini Counter WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mini Counter WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A2E37FB2732D302009D1FAD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -70,6 +85,17 @@
 		5A2E380C2732D304009D1FAD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5A2E380F2732D304009D1FAD /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		5A2E38112732D304009D1FAD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5A2E382D2732D756009D1FAD /* CounterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterView.swift; sourceTree = "<group>"; };
+		5A2E38332732D80E009D1FAD /* ActionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionsView.swift; sourceTree = "<group>"; };
+		5A2E38352732D8B0009D1FAD /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
+		5A2E383B2732D9B0009D1FAD /* Frame+Convenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Frame+Convenience.swift"; sourceTree = "<group>"; };
+		5A2E38462732E3C5009D1FAD /* OvalActionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OvalActionButton.swift; sourceTree = "<group>"; };
+		5A2E38482732E44C009D1FAD /* OvalButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OvalButtonStyle.swift; sourceTree = "<group>"; };
+		5A2E384C2732EE08009D1FAD /* OvalActionImageButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OvalActionImageButton.swift; sourceTree = "<group>"; };
+		5A2E384E2732F039009D1FAD /* Color+Convenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Convenience.swift"; sourceTree = "<group>"; };
+		5A2E38542734757A009D1FAD /* CountEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountEntry.swift; sourceTree = "<group>"; };
+		5A2E3857273479CB009D1FAD /* CountEntryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountEntryView.swift; sourceTree = "<group>"; };
+		5A2E385B27348201009D1FAD /* Font+Names.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Font+Names.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +132,7 @@
 			isa = PBXGroup;
 			children = (
 				5A2E37FB2732D302009D1FAD /* Assets.xcassets */,
+				5A097675273B1201007695D3 /* Colors.xcassets */,
 			);
 			path = "Mini Counter WatchKit App";
 			sourceTree = "<group>";
@@ -113,12 +140,11 @@
 		5A2E38052732D303009D1FAD /* Mini Counter WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
-				5A2E38062732D303009D1FAD /* ContentView.swift */,
-				5A2E38082732D303009D1FAD /* Mini_CounterApp.swift */,
-				5A2E380A2732D303009D1FAD /* ComplicationController.swift */,
-				5A2E380C2732D304009D1FAD /* Assets.xcassets */,
-				5A2E38112732D304009D1FAD /* Info.plist */,
-				5A2E380E2732D304009D1FAD /* Preview Content */,
+				5A2E38372732D97D009D1FAD /* Extensions */,
+				5A2E382B2732D6DC009D1FAD /* Models */,
+				5A2E38212732D34A009D1FAD /* Common */,
+				5A2E38202732D334009D1FAD /* Views */,
+				5A2E381F2732D32D009D1FAD /* Supporting Files */,
 			);
 			path = "Mini Counter WatchKit Extension";
 			sourceTree = "<group>";
@@ -129,6 +155,107 @@
 				5A2E380F2732D304009D1FAD /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		5A2E381F2732D32D009D1FAD /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				5A097673273B0963007695D3 /* CourierPrimeSans.ttf */,
+				5A2E380E2732D304009D1FAD /* Preview Content */,
+				5A2E38112732D304009D1FAD /* Info.plist */,
+				5A2E380C2732D304009D1FAD /* Assets.xcassets */,
+				5A2E38082732D303009D1FAD /* Mini_CounterApp.swift */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		5A2E38202732D334009D1FAD /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				5A2E3856273479BD009D1FAD /* CountEntry */,
+				5A2E383D2732DD94009D1FAD /* Button */,
+				5A2E38322732D799009D1FAD /* Actions */,
+				5A2E382F2732D75A009D1FAD /* List */,
+				5A2E382C2732D74B009D1FAD /* Counter */,
+				5A2E38062732D303009D1FAD /* ContentView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		5A2E38212732D34A009D1FAD /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				5A2E380A2732D303009D1FAD /* ComplicationController.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		5A2E382B2732D6DC009D1FAD /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				5A2E38542734757A009D1FAD /* CountEntry.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		5A2E382C2732D74B009D1FAD /* Counter */ = {
+			isa = PBXGroup;
+			children = (
+				5A2E382D2732D756009D1FAD /* CounterView.swift */,
+			);
+			path = Counter;
+			sourceTree = "<group>";
+		};
+		5A2E382F2732D75A009D1FAD /* List */ = {
+			isa = PBXGroup;
+			children = (
+				5A2E38352732D8B0009D1FAD /* ListView.swift */,
+			);
+			path = List;
+			sourceTree = "<group>";
+		};
+		5A2E38322732D799009D1FAD /* Actions */ = {
+			isa = PBXGroup;
+			children = (
+				5A2E38332732D80E009D1FAD /* ActionsView.swift */,
+			);
+			path = Actions;
+			sourceTree = "<group>";
+		};
+		5A2E38372732D97D009D1FAD /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				5A2E383A2732D994009D1FAD /* ViewModifiers */,
+				5A2E384E2732F039009D1FAD /* Color+Convenience.swift */,
+				5A2E385B27348201009D1FAD /* Font+Names.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		5A2E383A2732D994009D1FAD /* ViewModifiers */ = {
+			isa = PBXGroup;
+			children = (
+				5A2E383B2732D9B0009D1FAD /* Frame+Convenience.swift */,
+			);
+			path = ViewModifiers;
+			sourceTree = "<group>";
+		};
+		5A2E383D2732DD94009D1FAD /* Button */ = {
+			isa = PBXGroup;
+			children = (
+				5A2E38462732E3C5009D1FAD /* OvalActionButton.swift */,
+				5A2E384C2732EE08009D1FAD /* OvalActionImageButton.swift */,
+				5A2E38482732E44C009D1FAD /* OvalButtonStyle.swift */,
+			);
+			path = Button;
+			sourceTree = "<group>";
+		};
+		5A2E3856273479BD009D1FAD /* CountEntry */ = {
+			isa = PBXGroup;
+			children = (
+				5A2E3857273479CB009D1FAD /* CountEntryView.swift */,
+			);
+			path = CountEntry;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -247,7 +374,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				5A2E38102732D304009D1FAD /* Preview Assets.xcassets in Resources */,
+				5A097676273B1201007695D3 /* Colors.xcassets in Resources */,
 				5A2E380D2732D304009D1FAD /* Assets.xcassets in Resources */,
+				5A097674273B0963007695D3 /* CourierPrimeSans.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,9 +387,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5A2E38492732E44C009D1FAD /* OvalButtonStyle.swift in Sources */,
 				5A2E38072732D303009D1FAD /* ContentView.swift in Sources */,
+				5A2E383C2732D9B0009D1FAD /* Frame+Convenience.swift in Sources */,
+				5A2E38362732D8B0009D1FAD /* ListView.swift in Sources */,
 				5A2E38092732D303009D1FAD /* Mini_CounterApp.swift in Sources */,
+				5A2E38342732D80E009D1FAD /* ActionsView.swift in Sources */,
 				5A2E380B2732D303009D1FAD /* ComplicationController.swift in Sources */,
+				5A2E384F2732F039009D1FAD /* Color+Convenience.swift in Sources */,
+				5A2E384D2732EE08009D1FAD /* OvalActionImageButton.swift in Sources */,
+				5A2E38552734757A009D1FAD /* CountEntry.swift in Sources */,
+				5A2E3858273479CB009D1FAD /* CountEntryView.swift in Sources */,
+				5A2E382E2732D756009D1FAD /* CounterView.swift in Sources */,
+				5A2E385C27348201009D1FAD /* Font+Names.swift in Sources */,
+				5A2E38472732E3C5009D1FAD /* OvalActionButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -400,13 +540,13 @@
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Mini Counter WatchKit Extension/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Mini Counter WatchKit Extension/Supporting FIles/Preview Content\"";
 				DEVELOPMENT_TEAM = 543MGA3H89;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Mini Counter WatchKit Extension/Info.plist";
+				INFOPLIST_FILE = "Mini Counter WatchKit Extension/Supporting Files/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "Mini Counter WatchKit Extension";
-				INFOPLIST_KEY_CLKComplicationPrincipalClass = "$(PRODUCT_MODULE_NAME).ComplicationController";
+				INFOPLIST_KEY_CLKComplicationPrincipalClass = ComplicationController;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_WKWatchOnly = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -422,7 +562,7 @@
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 8.3;
+				WATCHOS_DEPLOYMENT_TARGET = 8.0;
 			};
 			name = Debug;
 		};
@@ -432,13 +572,13 @@
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Mini Counter WatchKit Extension/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Mini Counter WatchKit Extension/Supporting FIles/Preview Content\"";
 				DEVELOPMENT_TEAM = 543MGA3H89;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Mini Counter WatchKit Extension/Info.plist";
+				INFOPLIST_FILE = "Mini Counter WatchKit Extension/Supporting Files/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "Mini Counter WatchKit Extension";
-				INFOPLIST_KEY_CLKComplicationPrincipalClass = "$(PRODUCT_MODULE_NAME).ComplicationController";
+				INFOPLIST_KEY_CLKComplicationPrincipalClass = ComplicationController;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_WKWatchOnly = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -454,7 +594,7 @@
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 8.3;
+				WATCHOS_DEPLOYMENT_TARGET = 8.0;
 			};
 			name = Release;
 		};
@@ -479,7 +619,7 @@
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 8.3;
+				WATCHOS_DEPLOYMENT_TARGET = 8.0;
 			};
 			name = Debug;
 		};
@@ -504,7 +644,7 @@
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 8.3;
+				WATCHOS_DEPLOYMENT_TARGET = 8.0;
 			};
 			name = Release;
 		};

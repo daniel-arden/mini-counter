@@ -7,8 +7,7 @@
 
 import ClockKit
 
-
-class ComplicationController: NSObject, CLKComplicationDataSource {
+final class ComplicationController: NSObject, CLKComplicationDataSource {
     
     // MARK: - Complication Configuration
 
@@ -35,7 +34,7 @@ class ComplicationController: NSObject, CLKComplicationDataSource {
     
     func getPrivacyBehavior(for complication: CLKComplication, withHandler handler: @escaping (CLKComplicationPrivacyBehavior) -> Void) {
         // Call the handler with your desired behavior when the device is locked
-        handler(.showOnLockScreen)
+        handler(CLKComplicationPrivacyBehavior.showOnLockScreen)
     }
 
     // MARK: - Timeline Population
