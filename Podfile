@@ -22,5 +22,6 @@ target 'Mini Counter WatchKit Extension' do
   use_frameworks!
 
   # Pods for Mini Counter WatchKit Extension
+  pod 'SwiftLint'
 
 end

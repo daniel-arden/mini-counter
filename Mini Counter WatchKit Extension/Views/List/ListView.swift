@@ -19,7 +19,7 @@ struct ListView: View {
                     }
                 }
             }
-            // TODO: Fix double navigation title
+            // FIXME: Double navigation title
             .navigationBarTitleDisplayMode(
                 NavigationBarItem.TitleDisplayMode.large
             )
