@@ -167,10 +167,8 @@
 		5A2E38052732D303009D1FAD /* Mini Counter WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
-				5A2E38372732D97D009D1FAD /* Extensions */,
-				5A2E382B2732D6DC009D1FAD /* Models */,
 				5A2E38212732D34A009D1FAD /* Common */,
-				5A2E38202732D334009D1FAD /* Views */,
+				5A3F6C42273C0A4B00DDCBB4 /* Scenes */,
 				5A2E381F2732D32D009D1FAD /* Supporting Files */,
 			);
 			path = "Mini Counter WatchKit Extension";
@@ -195,23 +193,13 @@
 			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		5A2E38202732D334009D1FAD /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				5A2E3856273479BD009D1FAD /* CountEntry */,
-				5A2E383D2732DD94009D1FAD /* Button */,
-				5A2E38322732D799009D1FAD /* Actions */,
-				5A2E382F2732D75A009D1FAD /* List */,
-				5A2E382C2732D74B009D1FAD /* Counter */,
-				5A2E38062732D303009D1FAD /* ContentView.swift */,
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
 		5A2E38212732D34A009D1FAD /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				5A2E380A2732D303009D1FAD /* ComplicationController.swift */,
+				5A3F6C44273C0A6300DDCBB4 /* Views */,
+				5A2E38372732D97D009D1FAD /* Extensions */,
+				5A2E382B2732D6DC009D1FAD /* Models */,
+				5A3F6C4C273C0B2800DDCBB4 /* Misc */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -227,7 +215,7 @@
 		5A2E382C2732D74B009D1FAD /* Counter */ = {
 			isa = PBXGroup;
 			children = (
-				5A2E382D2732D756009D1FAD /* CounterView.swift */,
+				5A3F6C49273C0AD800DDCBB4 /* Views */,
 			);
 			path = Counter;
 			sourceTree = "<group>";
@@ -235,7 +223,7 @@
 		5A2E382F2732D75A009D1FAD /* List */ = {
 			isa = PBXGroup;
 			children = (
-				5A2E38352732D8B0009D1FAD /* ListView.swift */,
+				5A3F6C45273C0AB200DDCBB4 /* Views */,
 			);
 			path = List;
 			sourceTree = "<group>";
@@ -243,7 +231,7 @@
 		5A2E38322732D799009D1FAD /* Actions */ = {
 			isa = PBXGroup;
 			children = (
-				5A2E38332732D80E009D1FAD /* ActionsView.swift */,
+				5A3F6C4A273C0ADE00DDCBB4 /* Views */,
 			);
 			path = Actions;
 			sourceTree = "<group>";
@@ -265,22 +253,82 @@
 			path = ViewModifiers;
 			sourceTree = "<group>";
 		};
-		5A2E383D2732DD94009D1FAD /* Button */ = {
+		5A2E383D2732DD94009D1FAD /* OvalActionButton */ = {
 			isa = PBXGroup;
 			children = (
 				5A2E38462732E3C5009D1FAD /* OvalActionButton.swift */,
 				5A2E384C2732EE08009D1FAD /* OvalActionImageButton.swift */,
 				5A2E38482732E44C009D1FAD /* OvalButtonStyle.swift */,
 			);
-			path = Button;
+			path = OvalActionButton;
 			sourceTree = "<group>";
 		};
-		5A2E3856273479BD009D1FAD /* CountEntry */ = {
+		5A3F6C42273C0A4B00DDCBB4 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				5A3F6C46273C0AB500DDCBB4 /* Main */,
+				5A2E38322732D799009D1FAD /* Actions */,
+				5A2E382C2732D74B009D1FAD /* Counter */,
+				5A2E382F2732D75A009D1FAD /* List */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		5A3F6C44273C0A6300DDCBB4 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				5A2E383D2732DD94009D1FAD /* OvalActionButton */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		5A3F6C45273C0AB200DDCBB4 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				5A2E38352732D8B0009D1FAD /* ListView.swift */,
 				5A2E3857273479CB009D1FAD /* CountEntryView.swift */,
 			);
-			path = CountEntry;
+			path = Views;
+			sourceTree = "<group>";
+		};
+		5A3F6C46273C0AB500DDCBB4 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				5A3F6C47273C0ABD00DDCBB4 /* Views */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		5A3F6C47273C0ABD00DDCBB4 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				5A2E38062732D303009D1FAD /* ContentView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		5A3F6C49273C0AD800DDCBB4 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				5A2E382D2732D756009D1FAD /* CounterView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		5A3F6C4A273C0ADE00DDCBB4 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				5A2E38332732D80E009D1FAD /* ActionsView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		5A3F6C4C273C0B2800DDCBB4 /* Misc */ = {
+			isa = PBXGroup;
+			children = (
+				5A2E380A2732D303009D1FAD /* ComplicationController.swift */,
+			);
+			path = Misc;
 			sourceTree = "<group>";
 		};
 		68FB5522B22F11EF6D48FE49 /* Pods */ = {
