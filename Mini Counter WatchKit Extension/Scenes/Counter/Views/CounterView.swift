@@ -15,11 +15,13 @@ struct CounterView: View {
         Text("\(Int(scrollAmount))")
             .font(
                 Font.system(
-                    size: 70,
+                    size: 100,
                     weight: .bold,
-                    design: .rounded
+                    design: .monospaced
                 )
             )
+            .minimumScaleFactor(0.2)
+            .lineLimit(1)
             .maxWidth()
             .focusable()
             .digitalCrownRotation(
