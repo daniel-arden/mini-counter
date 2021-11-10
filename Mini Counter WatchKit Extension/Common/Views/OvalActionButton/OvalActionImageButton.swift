@@ -16,11 +16,7 @@ struct OvalActionImageButton: View {
 
     var body: some View {
         Button(action: action) {
-            Image(systemName: systemImageName)
-                .resizable()
-                .foregroundColor(Color.white)
-                .aspectRatio(1.0, contentMode: ContentMode.fit)
-                .padding()
+            OvalActionButtonImage(systemImageName: systemImageName)
         }
         .buttonStyle(OvalButtonStyle(buttonColor: buttonColor))
         .opacity(!isEnabled ? 0.3 : 1.0)

@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		2C492E7D1CDD5990D979B04D /* Pods_Mini_Counter_WatchKit_Extension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11CA49C1796C03ACA8967D50 /* Pods_Mini_Counter_WatchKit_Extension.framework */; };
+		5A0230D7273C18BF00E05BDF /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0230D6273C18BF00E05BDF /* SettingsView.swift */; };
+		5A0230D9273C197B00E05BDF /* OvalActionButtonImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0230D8273C197B00E05BDF /* OvalActionButtonImage.swift */; };
+		5A0230DB273C19D700E05BDF /* OvalImageNavigationLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0230DA273C19D700E05BDF /* OvalImageNavigationLink.swift */; };
 		5A097676273B1201007695D3 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A097675273B1201007695D3 /* Colors.xcassets */; };
 		5A2E37F72732D301009D1FAD /* Mini Counter WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 5A2E37F62732D301009D1FAD /* Mini Counter WatchKit App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		5A2E37FC2732D302009D1FAD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A2E37FB2732D302009D1FAD /* Assets.xcassets */; };
@@ -76,6 +79,9 @@
 /* Begin PBXFileReference section */
 		11CA49C1796C03ACA8967D50 /* Pods_Mini_Counter_WatchKit_Extension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mini_Counter_WatchKit_Extension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		19AAA77A4DD8F6B6916EC191 /* Pods-Mini Counter WatchKit App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mini Counter WatchKit App.debug.xcconfig"; path = "Target Support Files/Pods-Mini Counter WatchKit App/Pods-Mini Counter WatchKit App.debug.xcconfig"; sourceTree = "<group>"; };
+		5A0230D6273C18BF00E05BDF /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		5A0230D8273C197B00E05BDF /* OvalActionButtonImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OvalActionButtonImage.swift; sourceTree = "<group>"; };
+		5A0230DA273C19D700E05BDF /* OvalImageNavigationLink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OvalImageNavigationLink.swift; sourceTree = "<group>"; };
 		5A097675273B1201007695D3 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		5A2E37F22732D301009D1FAD /* Mini Counter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mini Counter.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A2E37F62732D301009D1FAD /* Mini Counter WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mini Counter WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -134,6 +140,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5A0230D4273C189E00E05BDF /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				5A0230D5273C18AD00E05BDF /* Views */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		5A0230D5273C18AD00E05BDF /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				5A0230D6273C18BF00E05BDF /* SettingsView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		5A2E37EB2732D300009D1FAD = {
 			isa = PBXGroup;
 			children = (
@@ -259,6 +281,8 @@
 				5A2E38462732E3C5009D1FAD /* OvalActionButton.swift */,
 				5A2E384C2732EE08009D1FAD /* OvalActionImageButton.swift */,
 				5A2E38482732E44C009D1FAD /* OvalButtonStyle.swift */,
+				5A0230D8273C197B00E05BDF /* OvalActionButtonImage.swift */,
+				5A0230DA273C19D700E05BDF /* OvalImageNavigationLink.swift */,
 			);
 			path = OvalActionButton;
 			sourceTree = "<group>";
@@ -270,6 +294,7 @@
 				5A2E38322732D799009D1FAD /* Actions */,
 				5A2E382C2732D74B009D1FAD /* Counter */,
 				5A2E382F2732D75A009D1FAD /* List */,
+				5A0230D4273C189E00E05BDF /* Settings */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -582,12 +607,15 @@
 				5A2E38092732D303009D1FAD /* Mini_CounterApp.swift in Sources */,
 				5A2E38342732D80E009D1FAD /* ActionsView.swift in Sources */,
 				5A2E380B2732D303009D1FAD /* ComplicationController.swift in Sources */,
+				5A0230DB273C19D700E05BDF /* OvalImageNavigationLink.swift in Sources */,
+				5A0230D7273C18BF00E05BDF /* SettingsView.swift in Sources */,
 				5A2E384F2732F039009D1FAD /* Color+Convenience.swift in Sources */,
 				5A2E384D2732EE08009D1FAD /* OvalActionImageButton.swift in Sources */,
 				5A2E38552734757A009D1FAD /* CountEntry.swift in Sources */,
 				5A2E3858273479CB009D1FAD /* CountEntryView.swift in Sources */,
 				5A2E382E2732D756009D1FAD /* CounterView.swift in Sources */,
 				5A2E38472732E3C5009D1FAD /* OvalActionButton.swift in Sources */,
+				5A0230D9273C197B00E05BDF /* OvalActionButtonImage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

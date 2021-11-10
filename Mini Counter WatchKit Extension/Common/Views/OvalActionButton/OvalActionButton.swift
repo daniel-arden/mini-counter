@@ -24,3 +24,17 @@ struct OvalActionButton: View {
         .padding([Edge.Set.top, Edge.Set.bottom], 1)
     }
 }
+
+// MARK: - Preview
+#if DEBUG
+struct OvalActionButton_Previews: PreviewProvider {
+    static var previews: some View {
+        OvalActionButton(
+            title: "Oval action button",
+            buttonColor: Color.pistachio,
+            action: {}
+        )
+        .previewLayout(PreviewLayout.sizeThatFits)
+    }
+}
+#endif

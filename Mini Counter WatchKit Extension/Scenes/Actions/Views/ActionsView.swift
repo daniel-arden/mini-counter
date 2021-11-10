@@ -9,25 +9,27 @@ import SwiftUI
 
 struct ActionsView: View {
     var body: some View {
-        VStack(spacing: 8) {
-            HStack(spacing: 8) {
-                OvalActionImageButton(
-                    systemImageName: "gearshape.fill",
-                    buttonColor: Color.pewterBlue
-                ) {
-                    print("Settings button tapped!")
-                }
+        NavigationView {
+            VStack(spacing: 8) {
+                HStack(spacing: 8) {
+                    OvalImageNavigationLink(
+                        systemImageName: "gearshape.fill",
+                        buttonColor: Color.pewterBlue
+                    ) {
+                        SettingsView()
+                    }
 
-                OvalActionImageButton(
-                    systemImageName: "arrow.clockwise.circle.fill",
-                    buttonColor: Color.terraCotta
-                ) {
-                    print("Reset button tapped!")
+                    OvalActionImageButton(
+                        systemImageName: "arrow.clockwise.circle.fill",
+                        buttonColor: Color.terraCotta
+                    ) {
+                        print("Reset button tapped!")
+                    }
                 }
-            }
-            
-            OvalActionButton(title: "Save Count", buttonColor: Color.pistachio) {
-                print("Save Count button tapped!")
+                
+                OvalActionButton(title: "Save Count", buttonColor: Color.pistachio) {
+                    print("Save Count button tapped!")
+                }
             }
         }
     }
