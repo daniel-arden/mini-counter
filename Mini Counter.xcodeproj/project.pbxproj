@@ -29,6 +29,8 @@
 		5A2E384F2732F039009D1FAD /* Color+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A2E384E2732F039009D1FAD /* Color+Convenience.swift */; };
 		5A2E38552734757A009D1FAD /* CountEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A2E38542734757A009D1FAD /* CountEntry.swift */; };
 		5A2E3858273479CB009D1FAD /* CountEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A2E3857273479CB009D1FAD /* CountEntryView.swift */; };
+		5A7A717B273EEF240085C7FF /* Stinsen in Frameworks */ = {isa = PBXBuildFile; productRef = 5A7A717A273EEF240085C7FF /* Stinsen */; };
+		5A7A717E273EF0020085C7FF /* Stinsen in Frameworks */ = {isa = PBXBuildFile; productRef = 5A7A717D273EF0020085C7FF /* Stinsen */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -106,6 +108,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5A7A717E273EF0020085C7FF /* Stinsen in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -120,6 +123,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5A7A717B273EEF240085C7FF /* Stinsen in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -149,6 +153,7 @@
 				5A2E37FA2732D301009D1FAD /* Mini Counter WatchKit App */,
 				5A2E38052732D303009D1FAD /* Mini Counter WatchKit Extension */,
 				5A2E37F32732D301009D1FAD /* Products */,
+				5A7A717C273EF0020085C7FF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -341,6 +346,13 @@
 			path = Misc;
 			sourceTree = "<group>";
 		};
+		5A7A717C273EF0020085C7FF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -358,6 +370,9 @@
 				5A2E37F92732D301009D1FAD /* PBXTargetDependency */,
 			);
 			name = "Mini Counter";
+			packageProductDependencies = (
+				5A7A717A273EEF240085C7FF /* Stinsen */,
+			);
 			productName = "Mini Counter";
 			productReference = 5A2E37F22732D301009D1FAD /* Mini Counter.app */;
 			productType = "com.apple.product-type.application.watchapp2-container";
@@ -394,6 +409,9 @@
 			dependencies = (
 			);
 			name = "Mini Counter WatchKit Extension";
+			packageProductDependencies = (
+				5A7A717D273EF0020085C7FF /* Stinsen */,
+			);
 			productName = "Mini Counter WatchKit Extension";
 			productReference = 5A2E38012732D303009D1FAD /* Mini Counter WatchKit Extension.appex */;
 			productType = "com.apple.product-type.watchkit2-extension";
@@ -428,6 +446,9 @@
 				Base,
 			);
 			mainGroup = 5A2E37EB2732D300009D1FAD;
+			packageReferences = (
+				5A7A7179273EEF240085C7FF /* XCRemoteSwiftPackageReference "stinsen" */,
+			);
 			productRefGroup = 5A2E37F32732D301009D1FAD /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -822,6 +843,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		5A7A7179273EEF240085C7FF /* XCRemoteSwiftPackageReference "stinsen" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/rundfunk47/stinsen";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		5A7A717A273EEF240085C7FF /* Stinsen */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5A7A7179273EEF240085C7FF /* XCRemoteSwiftPackageReference "stinsen" */;
+			productName = Stinsen;
+		};
+		5A7A717D273EF0020085C7FF /* Stinsen */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5A7A7179273EEF240085C7FF /* XCRemoteSwiftPackageReference "stinsen" */;
+			productName = Stinsen;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 5A2E37EC2732D300009D1FAD /* Project object */;
 }
