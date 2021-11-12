@@ -31,6 +31,12 @@
 		5A2E3858273479CB009D1FAD /* CountEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A2E3857273479CB009D1FAD /* CountEntryView.swift */; };
 		5A7A717B273EEF240085C7FF /* Stinsen in Frameworks */ = {isa = PBXBuildFile; productRef = 5A7A717A273EEF240085C7FF /* Stinsen */; };
 		5A7A717E273EF0020085C7FF /* Stinsen in Frameworks */ = {isa = PBXBuildFile; productRef = 5A7A717D273EF0020085C7FF /* Stinsen */; };
+		5A7A7181273F01C80085C7FF /* MainTabCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7A7180273F01C80085C7FF /* MainTabCoordinator.swift */; };
+		5A7A7185273F086A0085C7FF /* ActionsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7A7184273F086A0085C7FF /* ActionsCoordinator.swift */; };
+		5A7A7188273F087D0085C7FF /* CounterCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7A7187273F087D0085C7FF /* CounterCoordinator.swift */; };
+		5A7A718B273F08950085C7FF /* ListCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7A718A273F08950085C7FF /* ListCoordinator.swift */; };
+		5A7A718E273F08A00085C7FF /* SettingsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7A718D273F08A00085C7FF /* SettingsCoordinator.swift */; };
+		5A7A7191273F09DD0085C7FF /* NameDescribable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7A7190273F09DD0085C7FF /* NameDescribable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -101,6 +107,12 @@
 		5A2E38542734757A009D1FAD /* CountEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountEntry.swift; sourceTree = "<group>"; };
 		5A2E3857273479CB009D1FAD /* CountEntryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountEntryView.swift; sourceTree = "<group>"; };
 		5A7A7176273C61860085C7FF /* BuildTools */ = {isa = PBXFileReference; lastKnownFileType = folder; path = BuildTools; sourceTree = "<group>"; };
+		5A7A7180273F01C80085C7FF /* MainTabCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabCoordinator.swift; sourceTree = "<group>"; };
+		5A7A7184273F086A0085C7FF /* ActionsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionsCoordinator.swift; sourceTree = "<group>"; };
+		5A7A7187273F087D0085C7FF /* CounterCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterCoordinator.swift; sourceTree = "<group>"; };
+		5A7A718A273F08950085C7FF /* ListCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCoordinator.swift; sourceTree = "<group>"; };
+		5A7A718D273F08A00085C7FF /* SettingsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCoordinator.swift; sourceTree = "<group>"; };
+		5A7A7190273F09DD0085C7FF /* NameDescribable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameDescribable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,17 +145,18 @@
 		5A0230D4273C189E00E05BDF /* Settings */ = {
 			isa = PBXGroup;
 			children = (
-				5A0230D5273C18AD00E05BDF /* Views */,
+				5A7A718C273F08980085C7FF /* Coordinator */,
+				5A0230D5273C18AD00E05BDF /* View */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
 		};
-		5A0230D5273C18AD00E05BDF /* Views */ = {
+		5A0230D5273C18AD00E05BDF /* View */ = {
 			isa = PBXGroup;
 			children = (
 				5A0230D6273C18BF00E05BDF /* SettingsView.swift */,
 			);
-			path = Views;
+			path = View;
 			sourceTree = "<group>";
 		};
 		5A2E37EB2732D300009D1FAD = {
@@ -179,6 +192,7 @@
 		5A2E38052732D303009D1FAD /* Mini Counter WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
+				5A7A717F273F01B40085C7FF /* Coordinators */,
 				5A2E38212732D34A009D1FAD /* Common */,
 				5A3F6C42273C0A4B00DDCBB4 /* Scenes */,
 				5A2E381F2732D32D009D1FAD /* Supporting Files */,
@@ -208,6 +222,7 @@
 		5A2E38212732D34A009D1FAD /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				5A7A718F273F09D40085C7FF /* Protocols */,
 				5A3F6C44273C0A6300DDCBB4 /* Views */,
 				5A2E38372732D97D009D1FAD /* Extensions */,
 				5A2E382B2732D6DC009D1FAD /* Models */,
@@ -227,7 +242,8 @@
 		5A2E382C2732D74B009D1FAD /* Counter */ = {
 			isa = PBXGroup;
 			children = (
-				5A3F6C49273C0AD800DDCBB4 /* Views */,
+				5A7A7186273F08700085C7FF /* Coordinator */,
+				5A3F6C49273C0AD800DDCBB4 /* View */,
 			);
 			path = Counter;
 			sourceTree = "<group>";
@@ -235,7 +251,8 @@
 		5A2E382F2732D75A009D1FAD /* List */ = {
 			isa = PBXGroup;
 			children = (
-				5A3F6C45273C0AB200DDCBB4 /* Views */,
+				5A7A7189273F08810085C7FF /* Coordinator */,
+				5A3F6C45273C0AB200DDCBB4 /* View */,
 			);
 			path = List;
 			sourceTree = "<group>";
@@ -243,7 +260,8 @@
 		5A2E38322732D799009D1FAD /* Actions */ = {
 			isa = PBXGroup;
 			children = (
-				5A3F6C4A273C0ADE00DDCBB4 /* Views */,
+				5A7A7183273F08640085C7FF /* Coordinator */,
+				5A3F6C4A273C0ADE00DDCBB4 /* View */,
 			);
 			path = Actions;
 			sourceTree = "<group>";
@@ -297,45 +315,46 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
-		5A3F6C45273C0AB200DDCBB4 /* Views */ = {
+		5A3F6C45273C0AB200DDCBB4 /* View */ = {
 			isa = PBXGroup;
 			children = (
 				5A2E38352732D8B0009D1FAD /* ListView.swift */,
 				5A2E3857273479CB009D1FAD /* CountEntryView.swift */,
 			);
-			path = Views;
+			path = View;
 			sourceTree = "<group>";
 		};
 		5A3F6C46273C0AB500DDCBB4 /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				5A3F6C47273C0ABD00DDCBB4 /* Views */,
+				5A7A7182273F08520085C7FF /* Coordinator */,
+				5A3F6C47273C0ABD00DDCBB4 /* View */,
 			);
 			path = Main;
 			sourceTree = "<group>";
 		};
-		5A3F6C47273C0ABD00DDCBB4 /* Views */ = {
+		5A3F6C47273C0ABD00DDCBB4 /* View */ = {
 			isa = PBXGroup;
 			children = (
 				5A2E38062732D303009D1FAD /* ContentView.swift */,
 			);
-			path = Views;
+			path = View;
 			sourceTree = "<group>";
 		};
-		5A3F6C49273C0AD800DDCBB4 /* Views */ = {
+		5A3F6C49273C0AD800DDCBB4 /* View */ = {
 			isa = PBXGroup;
 			children = (
 				5A2E382D2732D756009D1FAD /* CounterView.swift */,
 			);
-			path = Views;
+			path = View;
 			sourceTree = "<group>";
 		};
-		5A3F6C4A273C0ADE00DDCBB4 /* Views */ = {
+		5A3F6C4A273C0ADE00DDCBB4 /* View */ = {
 			isa = PBXGroup;
 			children = (
 				5A2E38332732D80E009D1FAD /* ActionsView.swift */,
 			);
-			path = Views;
+			path = View;
 			sourceTree = "<group>";
 		};
 		5A3F6C4C273C0B2800DDCBB4 /* Misc */ = {
@@ -351,6 +370,61 @@
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5A7A717F273F01B40085C7FF /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Coordinators;
+			sourceTree = "<group>";
+		};
+		5A7A7182273F08520085C7FF /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				5A7A7180273F01C80085C7FF /* MainTabCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		5A7A7183273F08640085C7FF /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				5A7A7184273F086A0085C7FF /* ActionsCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		5A7A7186273F08700085C7FF /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				5A7A7187273F087D0085C7FF /* CounterCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		5A7A7189273F08810085C7FF /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				5A7A718A273F08950085C7FF /* ListCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		5A7A718C273F08980085C7FF /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				5A7A718D273F08A00085C7FF /* SettingsCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		5A7A718F273F09D40085C7FF /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				5A7A7190273F09DD0085C7FF /* NameDescribable.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -505,7 +579,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "cd BuildTools\nSDKROOT=(xcrun --sdk macosx --show-sdk-path)\n\n#Temporarily uncomment the following line to update your packages (based on the versions defined in BuildTools/Package.swift)\n#swift package update\n\nswift run -c release swiftformat \"$SRCROOT/Mini Counter WatchKit Extension/\"\nswift run -c release swiftlint \"$SRCROOT/Mini Counter WatchKit Extension/\"\n";
+			shellScript = "cd BuildTools\nSDKROOT=(xcrun --sdk macosx --show-sdk-path)\n\n#Temporarily uncomment the following line to update your packages (based on the versions defined in BuildTools/Package.swift)\n#swift package update\n\n# swift run -c release swiftformat \"$SRCROOT/Mini Counter WatchKit Extension/\"\n# swift run -c release swiftlint \"$SRCROOT/Mini Counter WatchKit Extension/\"\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -518,14 +592,20 @@
 				5A2E38072732D303009D1FAD /* ContentView.swift in Sources */,
 				5A2E383C2732D9B0009D1FAD /* Frame+Convenience.swift in Sources */,
 				5A2E38362732D8B0009D1FAD /* ListView.swift in Sources */,
+				5A7A718E273F08A00085C7FF /* SettingsCoordinator.swift in Sources */,
 				5A2E38092732D303009D1FAD /* Mini_CounterApp.swift in Sources */,
 				5A2E38342732D80E009D1FAD /* ActionsView.swift in Sources */,
 				5A2E380B2732D303009D1FAD /* ComplicationController.swift in Sources */,
 				5A0230DB273C19D700E05BDF /* OvalImageNavigationLink.swift in Sources */,
+				5A7A718B273F08950085C7FF /* ListCoordinator.swift in Sources */,
+				5A7A7185273F086A0085C7FF /* ActionsCoordinator.swift in Sources */,
 				5A0230D7273C18BF00E05BDF /* SettingsView.swift in Sources */,
 				5A2E384F2732F039009D1FAD /* Color+Convenience.swift in Sources */,
 				5A2E384D2732EE08009D1FAD /* OvalActionImageButton.swift in Sources */,
+				5A7A7181273F01C80085C7FF /* MainTabCoordinator.swift in Sources */,
+				5A7A7188273F087D0085C7FF /* CounterCoordinator.swift in Sources */,
 				5A2E38552734757A009D1FAD /* CountEntry.swift in Sources */,
+				5A7A7191273F09DD0085C7FF /* NameDescribable.swift in Sources */,
 				5A2E3858273479CB009D1FAD /* CountEntryView.swift in Sources */,
 				5A2E382E2732D756009D1FAD /* CounterView.swift in Sources */,
 				5A2E38472732E3C5009D1FAD /* OvalActionButton.swift in Sources */,

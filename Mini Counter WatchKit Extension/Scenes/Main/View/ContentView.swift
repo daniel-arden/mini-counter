@@ -8,18 +8,8 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State private var selection: Int = 1
-
     var body: some View {
-        TabView(selection: $selection) {
-            ActionsView()
-                .tag(0)
-            CounterView()
-                .tag(1)
-            ListView()
-                .tag(2)
-        }
-        .tabViewStyle(PageTabViewStyle.page)
+        MainTabCoordinator().view()
     }
 }
 

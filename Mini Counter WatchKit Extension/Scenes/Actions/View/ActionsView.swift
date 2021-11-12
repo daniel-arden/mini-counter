@@ -8,15 +8,17 @@
 import SwiftUI
 
 struct ActionsView: View {
+    @EnvironmentObject private var actionsRouter: ActionsCoordinator.Router
+
     var body: some View {
         NavigationView {
             VStack(spacing: 8) {
                 HStack(spacing: 8) {
-                    OvalImageNavigationLink(
+                    OvalActionImageButton(
                         systemImageName: "gearshape.fill",
                         buttonColor: Color.pewterBlue
                     ) {
-                        SettingsView()
+                        actionsRouter.route(to: \.settings)
                     }
 
                     OvalActionImageButton(
