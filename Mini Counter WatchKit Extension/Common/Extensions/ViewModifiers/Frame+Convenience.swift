@@ -35,11 +35,11 @@ extension View {
     func maxWidth() -> some View {
         modifier(MaxWidth())
     }
-    
+
     func maxHeight() -> some View {
         modifier(MaxHeight())
     }
-    
+
     func maxFrame() -> some View {
         modifier(MaxFrame())
     }

@@ -26,7 +26,7 @@ struct CountEntryView: View {
             }
         }
     }
-    
+
     @ViewBuilder
     private var countView: some View {
         Text("\(countEntry.count)")
@@ -35,16 +35,17 @@ struct CountEntryView: View {
 }
 
 // MARK: - Preview
+
 #if DEBUG
-struct CountEntryView_Previews: PreviewProvider {
-    static var previews: some View {
-        List {
-            Section {
-                ForEach(CountEntry.mockData) { countEntry in
-                    CountEntryView(countEntry: countEntry)
+    struct CountEntryView_Previews: PreviewProvider {
+        static var previews: some View {
+            List {
+                Section {
+                    ForEach(CountEntry.mockData) { countEntry in
+                        CountEntryView(countEntry: countEntry)
+                    }
                 }
             }
         }
     }
-}
 #endif

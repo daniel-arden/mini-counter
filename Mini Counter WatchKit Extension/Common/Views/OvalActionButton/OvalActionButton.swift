@@ -26,15 +26,16 @@ struct OvalActionButton: View {
 }
 
 // MARK: - Preview
+
 #if DEBUG
-struct OvalActionButton_Previews: PreviewProvider {
-    static var previews: some View {
-        OvalActionButton(
-            title: "Oval action button",
-            buttonColor: Color.pistachio,
-            action: {}
-        )
-        .previewLayout(PreviewLayout.sizeThatFits)
+    struct OvalActionButton_Previews: PreviewProvider {
+        static var previews: some View {
+            OvalActionButton(
+                title: "Oval action button",
+                buttonColor: Color.pistachio,
+                action: {}
+            )
+            .previewLayout(PreviewLayout.sizeThatFits)
+        }
     }
-}
 #endif

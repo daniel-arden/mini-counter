@@ -36,10 +36,11 @@ struct CounterView: View {
 }
 
 // MARK: - Preview
+
 #if DEBUG
-struct CounterView_Previews: PreviewProvider {
-    static var previews: some View {
-        CounterView()
+    struct CounterView_Previews: PreviewProvider {
+        static var previews: some View {
+            CounterView()
+        }
     }
-}
 #endif

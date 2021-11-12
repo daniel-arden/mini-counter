@@ -13,7 +13,7 @@ struct OvalImageNavigationLink<Destination>: View where Destination: View {
     let systemImageName: String
     let buttonColor: Color
     let destination: Destination
-    
+
     init(
         systemImageName: String,
         buttonColor: Color,

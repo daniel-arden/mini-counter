@@ -26,7 +26,7 @@ struct ActionsView: View {
                         print("Reset button tapped!")
                     }
                 }
-                
+
                 OvalActionButton(title: "Save Count", buttonColor: Color.pistachio) {
                     print("Save Count button tapped!")
                 }
@@ -36,10 +36,11 @@ struct ActionsView: View {
 }
 
 // MARK: - Preview
+
 #if DEBUG
-struct ActionsView_Previews: PreviewProvider {
-    static var previews: some View {
-        ActionsView()
+    struct ActionsView_Previews: PreviewProvider {
+        static var previews: some View {
+            ActionsView()
+        }
     }
-}
 #endif

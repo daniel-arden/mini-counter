@@ -29,10 +29,11 @@ struct ListView: View {
 }
 
 // MARK: - Preview
+
 #if DEBUG
-struct ListView_Previews: PreviewProvider {
-    static var previews: some View {
-        ListView()
+    struct ListView_Previews: PreviewProvider {
+        static var previews: some View {
+            ListView()
+        }
     }
-}
 #endif

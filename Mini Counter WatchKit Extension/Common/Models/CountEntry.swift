@@ -8,7 +8,7 @@
 import Foundation
 
 struct CountEntry: Identifiable {
-    let id: UUID = UUID()
+    let id = UUID()
     let count: UInt
     let label: String
 }
@@ -47,6 +47,6 @@ extension CountEntry {
         CountEntry(count: 232, label: "FHEFJFEjf"),
         CountEntry(count: 399, label: "balbal"),
         CountEntry(count: 0, label: ""),
-        CountEntry(count: 42, label: "shfwiafjofaoaf faweilf")
+        CountEntry(count: 42, label: "shfwiafjofaoaf faweilf"),
     ]
 }

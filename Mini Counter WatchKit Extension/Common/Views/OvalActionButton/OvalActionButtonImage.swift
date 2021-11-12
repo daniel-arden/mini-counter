@@ -20,10 +20,11 @@ struct OvalActionButtonImage: View {
 }
 
 // MARK: - Preview
+
 #if DEBUG
-struct OvalActionButtonImage_Previews: PreviewProvider {
-    static var previews: some View {
-        OvalActionButtonImage(systemImageName: "gearshape.fill")
+    struct OvalActionButtonImage_Previews: PreviewProvider {
+        static var previews: some View {
+            OvalActionButtonImage(systemImageName: "gearshape.fill")
+        }
     }
-}
 #endif

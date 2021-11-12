@@ -8,7 +8,7 @@
 import SwiftUI
 
 extension Color {
-    static let pewterBlue: Color = Color("Pewter Blue")
-    static let pistachio: Color = Color("Pistachio")
-    static let terraCotta: Color = Color("Terra Cotta")
+    static let pewterBlue = Color("Pewter Blue")
+    static let pistachio = Color("Pistachio")
+    static let terraCotta = Color("Terra Cotta")
 }
