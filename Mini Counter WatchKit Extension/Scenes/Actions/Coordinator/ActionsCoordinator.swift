@@ -13,6 +13,7 @@ final class ActionsCoordinator: NavigationCoordinatable {
 
     @Root var start = makeStart
     @Route(.push) var settings = makeSettings
+    @Route(.push) var saveDetail = makeSaveDetail
 
     #if DEBUG
         deinit {
@@ -30,6 +31,10 @@ private extension ActionsCoordinator {
 
     func makeSettings() -> SettingsCoordinator {
         SettingsCoordinator()
+    }
+    
+    func makeSaveDetail() -> SaveDetailCoordinator {
+        SaveDetailCoordinator()
     }
 }
 

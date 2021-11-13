@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		5A0230D7273C18BF00E05BDF /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0230D6273C18BF00E05BDF /* SettingsView.swift */; };
 		5A0230D9273C197B00E05BDF /* OvalActionButtonImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0230D8273C197B00E05BDF /* OvalActionButtonImage.swift */; };
-		5A0230DB273C19D700E05BDF /* OvalImageNavigationLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0230DA273C19D700E05BDF /* OvalImageNavigationLink.swift */; };
 		5A097676273B1201007695D3 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A097675273B1201007695D3 /* Colors.xcassets */; };
 		5A2E37F72732D301009D1FAD /* Mini Counter WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 5A2E37F62732D301009D1FAD /* Mini Counter WatchKit App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		5A2E37FC2732D302009D1FAD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A2E37FB2732D302009D1FAD /* Assets.xcassets */; };
@@ -37,6 +36,8 @@
 		5A7A718B273F08950085C7FF /* ListCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7A718A273F08950085C7FF /* ListCoordinator.swift */; };
 		5A7A718E273F08A00085C7FF /* SettingsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7A718D273F08A00085C7FF /* SettingsCoordinator.swift */; };
 		5A7A7191273F09DD0085C7FF /* NameDescribable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7A7190273F09DD0085C7FF /* NameDescribable.swift */; };
+		5A7A719A273FFCC00085C7FF /* SaveDetailCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7A7199273FFCC00085C7FF /* SaveDetailCoordinator.swift */; };
+		5A7A719C273FFCD00085C7FF /* SaveDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7A719B273FFCD00085C7FF /* SaveDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,7 +85,6 @@
 /* Begin PBXFileReference section */
 		5A0230D6273C18BF00E05BDF /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		5A0230D8273C197B00E05BDF /* OvalActionButtonImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OvalActionButtonImage.swift; sourceTree = "<group>"; };
-		5A0230DA273C19D700E05BDF /* OvalImageNavigationLink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OvalImageNavigationLink.swift; sourceTree = "<group>"; };
 		5A097675273B1201007695D3 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		5A2E37F22732D301009D1FAD /* Mini Counter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mini Counter.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A2E37F62732D301009D1FAD /* Mini Counter WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mini Counter WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -113,6 +113,8 @@
 		5A7A718A273F08950085C7FF /* ListCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCoordinator.swift; sourceTree = "<group>"; };
 		5A7A718D273F08A00085C7FF /* SettingsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCoordinator.swift; sourceTree = "<group>"; };
 		5A7A7190273F09DD0085C7FF /* NameDescribable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameDescribable.swift; sourceTree = "<group>"; };
+		5A7A7199273FFCC00085C7FF /* SaveDetailCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveDetailCoordinator.swift; sourceTree = "<group>"; };
+		5A7A719B273FFCD00085C7FF /* SaveDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -192,7 +194,6 @@
 		5A2E38052732D303009D1FAD /* Mini Counter WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
-				5A7A717F273F01B40085C7FF /* Coordinators */,
 				5A2E38212732D34A009D1FAD /* Common */,
 				5A3F6C42273C0A4B00DDCBB4 /* Scenes */,
 				5A2E381F2732D32D009D1FAD /* Supporting Files */,
@@ -290,7 +291,6 @@
 				5A2E384C2732EE08009D1FAD /* OvalActionImageButton.swift */,
 				5A2E38482732E44C009D1FAD /* OvalButtonStyle.swift */,
 				5A0230D8273C197B00E05BDF /* OvalActionButtonImage.swift */,
-				5A0230DA273C19D700E05BDF /* OvalImageNavigationLink.swift */,
 			);
 			path = OvalActionButton;
 			sourceTree = "<group>";
@@ -300,6 +300,7 @@
 			children = (
 				5A3F6C46273C0AB500DDCBB4 /* Main */,
 				5A2E38322732D799009D1FAD /* Actions */,
+				5A7A7196273FFCA50085C7FF /* SaveDetail */,
 				5A2E382C2732D74B009D1FAD /* Counter */,
 				5A2E382F2732D75A009D1FAD /* List */,
 				5A0230D4273C189E00E05BDF /* Settings */,
@@ -372,13 +373,6 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		5A7A717F273F01B40085C7FF /* Coordinators */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Coordinators;
-			sourceTree = "<group>";
-		};
 		5A7A7182273F08520085C7FF /* Coordinator */ = {
 			isa = PBXGroup;
 			children = (
@@ -425,6 +419,31 @@
 				5A7A7190273F09DD0085C7FF /* NameDescribable.swift */,
 			);
 			path = Protocols;
+			sourceTree = "<group>";
+		};
+		5A7A7196273FFCA50085C7FF /* SaveDetail */ = {
+			isa = PBXGroup;
+			children = (
+				5A7A7197273FFCAE0085C7FF /* Coordinator */,
+				5A7A7198273FFCB30085C7FF /* View */,
+			);
+			path = SaveDetail;
+			sourceTree = "<group>";
+		};
+		5A7A7197273FFCAE0085C7FF /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				5A7A7199273FFCC00085C7FF /* SaveDetailCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		5A7A7198273FFCB30085C7FF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5A7A719B273FFCD00085C7FF /* SaveDetailView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -588,15 +607,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5A7A719A273FFCC00085C7FF /* SaveDetailCoordinator.swift in Sources */,
 				5A2E38492732E44C009D1FAD /* OvalButtonStyle.swift in Sources */,
 				5A2E38072732D303009D1FAD /* ContentView.swift in Sources */,
 				5A2E383C2732D9B0009D1FAD /* Frame+Convenience.swift in Sources */,
+				5A7A719C273FFCD00085C7FF /* SaveDetailView.swift in Sources */,
 				5A2E38362732D8B0009D1FAD /* ListView.swift in Sources */,
 				5A7A718E273F08A00085C7FF /* SettingsCoordinator.swift in Sources */,
 				5A2E38092732D303009D1FAD /* Mini_CounterApp.swift in Sources */,
 				5A2E38342732D80E009D1FAD /* ActionsView.swift in Sources */,
 				5A2E380B2732D303009D1FAD /* ComplicationController.swift in Sources */,
-				5A0230DB273C19D700E05BDF /* OvalImageNavigationLink.swift in Sources */,
 				5A7A718B273F08950085C7FF /* ListCoordinator.swift in Sources */,
 				5A7A7185273F086A0085C7FF /* ActionsCoordinator.swift in Sources */,
 				5A0230D7273C18BF00E05BDF /* SettingsView.swift in Sources */,

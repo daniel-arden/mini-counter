@@ -30,7 +30,7 @@ struct ActionsView: View {
                 }
 
                 OvalActionButton(title: "Save Count", buttonColor: Color.pistachio) {
-                    print("Save Count button tapped!")
+                    actionsRouter.route(to: \.saveDetail)
                 }
             }
         }
