@@ -13,7 +13,7 @@ struct Mini_CounterApp: App {
     var body: some Scene {
         WindowGroup {
             NavigationView {
-                ContentView()
+                MainTabCoordinator().view()
             }
         }
     }

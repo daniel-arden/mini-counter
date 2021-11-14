@@ -9,6 +9,10 @@ import Stinsen
 import SwiftUI
 
 final class MainTabCoordinator: TabCoordinatable {
+    // MARK: Stores
+    private let counterStore: CounterStore = CounterStore()
+
+    // MARK: Coordinator Properties
     var child = TabChild(
         startingItems: [
             \MainTabCoordinator.actions,
@@ -21,7 +25,8 @@ final class MainTabCoordinator: TabCoordinatable {
     @Route(tabItem: makeActionsTab) var actions = makeActions
     @Route(tabItem: makeCounterTab) var counter = makeCounter
     @Route(tabItem: makeListTab) var list = makeList
-
+    
+    // MARK: Init
     #if DEBUG
         deinit {
             print("Deinit \(Self.typeName)")
@@ -45,11 +50,11 @@ extension MainTabCoordinator {
     // MARK: Counter Tab
 
     func makeCounter() -> CounterCoordinator {
-        CounterCoordinator()
+        CounterCoordinator(counterStore: counterStore)
     }
 
     @ViewBuilder func makeCounterTab(isActive _: Bool) -> some View {
-        CounterView()
+        CounterView(counterStore: counterStore)
     }
 
     // MARK: List Tab

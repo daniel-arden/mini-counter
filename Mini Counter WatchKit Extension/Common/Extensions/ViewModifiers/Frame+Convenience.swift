@@ -31,6 +31,18 @@ struct MaxFrame: ViewModifier {
     }
 }
 
+struct SquareFrame: ViewModifier {
+    let dimension: CGFloat
+
+    func body(content: Content) -> some View {
+        content
+            .frame(
+                width: dimension,
+                height: dimension
+            )
+    }
+}
+
 extension View {
     func maxWidth() -> some View {
         modifier(MaxWidth())
@@ -42,5 +54,9 @@ extension View {
 
     func maxFrame() -> some View {
         modifier(MaxFrame())
+    }
+    
+    func squareFrame(_ dimension: CGFloat) -> some View {
+        modifier(SquareFrame(dimension: dimension))
     }
 }

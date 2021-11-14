@@ -13,7 +13,6 @@
 		5A2E37F72732D301009D1FAD /* Mini Counter WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 5A2E37F62732D301009D1FAD /* Mini Counter WatchKit App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		5A2E37FC2732D302009D1FAD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A2E37FB2732D302009D1FAD /* Assets.xcassets */; };
 		5A2E38022732D303009D1FAD /* Mini Counter WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 5A2E38012732D303009D1FAD /* Mini Counter WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		5A2E38072732D303009D1FAD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A2E38062732D303009D1FAD /* ContentView.swift */; };
 		5A2E38092732D303009D1FAD /* Mini_CounterApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A2E38082732D303009D1FAD /* Mini_CounterApp.swift */; };
 		5A2E380B2732D303009D1FAD /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A2E380A2732D303009D1FAD /* ComplicationController.swift */; };
 		5A2E380D2732D304009D1FAD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A2E380C2732D304009D1FAD /* Assets.xcassets */; };
@@ -38,6 +37,13 @@
 		5A7A7191273F09DD0085C7FF /* NameDescribable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7A7190273F09DD0085C7FF /* NameDescribable.swift */; };
 		5A7A719A273FFCC00085C7FF /* SaveDetailCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7A7199273FFCC00085C7FF /* SaveDetailCoordinator.swift */; };
 		5A7A719C273FFCD00085C7FF /* SaveDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7A719B273FFCD00085C7FF /* SaveDetailView.swift */; };
+		5A7A719F274000DC0085C7FF /* CircularButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7A719E274000DC0085C7FF /* CircularButton.swift */; };
+		5A7A71A1274000E90085C7FF /* CircularButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7A71A0274000E90085C7FF /* CircularButtonStyle.swift */; };
+		5A7A71A5274005ED0085C7FF /* SettingsCounterStrideView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7A71A4274005ED0085C7FF /* SettingsCounterStrideView.swift */; };
+		5A7A71A9274053430085C7FF /* SettingsStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7A71A8274053430085C7FF /* SettingsStore.swift */; };
+		5A7A71AB27405D140085C7FF /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7A71AA27405D140085C7FF /* Constants.swift */; };
+		5A7A71AF2740601B0085C7FF /* UserDefaults+Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7A71AE2740601B0085C7FF /* UserDefaults+Keys.swift */; };
+		5A7A71B2274078820085C7FF /* CounterStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7A71B1274078820085C7FF /* CounterStore.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -90,7 +96,6 @@
 		5A2E37F62732D301009D1FAD /* Mini Counter WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mini Counter WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A2E37FB2732D302009D1FAD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5A2E38012732D303009D1FAD /* Mini Counter WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Mini Counter WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
-		5A2E38062732D303009D1FAD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		5A2E38082732D303009D1FAD /* Mini_CounterApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mini_CounterApp.swift; sourceTree = "<group>"; };
 		5A2E380A2732D303009D1FAD /* ComplicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationController.swift; sourceTree = "<group>"; };
 		5A2E380C2732D304009D1FAD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -115,6 +120,13 @@
 		5A7A7190273F09DD0085C7FF /* NameDescribable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameDescribable.swift; sourceTree = "<group>"; };
 		5A7A7199273FFCC00085C7FF /* SaveDetailCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveDetailCoordinator.swift; sourceTree = "<group>"; };
 		5A7A719B273FFCD00085C7FF /* SaveDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveDetailView.swift; sourceTree = "<group>"; };
+		5A7A719E274000DC0085C7FF /* CircularButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularButton.swift; sourceTree = "<group>"; };
+		5A7A71A0274000E90085C7FF /* CircularButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularButtonStyle.swift; sourceTree = "<group>"; };
+		5A7A71A4274005ED0085C7FF /* SettingsCounterStrideView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCounterStrideView.swift; sourceTree = "<group>"; };
+		5A7A71A8274053430085C7FF /* SettingsStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsStore.swift; sourceTree = "<group>"; };
+		5A7A71AA27405D140085C7FF /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		5A7A71AE2740601B0085C7FF /* UserDefaults+Keys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+Keys.swift"; sourceTree = "<group>"; };
+		5A7A71B1274078820085C7FF /* CounterStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterStore.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -157,6 +169,7 @@
 			isa = PBXGroup;
 			children = (
 				5A0230D6273C18BF00E05BDF /* SettingsView.swift */,
+				5A7A71A4274005ED0085C7FF /* SettingsCounterStrideView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -194,6 +207,7 @@
 		5A2E38052732D303009D1FAD /* Mini Counter WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
+				5A7A71A62740532A0085C7FF /* Stores */,
 				5A2E38212732D34A009D1FAD /* Common */,
 				5A3F6C42273C0A4B00DDCBB4 /* Scenes */,
 				5A2E381F2732D32D009D1FAD /* Supporting Files */,
@@ -272,6 +286,7 @@
 			children = (
 				5A2E383A2732D994009D1FAD /* ViewModifiers */,
 				5A2E384E2732F039009D1FAD /* Color+Convenience.swift */,
+				5A7A71AE2740601B0085C7FF /* UserDefaults+Keys.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -311,6 +326,7 @@
 		5A3F6C44273C0A6300DDCBB4 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				5A7A719D274000CD0085C7FF /* CircularButton */,
 				5A2E383D2732DD94009D1FAD /* OvalActionButton */,
 			);
 			path = Views;
@@ -329,17 +345,8 @@
 			isa = PBXGroup;
 			children = (
 				5A7A7182273F08520085C7FF /* Coordinator */,
-				5A3F6C47273C0ABD00DDCBB4 /* View */,
 			);
 			path = Main;
-			sourceTree = "<group>";
-		};
-		5A3F6C47273C0ABD00DDCBB4 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				5A2E38062732D303009D1FAD /* ContentView.swift */,
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 		5A3F6C49273C0AD800DDCBB4 /* View */ = {
@@ -362,6 +369,7 @@
 			isa = PBXGroup;
 			children = (
 				5A2E380A2732D303009D1FAD /* ComplicationController.swift */,
+				5A7A71AA27405D140085C7FF /* Constants.swift */,
 			);
 			path = Misc;
 			sourceTree = "<group>";
@@ -444,6 +452,40 @@
 				5A7A719B273FFCD00085C7FF /* SaveDetailView.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		5A7A719D274000CD0085C7FF /* CircularButton */ = {
+			isa = PBXGroup;
+			children = (
+				5A7A719E274000DC0085C7FF /* CircularButton.swift */,
+				5A7A71A0274000E90085C7FF /* CircularButtonStyle.swift */,
+			);
+			path = CircularButton;
+			sourceTree = "<group>";
+		};
+		5A7A71A62740532A0085C7FF /* Stores */ = {
+			isa = PBXGroup;
+			children = (
+				5A7A71B0274078770085C7FF /* Counter */,
+				5A7A71A7274053330085C7FF /* Settings */,
+			);
+			path = Stores;
+			sourceTree = "<group>";
+		};
+		5A7A71A7274053330085C7FF /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				5A7A71A8274053430085C7FF /* SettingsStore.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		5A7A71B0274078770085C7FF /* Counter */ = {
+			isa = PBXGroup;
+			children = (
+				5A7A71B1274078820085C7FF /* CounterStore.swift */,
+			);
+			path = Counter;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -609,14 +651,17 @@
 			files = (
 				5A7A719A273FFCC00085C7FF /* SaveDetailCoordinator.swift in Sources */,
 				5A2E38492732E44C009D1FAD /* OvalButtonStyle.swift in Sources */,
-				5A2E38072732D303009D1FAD /* ContentView.swift in Sources */,
 				5A2E383C2732D9B0009D1FAD /* Frame+Convenience.swift in Sources */,
 				5A7A719C273FFCD00085C7FF /* SaveDetailView.swift in Sources */,
 				5A2E38362732D8B0009D1FAD /* ListView.swift in Sources */,
 				5A7A718E273F08A00085C7FF /* SettingsCoordinator.swift in Sources */,
 				5A2E38092732D303009D1FAD /* Mini_CounterApp.swift in Sources */,
+				5A7A719F274000DC0085C7FF /* CircularButton.swift in Sources */,
 				5A2E38342732D80E009D1FAD /* ActionsView.swift in Sources */,
+				5A7A71A1274000E90085C7FF /* CircularButtonStyle.swift in Sources */,
+				5A7A71AB27405D140085C7FF /* Constants.swift in Sources */,
 				5A2E380B2732D303009D1FAD /* ComplicationController.swift in Sources */,
+				5A7A71AF2740601B0085C7FF /* UserDefaults+Keys.swift in Sources */,
 				5A7A718B273F08950085C7FF /* ListCoordinator.swift in Sources */,
 				5A7A7185273F086A0085C7FF /* ActionsCoordinator.swift in Sources */,
 				5A0230D7273C18BF00E05BDF /* SettingsView.swift in Sources */,
@@ -626,7 +671,10 @@
 				5A7A7188273F087D0085C7FF /* CounterCoordinator.swift in Sources */,
 				5A2E38552734757A009D1FAD /* CountEntry.swift in Sources */,
 				5A7A7191273F09DD0085C7FF /* NameDescribable.swift in Sources */,
+				5A7A71B2274078820085C7FF /* CounterStore.swift in Sources */,
 				5A2E3858273479CB009D1FAD /* CountEntryView.swift in Sources */,
+				5A7A71A9274053430085C7FF /* SettingsStore.swift in Sources */,
+				5A7A71A5274005ED0085C7FF /* SettingsCounterStrideView.swift in Sources */,
 				5A2E382E2732D756009D1FAD /* CounterView.swift in Sources */,
 				5A2E38472732E3C5009D1FAD /* OvalActionButton.swift in Sources */,
 				5A0230D9273C197B00E05BDF /* OvalActionButtonImage.swift in Sources */,

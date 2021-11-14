@@ -20,6 +20,5 @@ struct OvalActionImageButton: View {
         }
         .buttonStyle(OvalButtonStyle(buttonColor: buttonColor))
         .opacity(!isEnabled ? 0.3 : 1.0)
-        .padding([Edge.Set.top, Edge.Set.bottom], 1)
     }
 }

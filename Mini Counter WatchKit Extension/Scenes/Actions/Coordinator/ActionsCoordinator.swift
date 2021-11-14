@@ -9,12 +9,14 @@ import Stinsen
 import SwiftUI
 
 final class ActionsCoordinator: NavigationCoordinatable {
+    // MARK: Coordinator Properties
     let stack = NavigationStack(initial: \ActionsCoordinator.start)
 
     @Root var start = makeStart
     @Route(.push) var settings = makeSettings
     @Route(.push) var saveDetail = makeSaveDetail
 
+    // MARK: Init
     #if DEBUG
         deinit {
             print("Deinit \(Self.typeName)")

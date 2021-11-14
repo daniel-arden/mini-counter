@@ -9,10 +9,12 @@ import Stinsen
 import SwiftUI
 
 final class SaveDetailCoordinator: NavigationCoordinatable {
+    // MARK: Coordinator Properties
     let stack = NavigationStack(initial: \SaveDetailCoordinator.start)
     
     @Root var start = makeStart
     
+    // MARK: Init
     #if DEBUG
     deinit {
         print("Deinit \(Self.typeName)")

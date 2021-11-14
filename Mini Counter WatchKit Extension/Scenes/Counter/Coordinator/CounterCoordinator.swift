@@ -9,9 +9,19 @@ import Stinsen
 import SwiftUI
 
 final class CounterCoordinator: NavigationCoordinatable {
+    // MARK: Stores
+    @ObservedObject private var counterStore: CounterStore = CounterStore()
+    
+    // MARK: Coordinator Properties
     let stack = NavigationStack(initial: \CounterCoordinator.start)
-
+    
     @Root var start = makeStart
+    
+    // MARK: Init
+
+    init(counterStore: CounterStore) {
+        self.counterStore = counterStore
+    }
 
     #if DEBUG
         deinit {
@@ -24,7 +34,7 @@ final class CounterCoordinator: NavigationCoordinatable {
 
 private extension CounterCoordinator {
     @ViewBuilder func makeStart() -> some View {
-        CounterView()
+        CounterView(counterStore: counterStore)
     }
 }
 

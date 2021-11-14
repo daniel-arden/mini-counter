@@ -9,10 +9,15 @@ import Stinsen
 import SwiftUI
 
 final class SettingsCoordinator: NavigationCoordinatable {
+    // MARK: Stores
+    private let settingsStore: SettingsStore = SettingsStore()
+
+    // MARK: Coordinator Properties
     let stack = NavigationStack(initial: \SettingsCoordinator.start)
 
     @Root var start = makeStart
 
+    // MARK: Init
     #if DEBUG
         deinit {
             print("Deinit \(Self.typeName)")
@@ -24,7 +29,7 @@ final class SettingsCoordinator: NavigationCoordinatable {
 
 private extension SettingsCoordinator {
     @ViewBuilder func makeStart() -> some View {
-        SettingsView()
+        SettingsView(settingsStore: settingsStore)
     }
 }
 
