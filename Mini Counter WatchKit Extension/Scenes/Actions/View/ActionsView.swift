@@ -16,20 +16,20 @@ struct ActionsView: View {
                 HStack(spacing: 8) {
                     OvalActionImageButton(
                         systemImageName: "gearshape.fill",
-                        buttonColor: Color.pewterBlue
+                        buttonColor: Color.blueAtmosphere
                     ) {
                         actionsRouter.route(to: \.settings)
                     }
 
                     OvalActionImageButton(
                         systemImageName: "arrow.clockwise.circle.fill",
-                        buttonColor: Color.terraCotta
+                        buttonColor: Color.orangeFire
                     ) {
                         print("Reset button tapped!")
                     }
                 }
 
-                OvalActionButton(title: "Save Count", buttonColor: Color.pistachio) {
+                OvalActionButton(title: "Save Count", buttonColor: Color.greenSourCandy) {
                     actionsRouter.route(to: \.saveDetail)
                 }
             }

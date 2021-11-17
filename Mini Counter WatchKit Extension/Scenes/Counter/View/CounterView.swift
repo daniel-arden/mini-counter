@@ -23,6 +23,7 @@ struct CounterView: View {
                     design: .monospaced
                 )
             )
+            .foregroundColor(counterStore.counterColor.color)
             .minimumScaleFactor(0.2)
             .lineLimit(1)
             .maxWidth()

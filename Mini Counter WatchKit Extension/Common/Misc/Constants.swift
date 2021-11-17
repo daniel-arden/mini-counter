@@ -7,4 +7,6 @@
 
 enum Constants {
     static let counterStrideRange: ClosedRange<Int> = 1...10
+    static let defaultCounterStride: Int = 1
+    static let defaultCounterColor: CounterColor = CounterColor.white
 }

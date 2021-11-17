@@ -32,7 +32,7 @@ struct OvalActionButton: View {
         static var previews: some View {
             OvalActionButton(
                 title: "Oval action button",
-                buttonColor: Color.pistachio,
+                buttonColor: Color.greenSourCandy,
                 action: {}
             )
             .previewLayout(PreviewLayout.sizeThatFits)

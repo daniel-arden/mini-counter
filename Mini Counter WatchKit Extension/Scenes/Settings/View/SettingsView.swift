@@ -20,14 +20,14 @@ struct SettingsView: View {
                SettingsCounterStrideView(settingsStore: settingsStore)
             }
             
-            Section(header: appTintSectionHeader) {
-                // TODO: SettingsAppTintView
-                Text("SettingsAppTintView")
+            Section(header: counterColorSectionHeader) {
+                SettingsCounterColorView(settingsStore: settingsStore)
             }
         }
         .headerProminence(Prominence.increased)
         .navigationTitle("Settings")
         .navigationBarTitleDisplayMode(NavigationBarItem.TitleDisplayMode.large)
+        .tint(settingsStore.counterColor.color)
     }
 }
 
@@ -39,8 +39,8 @@ private extension SettingsView {
     }
     
     @ViewBuilder
-    private var appTintSectionHeader: some View {
-        Text("APP TINT")
+    private var counterColorSectionHeader: some View {
+        Text("COUNTER COLOR")
     }
 }
 
