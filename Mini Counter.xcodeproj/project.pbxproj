@@ -46,6 +46,7 @@
 		5A7A71AB27405D140085C7FF /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7A71AA27405D140085C7FF /* Constants.swift */; };
 		5A7A71AF2740601B0085C7FF /* UserDefaults+Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7A71AE2740601B0085C7FF /* UserDefaults+Keys.swift */; };
 		5A7A71B2274078820085C7FF /* CounterStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7A71B1274078820085C7FF /* CounterStore.swift */; };
+		5AAD734827485D8400024FB9 /* MainStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AAD734727485D8400024FB9 /* MainStore.swift */; };
 		5AD8B5442745AB0D00547A70 /* CounterColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AD8B5432745AB0D00547A70 /* CounterColor.swift */; };
 /* End PBXBuildFile section */
 
@@ -132,6 +133,7 @@
 		5A7A71AA27405D140085C7FF /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		5A7A71AE2740601B0085C7FF /* UserDefaults+Keys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+Keys.swift"; sourceTree = "<group>"; };
 		5A7A71B1274078820085C7FF /* CounterStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterStore.swift; sourceTree = "<group>"; };
+		5AAD734727485D8400024FB9 /* MainStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainStore.swift; sourceTree = "<group>"; };
 		5AD8B5432745AB0D00547A70 /* CounterColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterColor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -483,6 +485,7 @@
 		5A7A71A62740532A0085C7FF /* Stores */ = {
 			isa = PBXGroup;
 			children = (
+				5AAD734627485D7400024FB9 /* Main */,
 				5A7A71B0274078770085C7FF /* Counter */,
 				5A7A71A7274053330085C7FF /* Settings */,
 			);
@@ -503,6 +506,14 @@
 				5A7A71B1274078820085C7FF /* CounterStore.swift */,
 			);
 			path = Counter;
+			sourceTree = "<group>";
+		};
+		5AAD734627485D7400024FB9 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				5AAD734727485D8400024FB9 /* MainStore.swift */,
+			);
+			path = Main;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -685,6 +696,7 @@
 				5A0230D7273C18BF00E05BDF /* SettingsView.swift in Sources */,
 				5A2E384F2732F039009D1FAD /* Color+Convenience.swift in Sources */,
 				5AD8B5442745AB0D00547A70 /* CounterColor.swift in Sources */,
+				5AAD734827485D8400024FB9 /* MainStore.swift in Sources */,
 				5A2E384D2732EE08009D1FAD /* OvalActionImageButton.swift in Sources */,
 				5A7A7181273F01C80085C7FF /* MainTabCoordinator.swift in Sources */,
 				5A7A7188273F087D0085C7FF /* CounterCoordinator.swift in Sources */,

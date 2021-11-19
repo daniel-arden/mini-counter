@@ -8,7 +8,22 @@
 import SwiftUI
 
 struct ActionsView: View {
+    // MARK: Stores
+    @ObservedObject private var mainStore: MainStore
+    @ObservedObject private var counterStore: CounterStore
+    
+    // MARK: Private Properties
     @EnvironmentObject private var actionsRouter: ActionsCoordinator.Router
+    @State private var showResetCountAlert: Bool = false
+    
+    // MARK: Init
+    init(
+        mainStore: MainStore,
+        counterStore: CounterStore
+    ) {
+        self.mainStore = mainStore
+        self.counterStore = counterStore
+    }
 
     var body: some View {
         NavigationView {
@@ -25,13 +40,27 @@ struct ActionsView: View {
                         systemImageName: "arrow.clockwise.circle.fill",
                         buttonColor: Color.orangeFire
                     ) {
-                        print("Reset button tapped!")
+                        showResetCountAlert = true
                     }
                 }
 
                 OvalActionButton(title: "Save Count", buttonColor: Color.greenSourCandy) {
                     actionsRouter.route(to: \.saveDetail)
                 }
+            }
+            .alert(isPresented: $showResetCountAlert) {
+                Alert(
+                    title: Text("Reset Counter"),
+                    message: Text("Are you sure you want to reset the counter to zero?\n\nThis action cannot be undone."),
+                    primaryButton: Alert.Button.destructive(Text("RESET")) {
+                        mainStore.selectTabIndexPublisher.send(1)
+                        counterStore.resetCounter()
+                        showResetCountAlert = false
+                    },
+                    secondaryButton: Alert.Button.cancel(Text("CANCEL")) {
+                        showResetCountAlert = false
+                    }
+                )
             }
         }
     }
@@ -42,7 +71,10 @@ struct ActionsView: View {
 #if DEBUG
     struct ActionsView_Previews: PreviewProvider {
         static var previews: some View {
-            ActionsView()
+            ActionsView(
+                mainStore: .init(),
+                counterStore: .init()
+            )
         }
     }
 #endif

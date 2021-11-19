@@ -10,7 +10,7 @@ import SwiftUI
 
 final class CounterCoordinator: NavigationCoordinatable {
     // MARK: Stores
-    @ObservedObject private var counterStore: CounterStore = CounterStore()
+    @ObservedObject private var counterStore: CounterStore
     
     // MARK: Coordinator Properties
     let stack = NavigationStack(initial: \CounterCoordinator.start)

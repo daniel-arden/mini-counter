@@ -9,6 +9,10 @@ import Stinsen
 import SwiftUI
 
 final class ActionsCoordinator: NavigationCoordinatable {
+    // MARK: Stores
+    @ObservedObject private var mainStore: MainStore
+    @ObservedObject private var counterStore: CounterStore
+
     // MARK: Coordinator Properties
     let stack = NavigationStack(initial: \ActionsCoordinator.start)
 
@@ -17,6 +21,14 @@ final class ActionsCoordinator: NavigationCoordinatable {
     @Route(.push) var saveDetail = makeSaveDetail
 
     // MARK: Init
+    init(
+        mainStore: MainStore,
+        counterStore: CounterStore
+    ) {
+        self.mainStore = mainStore
+        self.counterStore = counterStore
+    }
+
     #if DEBUG
         deinit {
             print("Deinit \(Self.typeName)")
@@ -28,7 +40,10 @@ final class ActionsCoordinator: NavigationCoordinatable {
 
 private extension ActionsCoordinator {
     @ViewBuilder func makeStart() -> some View {
-        ActionsView()
+        ActionsView(
+            mainStore: mainStore,
+            counterStore: counterStore
+        )
     }
 
     func makeSettings() -> SettingsCoordinator {

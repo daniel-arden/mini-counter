@@ -8,19 +8,21 @@
 import SwiftUI
 
 struct CounterView: View {
+    // MARK: Stores
     @ObservedObject private var counterStore: CounterStore
     
+    // MARK: Init
     init(counterStore: CounterStore) {
         self.counterStore = counterStore
     }
 
     var body: some View {
-        Text("\(Int(counterStore.scrollAmount.rounded()))")
+        Text("\(Int(counterStore.counterValue.rounded()))")
             .font(
                 Font.system(
                     size: 100,
-                    weight: .bold,
-                    design: .monospaced
+                    weight: Font.Weight.bold,
+                    design: Font.Design.monospaced
                 )
             )
             .foregroundColor(counterStore.counterColor.color)
@@ -29,7 +31,7 @@ struct CounterView: View {
             .maxWidth()
             .focusable()
             .digitalCrownRotation(
-                $counterStore.scrollAmount,
+                $counterStore.counterValue,
                 from: 0,
                 through: 999,
                 by: Double(counterStore.counterStride),

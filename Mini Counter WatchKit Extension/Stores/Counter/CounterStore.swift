@@ -10,5 +10,12 @@ import SwiftUI
 final class CounterStore: ObservableObject {
     @AppStorage(UserDefaults.Key.counterStride.rawValue) var counterStride: Int = Constants.defaultCounterStride
     @AppStorage(UserDefaults.Key.counterColor.rawValue) var counterColor: CounterColor = Constants.defaultCounterColor
-    @Published var scrollAmount: Double = 0.0
+    @Published var counterValue: Double = 0.0
+}
+
+// MARK: - Helpers
+extension CounterStore {
+    func resetCounter() {
+        counterValue = 0.0
+    }
 }
