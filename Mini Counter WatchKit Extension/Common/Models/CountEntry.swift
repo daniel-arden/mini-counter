@@ -9,7 +9,7 @@ import Foundation
 
 struct CountEntry: Identifiable {
     let id = UUID()
-    let count: UInt
+    let count: Int
     let label: String
 }
 

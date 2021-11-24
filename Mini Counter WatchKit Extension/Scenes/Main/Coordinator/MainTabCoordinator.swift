@@ -29,7 +29,7 @@ final class MainTabCoordinator: TabCoordinatable {
     @Route(tabItem: makeListTab) var list = makeList
     
     // MARK: Private Properties
-    private var selectTabIndexCancellable: AnyCancellable?
+    private var cancellables: Set<AnyCancellable> = []
     
     // MARK: Init
     init() {
@@ -74,22 +74,29 @@ extension MainTabCoordinator {
 
     // MARK: List Tab
 
-    func makeList() -> ListCoordinator {
-        ListCoordinator()
+    func makeList() -> SavedEntryListCoordinator {
+        SavedEntryListCoordinator(mainStore: mainStore)
     }
 
     @ViewBuilder func makeListTab(isActive _: Bool) -> some View {
-        ListView()
+        SavedEntryListView(mainStore: mainStore)
     }
 }
 
 // MARK: - Bind To Stores
 extension MainTabCoordinator {
     func bindToMainStore() {
-        selectTabIndexCancellable = mainStore.selectTabIndexPublisher
+        mainStore.resetCounterPublisher
+            .sink { [weak self] _ in
+                self?.counterStore.resetCounter()
+            }
+            .store(in: &cancellables)
+
+        mainStore.selectTabIndexPublisher
             .sink { [weak self] newSelectedIndex in
                 self?.selectTab(at: newSelectedIndex)
             }
+            .store(in: &cancellables)
     }
 }
 

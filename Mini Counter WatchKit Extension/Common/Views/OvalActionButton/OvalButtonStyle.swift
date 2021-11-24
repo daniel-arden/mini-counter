@@ -15,7 +15,7 @@ struct OvalButtonStyle: ButtonStyle {
             .font(Font.headline)
             .foregroundColor(Color.white)
             .maxWidth()
-            .frame(height: 50)
+            .frame(height: 44)
             .background(buttonColor)
             .cornerRadius(8)
             .opacity(configuration.isPressed ? 0.7 : 1.0)

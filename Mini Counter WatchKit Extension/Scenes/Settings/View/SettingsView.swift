@@ -27,7 +27,6 @@ struct SettingsView: View {
         .headerProminence(Prominence.increased)
         .navigationTitle("Settings")
         .navigationBarTitleDisplayMode(NavigationBarItem.TitleDisplayMode.large)
-        .tint(settingsStore.counterColor.color)
     }
 }
 

@@ -51,7 +51,10 @@ private extension ActionsCoordinator {
     }
     
     func makeSaveDetail() -> SaveDetailCoordinator {
-        SaveDetailCoordinator()
+        SaveDetailCoordinator(
+            mainStore: mainStore,
+            counterCount: Int(counterStore.counterValue.rounded())
+        )
     }
 }
 
