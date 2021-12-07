@@ -12,13 +12,14 @@ struct OvalActionImageButton: View {
 
     let systemImageName: String
     let buttonColor: Color
+    let style: OvalButtonStyle.Style
     let action: () -> Void
 
     var body: some View {
         Button(action: action) {
             OvalActionButtonImage(systemImageName: systemImageName)
         }
-        .buttonStyle(OvalButtonStyle(buttonColor: buttonColor))
+        .buttonStyle(OvalButtonStyle(buttonColor: buttonColor, style: style))
         .opacity(!isEnabled ? 0.3 : 1.0)
     }
 }

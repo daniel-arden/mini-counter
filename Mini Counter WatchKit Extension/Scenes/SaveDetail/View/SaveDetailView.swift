@@ -51,7 +51,11 @@ struct SaveDetailView: View {
             TextField("Count description", text: $saveDetailStore.description)
                 .padding(Edge.Set.vertical)
             
-            OvalActionButton(title: "SAVE", buttonColor: Color.greenSourCandy) {
+            OvalActionButton(
+                title: "SAVE",
+                buttonColor: Color.greenSourCandy,
+                style: OvalButtonStyle.Style.scrollingView
+            ) {
                 saveDetailStore.saveCount()
                 mainStore.resetCounterPublisher.send()
                 mainStore.selectTabIndexPublisher.send(1)

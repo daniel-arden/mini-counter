@@ -12,6 +12,7 @@ struct OvalActionButton: View {
 
     let title: String
     let buttonColor: Color
+    let style: OvalButtonStyle.Style
     let action: () -> Void
 
     var body: some View {
@@ -19,7 +20,7 @@ struct OvalActionButton: View {
             title.uppercased(),
             action: action
         )
-        .buttonStyle(OvalButtonStyle(buttonColor: buttonColor))
+        .buttonStyle(OvalButtonStyle(buttonColor: buttonColor, style: style))
         .opacity(!isEnabled ? 0.3 : 1.0)
         .padding([Edge.Set.top, Edge.Set.bottom], 1)
     }
@@ -33,6 +34,7 @@ struct OvalActionButton: View {
             OvalActionButton(
                 title: "Oval action button",
                 buttonColor: Color.greenSourCandy,
+                style: .scrollingView,
                 action: {}
             )
             .previewLayout(PreviewLayout.sizeThatFits)

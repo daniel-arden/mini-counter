@@ -31,20 +31,26 @@ struct ActionsView: View {
                 HStack(spacing: 8) {
                     OvalActionImageButton(
                         systemImageName: "gearshape.fill",
-                        buttonColor: Color.blueAtmosphere
+                        buttonColor: Color.blueAtmosphere,
+                        style: OvalButtonStyle.Style.nonScrollingView
                     ) {
                         actionsRouter.route(to: \.settings)
                     }
 
                     OvalActionImageButton(
                         systemImageName: "arrow.clockwise.circle.fill",
-                        buttonColor: Color.orangeFire
+                        buttonColor: Color.orangeFire,
+                        style: OvalButtonStyle.Style.nonScrollingView
                     ) {
                         showResetCountAlert = true
                     }
                 }
 
-                OvalActionButton(title: "Save Count", buttonColor: Color.greenSourCandy) {
+                OvalActionButton(
+                    title: "Save Count",
+                    buttonColor: Color.greenSourCandy,
+                    style: OvalButtonStyle.Style.nonScrollingView
+                ) {
                     actionsRouter.route(to: \.saveDetail)
                 }
             }
