@@ -33,7 +33,9 @@ struct SavedEntryListView: View {
                             isSelected: savedEntryStore.selection.contains(countEntry.id)
                         ) {
                             if isEditing {
-                                savedEntryStore.toggleSelectionOnID(countEntry.id)
+                                withAnimation {
+                                    savedEntryStore.toggleSelectionOnID(countEntry.id)
+                                }
                             } else {
                                 savedEntryListRouter.route(to: \.savedEntryDetail, countEntry)
                             }
@@ -41,14 +43,17 @@ struct SavedEntryListView: View {
                         .animation(.default, value: savedEntryStore.savedEntries)
                     }
                     .toolbar {
+                        // TODO: Add animation for when toolbar buttons change
                         if isEditing {
                             HStack {
-                                RoundedActionButton("Remove Selected", color: .redRage) {
+                                RoundedActionImageButton("trash.fill", color: .redRage) {
                                     withAnimation {
                                         savedEntryStore.removeSelectedEntries()
                                     }
+
                                     isEditing.toggle()
                                 }
+                                .disabled(savedEntryStore.selection.isEmpty)
 
                                 Spacer()
 
