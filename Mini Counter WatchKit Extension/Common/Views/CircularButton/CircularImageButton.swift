@@ -7,18 +7,28 @@
 
 import SwiftUI
 
-struct CircularButton: View {
+struct CircularImageButton: View {
     @Environment(\.isEnabled) private var isEnabled: Bool
     
-    let systemImageName: String
-    let buttonColor: Color
-    let action: () -> Void
+    private let systemImageName: String
+    private let color: Color
+    private let action: () -> Void
+    
+    init(
+        _ systemImageName: String,
+        color: Color,
+        action: @escaping () -> Void
+    ) {
+        self.systemImageName = systemImageName
+        self.color = color
+        self.action = action
+    }
     
     var body: some View {
         Button(action: action) {
             Image(systemName: systemImageName)
         }
-        .buttonStyle(CircularButtonStyle(buttonColor: buttonColor))
+        .buttonStyle(CircularButtonStyle(color: color))
         .opacity(!isEnabled ? 0.3 : 1.0)
     }
 }
@@ -27,9 +37,9 @@ struct CircularButton: View {
 #if DEBUG
 struct CircularButton_Previews: PreviewProvider {
     static var previews: some View {
-        CircularButton(
-            systemImageName: "minus",
-            buttonColor: Color.green,
+        CircularImageButton(
+            "minus",
+            color: Color.green,
             action: {}
         )
         .squareFrame(32)

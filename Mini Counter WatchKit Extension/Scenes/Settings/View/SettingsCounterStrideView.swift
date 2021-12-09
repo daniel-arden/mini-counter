@@ -16,10 +16,7 @@ struct SettingsCounterStrideView: View {
 
     var body: some View {
         HStack {
-            CircularButton(
-                systemImageName: "minus",
-                buttonColor: Color.greenSourCandy
-            ) {
+            CircularImageButton("minus", color: Color.greenSourCandy) {
                 settingsStore.decrementStride()
             }
             .squareFrame(32)
@@ -30,10 +27,7 @@ struct SettingsCounterStrideView: View {
                 .maxWidth()
                 .padding()
             
-            CircularButton(
-                systemImageName: "plus",
-                buttonColor: Color.greenSourCandy
-            ) {
+            CircularImageButton("plus", color: Color.greenSourCandy) {
                 settingsStore.incrementStride()
             }
             .squareFrame(32)

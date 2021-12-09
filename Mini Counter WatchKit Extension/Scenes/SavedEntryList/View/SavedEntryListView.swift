@@ -43,11 +43,7 @@ struct SavedEntryListView: View {
                     .toolbar {
                         if isEditing {
                             HStack {
-                                OvalActionButton(
-                                    title: "Remove Selected",
-                                    buttonColor: .redRage,
-                                    style: OvalButtonStyle.Style.scrollingView
-                                ) {
+                                RoundedActionButton("Remove Selected", color: Color.redRage) {
                                     withAnimation {
                                         savedEntryStore.removeSelectedEntries()
                                     }
@@ -56,22 +52,14 @@ struct SavedEntryListView: View {
 
                                 Spacer()
 
-                                OvalActionButton(
-                                    title: "Cancel",
-                                    buttonColor: Color.grayAsh,
-                                    style: OvalButtonStyle.Style.scrollingView
-                                ) {
+                                RoundedActionButton("Cancel", color: Color.grayAsh) {
                                     isEditing.toggle()
                                     savedEntryStore.resetSelection()
                                 }
                             }
                             .padding(Edge.Set.vertical)
                         } else {
-                            OvalActionButton(
-                                title: "Edit",
-                                buttonColor: Color.blueAtmosphere,
-                                style: OvalButtonStyle.Style.scrollingView
-                            ) {
+                            RoundedActionButton("Edit", color: Color.blueAtmosphere) {
                                 isEditing.toggle()
                             }
                             .padding(Edge.Set.vertical)

@@ -29,28 +29,18 @@ struct ActionsView: View {
         NavigationView {
             VStack(spacing: 8) {
                 HStack(spacing: 8) {
-                    OvalActionImageButton(
-                        systemImageName: "gearshape.fill",
-                        buttonColor: Color.blueAtmosphere,
-                        style: OvalButtonStyle.Style.nonScrollingView
-                    ) {
+                    RoundedActionImageButton("gearshape.fill", color: Color.blueAtmosphere) {
                         actionsRouter.route(to: \.settings)
                     }
+                    .frame(maxHeight: 44)
 
-                    OvalActionImageButton(
-                        systemImageName: "arrow.clockwise.circle.fill",
-                        buttonColor: Color.orangeFire,
-                        style: OvalButtonStyle.Style.nonScrollingView
-                    ) {
+                    RoundedActionImageButton("arrow.clockwise.circle.fill", color: Color.orangeFire) {
                         showResetCountAlert = true
                     }
+                    .frame(maxHeight: 44)
                 }
 
-                OvalActionButton(
-                    title: "Save Count",
-                    buttonColor: Color.greenSourCandy,
-                    style: OvalButtonStyle.Style.nonScrollingView
-                ) {
+                RoundedActionButton("Save Count", color: Color.greenSourCandy) {
                     actionsRouter.route(to: \.saveDetail)
                 }
             }

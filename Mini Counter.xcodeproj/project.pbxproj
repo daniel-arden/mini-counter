@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		5A0230D7273C18BF00E05BDF /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0230D6273C18BF00E05BDF /* SettingsView.swift */; };
-		5A0230D9273C197B00E05BDF /* OvalActionButtonImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0230D8273C197B00E05BDF /* OvalActionButtonImage.swift */; };
 		5A097676273B1201007695D3 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A097675273B1201007695D3 /* Colors.xcassets */; };
 		5A1E17CC27416E4900C3747E /* SettingsCounterColorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1E17CB27416E4900C3747E /* SettingsCounterColorView.swift */; };
 		5A1E17D12741A5EF00C3747E /* ColorDotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1E17D02741A5EF00C3747E /* ColorDotView.swift */; };
@@ -23,9 +22,8 @@
 		5A2E38342732D80E009D1FAD /* ActionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A2E38332732D80E009D1FAD /* ActionsView.swift */; };
 		5A2E38362732D8B0009D1FAD /* SavedEntryListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A2E38352732D8B0009D1FAD /* SavedEntryListView.swift */; };
 		5A2E383C2732D9B0009D1FAD /* Frame+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A2E383B2732D9B0009D1FAD /* Frame+Convenience.swift */; };
-		5A2E38472732E3C5009D1FAD /* OvalActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A2E38462732E3C5009D1FAD /* OvalActionButton.swift */; };
-		5A2E38492732E44C009D1FAD /* OvalButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A2E38482732E44C009D1FAD /* OvalButtonStyle.swift */; };
-		5A2E384D2732EE08009D1FAD /* OvalActionImageButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A2E384C2732EE08009D1FAD /* OvalActionImageButton.swift */; };
+		5A2E38472732E3C5009D1FAD /* RoundedActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A2E38462732E3C5009D1FAD /* RoundedActionButton.swift */; };
+		5A2E384D2732EE08009D1FAD /* RoundedActionImageButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A2E384C2732EE08009D1FAD /* RoundedActionImageButton.swift */; };
 		5A2E384F2732F039009D1FAD /* Color+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A2E384E2732F039009D1FAD /* Color+Convenience.swift */; };
 		5A2E38552734757A009D1FAD /* CountEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A2E38542734757A009D1FAD /* CountEntry.swift */; };
 		5A2E3858273479CB009D1FAD /* CountEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A2E3857273479CB009D1FAD /* CountEntryView.swift */; };
@@ -41,7 +39,7 @@
 		5A7A7191273F09DD0085C7FF /* NameDescribable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7A7190273F09DD0085C7FF /* NameDescribable.swift */; };
 		5A7A719A273FFCC00085C7FF /* SaveDetailCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7A7199273FFCC00085C7FF /* SaveDetailCoordinator.swift */; };
 		5A7A719C273FFCD00085C7FF /* SaveDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7A719B273FFCD00085C7FF /* SaveDetailView.swift */; };
-		5A7A719F274000DC0085C7FF /* CircularButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7A719E274000DC0085C7FF /* CircularButton.swift */; };
+		5A7A719F274000DC0085C7FF /* CircularImageButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7A719E274000DC0085C7FF /* CircularImageButton.swift */; };
 		5A7A71A1274000E90085C7FF /* CircularButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7A71A0274000E90085C7FF /* CircularButtonStyle.swift */; };
 		5A7A71A5274005ED0085C7FF /* SettingsCounterStrideView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7A71A4274005ED0085C7FF /* SettingsCounterStrideView.swift */; };
 		5A7A71A9274053430085C7FF /* SettingsStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7A71A8274053430085C7FF /* SettingsStore.swift */; };
@@ -99,7 +97,6 @@
 
 /* Begin PBXFileReference section */
 		5A0230D6273C18BF00E05BDF /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
-		5A0230D8273C197B00E05BDF /* OvalActionButtonImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OvalActionButtonImage.swift; sourceTree = "<group>"; };
 		5A097675273B1201007695D3 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		5A1E17CB27416E4900C3747E /* SettingsCounterColorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCounterColorView.swift; sourceTree = "<group>"; };
 		5A1E17D02741A5EF00C3747E /* ColorDotView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorDotView.swift; sourceTree = "<group>"; };
@@ -116,9 +113,8 @@
 		5A2E38332732D80E009D1FAD /* ActionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionsView.swift; sourceTree = "<group>"; };
 		5A2E38352732D8B0009D1FAD /* SavedEntryListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedEntryListView.swift; sourceTree = "<group>"; };
 		5A2E383B2732D9B0009D1FAD /* Frame+Convenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Frame+Convenience.swift"; sourceTree = "<group>"; };
-		5A2E38462732E3C5009D1FAD /* OvalActionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OvalActionButton.swift; sourceTree = "<group>"; };
-		5A2E38482732E44C009D1FAD /* OvalButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OvalButtonStyle.swift; sourceTree = "<group>"; };
-		5A2E384C2732EE08009D1FAD /* OvalActionImageButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OvalActionImageButton.swift; sourceTree = "<group>"; };
+		5A2E38462732E3C5009D1FAD /* RoundedActionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedActionButton.swift; sourceTree = "<group>"; };
+		5A2E384C2732EE08009D1FAD /* RoundedActionImageButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedActionImageButton.swift; sourceTree = "<group>"; };
 		5A2E384E2732F039009D1FAD /* Color+Convenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Convenience.swift"; sourceTree = "<group>"; };
 		5A2E38542734757A009D1FAD /* CountEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountEntry.swift; sourceTree = "<group>"; };
 		5A2E3857273479CB009D1FAD /* CountEntryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountEntryView.swift; sourceTree = "<group>"; };
@@ -133,7 +129,7 @@
 		5A7A7190273F09DD0085C7FF /* NameDescribable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameDescribable.swift; sourceTree = "<group>"; };
 		5A7A7199273FFCC00085C7FF /* SaveDetailCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveDetailCoordinator.swift; sourceTree = "<group>"; };
 		5A7A719B273FFCD00085C7FF /* SaveDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveDetailView.swift; sourceTree = "<group>"; };
-		5A7A719E274000DC0085C7FF /* CircularButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularButton.swift; sourceTree = "<group>"; };
+		5A7A719E274000DC0085C7FF /* CircularImageButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularImageButton.swift; sourceTree = "<group>"; };
 		5A7A71A0274000E90085C7FF /* CircularButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularButtonStyle.swift; sourceTree = "<group>"; };
 		5A7A71A4274005ED0085C7FF /* SettingsCounterStrideView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCounterStrideView.swift; sourceTree = "<group>"; };
 		5A7A71A8274053430085C7FF /* SettingsStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsStore.swift; sourceTree = "<group>"; };
@@ -327,15 +323,13 @@
 			path = ViewModifiers;
 			sourceTree = "<group>";
 		};
-		5A2E383D2732DD94009D1FAD /* OvalActionButton */ = {
+		5A2E383D2732DD94009D1FAD /* RoundedActionButton */ = {
 			isa = PBXGroup;
 			children = (
-				5A2E38462732E3C5009D1FAD /* OvalActionButton.swift */,
-				5A2E384C2732EE08009D1FAD /* OvalActionImageButton.swift */,
-				5A2E38482732E44C009D1FAD /* OvalButtonStyle.swift */,
-				5A0230D8273C197B00E05BDF /* OvalActionButtonImage.swift */,
+				5A2E38462732E3C5009D1FAD /* RoundedActionButton.swift */,
+				5A2E384C2732EE08009D1FAD /* RoundedActionImageButton.swift */,
 			);
-			path = OvalActionButton;
+			path = RoundedActionButton;
 			sourceTree = "<group>";
 		};
 		5A3093F62750DB3D00CD1F3B /* CountEntryDetail */ = {
@@ -365,7 +359,7 @@
 			children = (
 				5A1E17CF2741A5E500C3747E /* ColorDotView */,
 				5A7A719D274000CD0085C7FF /* CircularButton */,
-				5A2E383D2732DD94009D1FAD /* OvalActionButton */,
+				5A2E383D2732DD94009D1FAD /* RoundedActionButton */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -503,7 +497,7 @@
 		5A7A719D274000CD0085C7FF /* CircularButton */ = {
 			isa = PBXGroup;
 			children = (
-				5A7A719E274000DC0085C7FF /* CircularButton.swift */,
+				5A7A719E274000DC0085C7FF /* CircularImageButton.swift */,
 				5A7A71A0274000E90085C7FF /* CircularButtonStyle.swift */,
 			);
 			path = CircularButton;
@@ -741,13 +735,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				5A7A719A273FFCC00085C7FF /* SaveDetailCoordinator.swift in Sources */,
-				5A2E38492732E44C009D1FAD /* OvalButtonStyle.swift in Sources */,
 				5A2E383C2732D9B0009D1FAD /* Frame+Convenience.swift in Sources */,
 				5A7A719C273FFCD00085C7FF /* SaveDetailView.swift in Sources */,
 				5A2E38362732D8B0009D1FAD /* SavedEntryListView.swift in Sources */,
 				5A7A718E273F08A00085C7FF /* SettingsCoordinator.swift in Sources */,
 				5A2E38092732D303009D1FAD /* Mini_CounterApp.swift in Sources */,
-				5A7A719F274000DC0085C7FF /* CircularButton.swift in Sources */,
+				5A7A719F274000DC0085C7FF /* CircularImageButton.swift in Sources */,
 				5A2E38342732D80E009D1FAD /* ActionsView.swift in Sources */,
 				5A7A71A1274000E90085C7FF /* CircularButtonStyle.swift in Sources */,
 				5A7A71AB27405D140085C7FF /* Constants.swift in Sources */,
@@ -764,7 +757,7 @@
 				5AAE04E4274E1E7000B1EB10 /* SavedEntryDetailCoordinator.swift in Sources */,
 				5AD8B5442745AB0D00547A70 /* CounterColor.swift in Sources */,
 				5AAD734827485D8400024FB9 /* MainStore.swift in Sources */,
-				5A2E384D2732EE08009D1FAD /* OvalActionImageButton.swift in Sources */,
+				5A2E384D2732EE08009D1FAD /* RoundedActionImageButton.swift in Sources */,
 				5A7A7181273F01C80085C7FF /* MainTabCoordinator.swift in Sources */,
 				5A7A7188273F087D0085C7FF /* CounterCoordinator.swift in Sources */,
 				5A2E38552734757A009D1FAD /* CountEntry.swift in Sources */,
@@ -775,9 +768,8 @@
 				5A7A71A9274053430085C7FF /* SettingsStore.swift in Sources */,
 				5A7A71A5274005ED0085C7FF /* SettingsCounterStrideView.swift in Sources */,
 				5A2E382E2732D756009D1FAD /* CounterView.swift in Sources */,
-				5A2E38472732E3C5009D1FAD /* OvalActionButton.swift in Sources */,
+				5A2E38472732E3C5009D1FAD /* RoundedActionButton.swift in Sources */,
 				5A1E17CC27416E4900C3747E /* SettingsCounterColorView.swift in Sources */,
-				5A0230D9273C197B00E05BDF /* OvalActionButtonImage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
