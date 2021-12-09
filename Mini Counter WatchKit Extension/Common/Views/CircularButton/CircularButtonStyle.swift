@@ -12,8 +12,8 @@ struct CircularButtonStyle: ButtonStyle {
     
     func makeBody(configuration: Configuration) -> some View {
         configuration.label
-            .font(Font.headline)
-            .foregroundColor(Color.white)
+            .font(.headline)
+            .foregroundColor(.white)
             .maxFrame()
             .background(color)
             .clipShape(Circle())

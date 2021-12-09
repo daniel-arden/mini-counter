@@ -8,9 +8,9 @@
 import SwiftUI
 
 final class SaveDetailStore: ObservableObject {
-    @AppStorage(UserDefaults.Key.counterColor.rawValue) var counterColor: CounterColor = Constants.defaultCounterColor
+    @AppStorage(UserDefaults.Key.counterColor.rawValue) var counterColor = Constants.defaultCounterColor
     @ObservedObject private var mainStore: MainStore
-    @State var description: String = ""
+    @State var description = ""
     let counterCount: Int
     
     init(
@@ -27,7 +27,7 @@ extension SaveDetailStore {
         /*
          TODO: Remove the mainStore from here and save the data persistently instead
          */
-        let countEntry: CountEntry = CountEntry(count: counterCount, label: description)
+        let countEntry = CountEntry(count: counterCount, label: description)
         mainStore.savedEntries.append(countEntry)
     }
 }

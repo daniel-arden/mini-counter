@@ -20,21 +20,17 @@ struct CountEntryView: View {
 
                 Spacer(minLength: 8)
 
-                countView
+                Text("\(countEntry.count)")
+                    .fontWeight(.bold)
             } else {
-                countView
+                Text("\(countEntry.count)")
+                    .fontWeight(.bold)
             }
         }
         .maxWidth()
-        .buttonStyle(PlainButtonStyle.plain)
-        .foregroundColor(isSelected ? Color.redRage : Color.white)
-        .animation(Animation.easeInOut, value: isEditing)
-    }
-
-    @ViewBuilder
-    private var countView: some View {
-        Text("\(countEntry.count)")
-            .fontWeight(Font.Weight.bold)
+        .buttonStyle(.plain)
+        .foregroundColor(isSelected ? .redRage : .white)
+        .animation(.easeInOut, value: isEditing)
     }
 }
 

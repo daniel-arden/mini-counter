@@ -29,7 +29,7 @@ struct RoundedActionButton: View {
             title.uppercased(),
             action: action
         )
-        .buttonStyle(BorderedButtonStyle())
+            .buttonStyle(.bordered)
         /*
          Below, there is a workaround for getting the
          system button on watchOS to be colored with a tint color.
@@ -40,7 +40,7 @@ struct RoundedActionButton: View {
          Link: https://developer.apple.com/forums/thread/658058
          */
         .tint(color.opacity(10))
-        .foregroundColor(Color.white)
+        .foregroundColor(.white)
         .opacity(isEnabled ? 1.0 : 0.3)
     }
 }
@@ -50,12 +50,8 @@ struct RoundedActionButton: View {
 #if DEBUG
     struct OvalActionButton_Previews: PreviewProvider {
         static var previews: some View {
-            RoundedActionButton(
-                "Oval action button",
-                color: Color.greenSourCandy,
-                action: {}
-            )
-            .previewLayout(PreviewLayout.sizeThatFits)
+            RoundedActionButton("Oval action button", color: .greenSourCandy, action: {})
+                .previewLayout(.sizeThatFits)
         }
     }
 #endif

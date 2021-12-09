@@ -13,7 +13,7 @@ struct SavedEntryListView: View {
     
     // MARK: Private Properties
     @EnvironmentObject private var savedEntryListRouter: SavedEntryListCoordinator.Router
-    @State private var isEditing: Bool = false
+    @State private var isEditing = false
     
     // MARK: Init
     init(savedEntryStore: SavedEntryStore) {
@@ -38,12 +38,12 @@ struct SavedEntryListView: View {
                                 savedEntryListRouter.route(to: \.savedEntryDetail, countEntry)
                             }
                         }
-                        .animation(Animation.default, value: savedEntryStore.savedEntries)
+                        .animation(.default, value: savedEntryStore.savedEntries)
                     }
                     .toolbar {
                         if isEditing {
                             HStack {
-                                RoundedActionButton("Remove Selected", color: Color.redRage) {
+                                RoundedActionButton("Remove Selected", color: .redRage) {
                                     withAnimation {
                                         savedEntryStore.removeSelectedEntries()
                                     }
@@ -52,25 +52,23 @@ struct SavedEntryListView: View {
 
                                 Spacer()
 
-                                RoundedActionButton("Cancel", color: Color.grayAsh) {
+                                RoundedActionButton("Cancel", color: .grayAsh) {
                                     isEditing.toggle()
                                     savedEntryStore.resetSelection()
                                 }
                             }
-                            .padding(Edge.Set.vertical)
+                            .padding(.vertical)
                         } else {
-                            RoundedActionButton("Edit", color: Color.blueAtmosphere) {
+                            RoundedActionButton("Edit", color: .blueAtmosphere) {
                                 isEditing.toggle()
                             }
-                            .padding(Edge.Set.vertical)
+                            .padding(.vertical)
                         }
                     }
                 }
             }
             // FIXME: Double navigation title
-            .navigationBarTitleDisplayMode(
-                NavigationBarItem.TitleDisplayMode.large
-            )
+            .navigationBarTitleDisplayMode(.large)
             .navigationTitle("Saved entries")
         }
         .onDisappear {

@@ -19,10 +19,10 @@ struct CounterView: View {
     var body: some View {
         Text("\(Int(counterStore.counterValue.rounded()))")
             .font(
-                Font.system(
+                .system(
                     size: 100,
-                    weight: Font.Weight.bold,
-                    design: Font.Design.monospaced
+                    weight: .bold,
+                    design: .monospaced
                 )
             )
             .foregroundColor(counterStore.counterColor.color)
@@ -35,7 +35,7 @@ struct CounterView: View {
                 from: 0,
                 through: 999,
                 by: Double(counterStore.counterStride),
-                sensitivity: DigitalCrownRotationalSensitivity.medium
+                sensitivity: .medium
             )
             .maxFrame()
             .id(counterStore.counterStride)

@@ -10,7 +10,7 @@ import SwiftUI
 
 final class SettingsCoordinator: NavigationCoordinatable {
     // MARK: Stores
-    private let settingsStore: SettingsStore = SettingsStore()
+    private let settingsStore = SettingsStore()
 
     // MARK: Coordinator Properties
     let stack = NavigationStack(initial: \SettingsCoordinator.start)

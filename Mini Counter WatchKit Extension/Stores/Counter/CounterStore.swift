@@ -8,9 +8,9 @@
 import SwiftUI
 
 final class CounterStore: ObservableObject {
-    @AppStorage(UserDefaults.Key.counterStride.rawValue) var counterStride: Int = Constants.defaultCounterStride
-    @AppStorage(UserDefaults.Key.counterColor.rawValue) var counterColor: CounterColor = Constants.defaultCounterColor
-    @Published var counterValue: Double = 0.0
+    @AppStorage(UserDefaults.Key.counterStride.rawValue) var counterStride = Constants.defaultCounterStride
+    @AppStorage(UserDefaults.Key.counterColor.rawValue) var counterColor = Constants.defaultCounterColor
+    @Published var counterValue = 0.0
 }
 
 // MARK: - Helpers

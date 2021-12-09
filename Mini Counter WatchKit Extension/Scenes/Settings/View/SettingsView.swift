@@ -24,9 +24,9 @@ struct SettingsView: View {
                 SettingsCounterColorView(settingsStore: settingsStore)
             }
         }
-        .headerProminence(Prominence.increased)
+        .headerProminence(.increased)
+        .navigationBarTitleDisplayMode(.large)
         .navigationTitle("Settings")
-        .navigationBarTitleDisplayMode(NavigationBarItem.TitleDisplayMode.large)
     }
 }
 

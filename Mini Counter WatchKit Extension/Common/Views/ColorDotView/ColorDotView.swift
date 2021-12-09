@@ -18,7 +18,7 @@ struct ColorDotView: View {
                     return
                 }
 
-                withAnimation(Animation.easeInOut) {
+                withAnimation(.easeInOut) {
                     selectedColor = counterColor
                 }
             } label: {
@@ -34,9 +34,9 @@ struct ColorDotView: View {
                         .padding(geometry.size.height / 10.0)
                 }
             }
-            .buttonStyle(PlainButtonStyle())
+            .buttonStyle(.plain)
         }
-        .padding(Edge.Set.horizontal, 1)
+        .padding(.horizontal, 1)
     }
 }
 
@@ -44,13 +44,13 @@ struct ColorDotView: View {
 #if DEBUG
 struct ColorDotView_Previews: PreviewProvider {
     static var previews: some View {
-        ColorDotView(counterColor: CounterColor.redRage, selectedColor: .constant(CounterColor.purpleMedium))
+        ColorDotView(counterColor: .redRage, selectedColor: .constant(.purpleMedium))
             .squareFrame(48)
-            .previewLayout(PreviewLayout.sizeThatFits)
+            .previewLayout(.sizeThatFits)
 
-        ColorDotView(counterColor: CounterColor.yellowDanger, selectedColor: .constant(CounterColor.yellowDanger))
+        ColorDotView(counterColor: .yellowDanger, selectedColor: .constant(.yellowDanger))
             .squareFrame(48)
-            .previewLayout(PreviewLayout.sizeThatFits)
+            .previewLayout(.sizeThatFits)
     }
 }
 #endif

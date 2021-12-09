@@ -16,18 +16,18 @@ struct SettingsCounterStrideView: View {
 
     var body: some View {
         HStack {
-            CircularImageButton("minus", color: Color.greenSourCandy) {
+            CircularImageButton("minus", color: .greenSourCandy) {
                 settingsStore.decrementStride()
             }
             .squareFrame(32)
             .disabled(settingsStore.isStrideAtLowerBound)
             
             Text("\(settingsStore.counterStride)")
-                .font(Font.title)
+                .font(.title)
                 .maxWidth()
                 .padding()
             
-            CircularImageButton("plus", color: Color.greenSourCandy) {
+            CircularImageButton("plus", color: .greenSourCandy) {
                 settingsStore.incrementStride()
             }
             .squareFrame(32)

@@ -17,9 +17,7 @@ struct SettingsCounterColorView: View {
     private static let gridItemDimension: CGFloat = Self.colorDotDimension + Self.colorDotPadding
     
     private let gridItems: [GridItem] = Array(
-        repeating: GridItem(
-            GridItem.Size.fixed(Self.gridItemDimension)
-        ),
+        repeating: GridItem(.fixed(Self.gridItemDimension)),
         count: 4
     )
 

@@ -28,9 +28,9 @@ struct RoundedActionImageButton: View {
         Button(action: action) {
             Image(systemName: systemImageName)
                 .resizable()
-                .aspectRatio(1.0, contentMode: ContentMode.fit)
+                .aspectRatio(1.0, contentMode: .fit)
         }
-        .buttonStyle(BorderedButtonStyle())
+        .buttonStyle(.bordered)
         /*
          Below, there is a workaround for getting the
          system button on watchOS to be colored with a tint color.
@@ -41,7 +41,7 @@ struct RoundedActionImageButton: View {
          Link: https://developer.apple.com/forums/thread/658058
          */
         .tint(color.opacity(10))
-        .foregroundColor(Color.white)
+        .foregroundColor(.white)
         .opacity(isEnabled ? 1.0 : 0.3)
     }
 }
@@ -50,12 +50,8 @@ struct RoundedActionImageButton: View {
 #if DEBUG
     struct OvalActionImageButton_Previews: PreviewProvider {
         static var previews: some View {
-            RoundedActionImageButton(
-                "gearshape.fill",
-                color: Color.greenSourCandy,
-                action: {}
-            )
-            .previewLayout(PreviewLayout.sizeThatFits)
+            RoundedActionImageButton("gearshape.fill", color: .greenSourCandy, action: {})
+                .previewLayout(.sizeThatFits)
         }
     }
 #endif

@@ -11,9 +11,9 @@ import SwiftUI
 
 final class MainTabCoordinator: TabCoordinatable {
     // MARK: Stores
-    private let mainStore: MainStore = MainStore()
-    private let counterStore: CounterStore = CounterStore()
-    private let savedEntryStore: SavedEntryStore = SavedEntryStore()
+    private let mainStore = MainStore()
+    private let counterStore = CounterStore()
+    private let savedEntryStore = SavedEntryStore()
 
     // MARK: Coordinator Properties
     var child = TabChild(
@@ -30,7 +30,7 @@ final class MainTabCoordinator: TabCoordinatable {
     @Route(tabItem: makeListTab) var list = makeList
     
     // MARK: Private Properties
-    private var cancellables: Set<AnyCancellable> = []
+    private var cancellables = Set<AnyCancellable>()
     
     // MARK: Init
     init() {

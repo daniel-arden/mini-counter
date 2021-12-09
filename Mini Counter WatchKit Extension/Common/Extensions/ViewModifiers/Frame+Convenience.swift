@@ -10,14 +10,14 @@ import SwiftUI
 struct MaxWidth: ViewModifier {
     func body(content: Content) -> some View {
         content
-            .frame(maxWidth: CGFloat.infinity)
+            .frame(maxWidth: .infinity)
     }
 }
 
 struct MaxHeight: ViewModifier {
     func body(content: Content) -> some View {
         content
-            .frame(maxHeight: CGFloat.infinity)
+            .frame(maxHeight: .infinity)
     }
 }
 
@@ -25,8 +25,8 @@ struct MaxFrame: ViewModifier {
     func body(content: Content) -> some View {
         content
             .frame(
-                maxWidth: CGFloat.infinity,
-                maxHeight: CGFloat.infinity
+                maxWidth: .infinity,
+                maxHeight: .infinity
             )
     }
 }

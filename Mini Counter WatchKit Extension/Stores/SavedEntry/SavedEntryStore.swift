@@ -9,7 +9,7 @@ import SwiftUI
 
 final class SavedEntryStore: ObservableObject {
     @Published var selection: Set<UUID> = []
-    @Published var savedEntries: [CountEntry] = CountEntry.mockData // TODO: Fetch Data from persistent storage
+    @Published var savedEntries = CountEntry.mockData // TODO: Fetch Data from persistent storage
 }
 
 // MARK: - Helpers

@@ -28,41 +28,37 @@ struct SaveDetailView: View {
         ScrollView {
             Text("\(saveDetailStore.counterCount)")
                 .font(
-                    Font.system(
+                    .system(
                         size: 70,
-                        weight: Font.Weight.bold,
-                        design: Font.Design.monospaced
+                        weight: .bold,
+                        design: .monospaced
                     )
                 )
                 .foregroundColor(saveDetailStore.counterColor.color)
-                .padding(Edge.Set.vertical)
+                .padding(.vertical)
             
             Divider()
                 .padding()
             
             Text("What were you keeping track of? (optional)")
-                .font(
-                    Font.system(
-                        Font.TextStyle.body
-                    )
-                )
-                .padding(Edge.Set.vertical)
+                .font(.system(.body))
+                    .padding(.vertical)
             
             TextField("Count description", text: $saveDetailStore.description)
-                .padding(Edge.Set.vertical)
+                .padding(.vertical)
             
-            RoundedActionButton("SAVE", color: Color.greenSourCandy) {
+            RoundedActionButton("SAVE", color: .greenSourCandy) {
                 saveDetailStore.saveCount()
                 mainStore.resetCounterPublisher.send()
                 mainStore.selectTabIndexPublisher.send(1)
                 saveDetailRouter.dismissCoordinator()
             }
-            .padding(Edge.Set.top)
+            .padding(.top)
             
         }
-        .headerProminence(Prominence.increased)
+        .headerProminence(.increased)
         .navigationTitle("Save count")
-        .navigationBarTitleDisplayMode(NavigationBarItem.TitleDisplayMode.large)
+        .navigationBarTitleDisplayMode(.large)
     }
 }
 

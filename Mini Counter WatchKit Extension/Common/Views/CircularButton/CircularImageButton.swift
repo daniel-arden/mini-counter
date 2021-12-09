@@ -29,7 +29,7 @@ struct CircularImageButton: View {
             Image(systemName: systemImageName)
         }
         .buttonStyle(CircularButtonStyle(color: color))
-        .opacity(!isEnabled ? 0.3 : 1.0)
+        .opacity(isEnabled ? 1.0 : 0.3)
     }
 }
 
@@ -37,13 +37,9 @@ struct CircularImageButton: View {
 #if DEBUG
 struct CircularButton_Previews: PreviewProvider {
     static var previews: some View {
-        CircularImageButton(
-            "minus",
-            color: Color.green,
-            action: {}
-        )
+        CircularImageButton("minus", color: .greenSourCandy, action: {})
         .squareFrame(32)
-        .previewLayout(PreviewLayout.sizeThatFits)
+        .previewLayout(.sizeThatFits)
     }
 }
 #endif

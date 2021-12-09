@@ -21,25 +21,25 @@ enum CounterColor: String, CaseIterable, Identifiable {
     var color: Color {
         switch self {
         case .white:
-            return Color.white
+            return .white
         case .blueAtmosphere:
-            return Color.blueAtmosphere
+            return .blueAtmosphere
         case .grayAsh:
-            return Color.grayAsh
+            return .grayAsh
         case .greenSourCandy:
-            return Color.greenSourCandy
+            return .greenSourCandy
         case .orangeFire:
-            return Color.orangeFire
+            return .orangeFire
         case .purpleMedium:
-            return Color.purpleMedium
+            return .purpleMedium
         case .redRage:
-            return Color.redRage
+            return .redRage
         case .yellowDanger:
-            return Color.yellowDanger
+            return .yellowDanger
         }
     }
     
     var id: String {
-        self.rawValue
+        rawValue
     }
 }

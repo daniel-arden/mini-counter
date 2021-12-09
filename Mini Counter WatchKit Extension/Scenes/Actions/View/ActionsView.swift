@@ -14,7 +14,7 @@ struct ActionsView: View {
     
     // MARK: Private Properties
     @EnvironmentObject private var actionsRouter: ActionsCoordinator.Router
-    @State private var showResetCountAlert: Bool = false
+    @State private var showResetCountAlert = false
     
     // MARK: Init
     init(
@@ -29,18 +29,18 @@ struct ActionsView: View {
         NavigationView {
             VStack(spacing: 8) {
                 HStack(spacing: 8) {
-                    RoundedActionImageButton("gearshape.fill", color: Color.blueAtmosphere) {
+                    RoundedActionImageButton("gearshape.fill", color: .blueAtmosphere) {
                         actionsRouter.route(to: \.settings)
                     }
                     .frame(maxHeight: 44)
 
-                    RoundedActionImageButton("arrow.clockwise.circle.fill", color: Color.orangeFire) {
-                        showResetCountAlert = true
+                    RoundedActionImageButton("arrow.clockwise.circle.fill", color: .orangeFire) {
+                        showResetCountAlert.toggle()
                     }
                     .frame(maxHeight: 44)
                 }
 
-                RoundedActionButton("Save Count", color: Color.greenSourCandy) {
+                RoundedActionButton("Save Count", color: .greenSourCandy) {
                     actionsRouter.route(to: \.saveDetail)
                 }
             }
@@ -48,13 +48,13 @@ struct ActionsView: View {
                 Alert(
                     title: Text("Reset Counter"),
                     message: Text("Are you sure you want to reset the counter to zero?\n\nThis action cannot be undone."),
-                    primaryButton: Alert.Button.destructive(Text("RESET")) {
+                    primaryButton: .destructive(Text("RESET")) {
                         mainStore.selectTabIndexPublisher.send(1)
                         counterStore.resetCounter()
-                        showResetCountAlert = false
+                        showResetCountAlert.toggle()
                     },
-                    secondaryButton: Alert.Button.cancel(Text("CANCEL")) {
-                        showResetCountAlert = false
+                    secondaryButton: .cancel(Text("CANCEL")) {
+                        showResetCountAlert.toggle()
                     }
                 )
             }
