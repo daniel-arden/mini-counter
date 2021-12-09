@@ -9,22 +9,26 @@ import SwiftUI
 
 struct CountEntryView: View {
     let countEntry: CountEntry
+    @Binding var isEditing: Bool
+    var isSelected: Bool
+    let onTapAction: () -> Void
 
     var body: some View {
-        Group {
+        Button(action: onTapAction) {
             if !countEntry.label.isEmpty {
-                HStack {
-                    Text(countEntry.label)
+                Text(countEntry.label)
 
-                    Spacer(minLength: 8)
+                Spacer(minLength: 8)
 
-                    countView
-                }
+                countView
             } else {
                 countView
-                    .maxWidth()
             }
         }
+        .maxWidth()
+        .buttonStyle(PlainButtonStyle.plain)
+        .foregroundColor(isSelected ? Color.redRage : Color.white)
+        .animation(Animation.easeInOut, value: isEditing)
     }
 
     @ViewBuilder
@@ -39,12 +43,13 @@ struct CountEntryView: View {
 #if DEBUG
     struct CountEntryView_Previews: PreviewProvider {
         static var previews: some View {
-            List {
-                Section {
-                    ForEach(CountEntry.mockData) { countEntry in
-                        CountEntryView(countEntry: countEntry)
-                    }
-                }
+            List(CountEntry.mockData) { countEntry in
+                CountEntryView(
+                    countEntry: countEntry,
+                    isEditing: .constant(false),
+                    isSelected: false,
+                    onTapAction: {}
+                )
             }
         }
     }

@@ -9,24 +9,72 @@ import SwiftUI
 
 struct SavedEntryListView: View {
     // MARK: Stores
-    @ObservedObject private var mainStore: MainStore
+    @ObservedObject private var savedEntryStore: SavedEntryStore
+    
+    // MARK: Private Properties
+    @EnvironmentObject private var savedEntryListRouter: SavedEntryListCoordinator.Router
+    @State private var isEditing: Bool = false
     
     // MARK: Init
-    init(mainStore: MainStore) {
-        self.mainStore = mainStore
+    init(savedEntryStore: SavedEntryStore) {
+        self.savedEntryStore = savedEntryStore
     }
 
     var body: some View {
         NavigationView {
             Group {
-                if mainStore.savedEntries.isEmpty {
+                if savedEntryStore.savedEntries.isEmpty {
                     Text("No saved entries")
                 } else {
-                    List {
-                        Section {
-                            ForEach(mainStore.savedEntries) { countEntry in
-                                CountEntryView(countEntry: countEntry)
+                    List(savedEntryStore.savedEntries) { countEntry in
+                        CountEntryView(
+                            countEntry: countEntry,
+                            isEditing: $isEditing,
+                            isSelected: savedEntryStore.selection.contains(countEntry.id)
+                        ) {
+                            if isEditing {
+                                savedEntryStore.toggleSelectionOnID(countEntry.id)
+                            } else {
+                                savedEntryListRouter.route(to: \.savedEntryDetail, countEntry)
                             }
+                        }
+                        .animation(Animation.default, value: savedEntryStore.savedEntries)
+                    }
+                    .toolbar {
+                        if isEditing {
+                            HStack {
+                                OvalActionButton(
+                                    title: "Remove Selected",
+                                    buttonColor: .redRage,
+                                    style: OvalButtonStyle.Style.scrollingView
+                                ) {
+                                    withAnimation {
+                                        savedEntryStore.removeSelectedEntries()
+                                    }
+                                    isEditing.toggle()
+                                }
+
+                                Spacer()
+
+                                OvalActionButton(
+                                    title: "Cancel",
+                                    buttonColor: Color.grayAsh,
+                                    style: OvalButtonStyle.Style.scrollingView
+                                ) {
+                                    isEditing.toggle()
+                                    savedEntryStore.resetSelection()
+                                }
+                            }
+                            .padding(Edge.Set.vertical)
+                        } else {
+                            OvalActionButton(
+                                title: "Edit",
+                                buttonColor: Color.blueAtmosphere,
+                                style: OvalButtonStyle.Style.scrollingView
+                            ) {
+                                isEditing.toggle()
+                            }
+                            .padding(Edge.Set.vertical)
                         }
                     }
                 }
@@ -37,6 +85,10 @@ struct SavedEntryListView: View {
             )
             .navigationTitle("Saved entries")
         }
+        .onDisappear {
+            isEditing = false
+            savedEntryStore.resetSelection()
+        }
     }
 }
 
@@ -45,7 +97,7 @@ struct SavedEntryListView: View {
 #if DEBUG
     struct ListView_Previews: PreviewProvider {
         static var previews: some View {
-            SavedEntryListView(mainStore: .init())
+            SavedEntryListView(savedEntryStore: .init())
         }
     }
 #endif

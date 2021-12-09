@@ -13,6 +13,7 @@ final class MainTabCoordinator: TabCoordinatable {
     // MARK: Stores
     private let mainStore: MainStore = MainStore()
     private let counterStore: CounterStore = CounterStore()
+    private let savedEntryStore: SavedEntryStore = SavedEntryStore()
 
     // MARK: Coordinator Properties
     var child = TabChild(
@@ -75,11 +76,11 @@ extension MainTabCoordinator {
     // MARK: List Tab
 
     func makeList() -> SavedEntryListCoordinator {
-        SavedEntryListCoordinator(mainStore: mainStore)
+        SavedEntryListCoordinator(savedEntryStore: savedEntryStore)
     }
 
     @ViewBuilder func makeListTab(isActive _: Bool) -> some View {
-        SavedEntryListView(mainStore: mainStore)
+        SavedEntryListView(savedEntryStore: savedEntryStore)
     }
 }
 

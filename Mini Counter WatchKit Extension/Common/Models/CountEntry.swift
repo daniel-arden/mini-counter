@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct CountEntry: Identifiable {
+struct CountEntry: Identifiable, Equatable {
     let id = UUID()
     let count: Int
     let label: String
