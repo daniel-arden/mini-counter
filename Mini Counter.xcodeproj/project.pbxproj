@@ -120,7 +120,6 @@
 		5A2E3857273479CB009D1FAD /* CountEntryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountEntryView.swift; sourceTree = "<group>"; };
 		5A3093F72750DB4900CD1F3B /* CountEntryDetailStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountEntryDetailStore.swift; sourceTree = "<group>"; };
 		5A607F3C27609C6700CBEEB2 /* SavedEntryStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedEntryStore.swift; sourceTree = "<group>"; };
-		5A7A7176273C61860085C7FF /* BuildTools */ = {isa = PBXFileReference; lastKnownFileType = folder; path = BuildTools; sourceTree = "<group>"; };
 		5A7A7180273F01C80085C7FF /* MainTabCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabCoordinator.swift; sourceTree = "<group>"; };
 		5A7A7184273F086A0085C7FF /* ActionsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionsCoordinator.swift; sourceTree = "<group>"; };
 		5A7A7187273F087D0085C7FF /* CounterCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterCoordinator.swift; sourceTree = "<group>"; };
@@ -200,7 +199,6 @@
 		5A2E37EB2732D300009D1FAD = {
 			isa = PBXGroup;
 			children = (
-				5A7A7176273C61860085C7FF /* BuildTools */,
 				5A2E37FA2732D301009D1FAD /* Mini Counter WatchKit App */,
 				5A2E38052732D303009D1FAD /* Mini Counter WatchKit Extension */,
 				5A2E37F32732D301009D1FAD /* Products */,
@@ -619,7 +617,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5A2E38142732D304009D1FAD /* Build configuration list for PBXNativeTarget "Mini Counter WatchKit Extension" */;
 			buildPhases = (
-				5A7A7177273C64C70085C7FF /* Build Tools */,
 				5A2E37FD2732D303009D1FAD /* Sources */,
 				5A2E37FE2732D303009D1FAD /* Frameworks */,
 				5A2E37FF2732D303009D1FAD /* Resources */,
@@ -707,27 +704,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		5A7A7177273C64C70085C7FF /* Build Tools */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = "Build Tools";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "cd BuildTools\nSDKROOT=(xcrun --sdk macosx --show-sdk-path)\n\n#Temporarily uncomment the following line to update your packages (based on the versions defined in BuildTools/Package.swift)\n#swift package update\n\n# swift run -c release swiftformat \"$SRCROOT/Mini Counter WatchKit Extension/\"\n# swift run -c release swiftlint \"$SRCROOT/Mini Counter WatchKit Extension/\"\n";
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		5A2E37FD2732D303009D1FAD /* Sources */ = {
