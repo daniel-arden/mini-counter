@@ -32,8 +32,8 @@ struct CounterView: View {
             .focusable()
             .digitalCrownRotation(
                 $counterStore.counterValue,
-                from: 0,
-                through: 999,
+                from: Double(Constants.counterValueRange.lowerBound),
+                through: Double(Constants.counterValueRange.upperBound),
                 by: Double(counterStore.counterStride),
                 sensitivity: .medium
             )

@@ -8,6 +8,7 @@
 enum Constants {
     static let defaultSelectedMainTabIndex: Int = 1
     static let counterStrideRange = 1...10
+    static let counterValueRange = 0...999
     static let defaultCounterStride = 1
     static let defaultCounterColor = CounterColor.white
 }
