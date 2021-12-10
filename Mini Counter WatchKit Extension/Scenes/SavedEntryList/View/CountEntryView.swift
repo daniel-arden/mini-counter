@@ -32,6 +32,7 @@ struct CountEntryView: View {
             }
             .maxWidth()
             // Setting the contentShape to Rectangle makes the full width tappable
+            // Taken from this SO answer: https://stackoverflow.com/a/65101136/10876104
             .contentShape(Rectangle())
         }
         .buttonStyle(.plain)

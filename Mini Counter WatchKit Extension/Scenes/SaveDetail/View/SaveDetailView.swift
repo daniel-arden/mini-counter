@@ -43,14 +43,17 @@ struct SaveDetailView: View {
             Divider()
                 .padding()
 
-            Text("What were you keeping track of? (optional)")
+            Text(LocString.saveDetailViewKeepingTrackOf())
                 .font(.system(.body))
                 .padding(.vertical)
 
-            TextField("Count description", text: $saveDetailStore.description)
-                .padding(.vertical)
+            TextField(
+                LocString.saveDetailViewCountDescription(),
+                text: $saveDetailStore.description
+            )
+            .padding(.vertical)
 
-            RoundedActionButton("SAVE", color: .greenSourCandy) {
+            RoundedActionButton(LocString.buttonSaveTitle(), color: .greenSourCandy) {
                 saveDetailStore.saveCount()
                 mainStore.resetCounterPublisher.send()
                 mainStore.selectTabIndexPublisher.send(1)
@@ -59,7 +62,7 @@ struct SaveDetailView: View {
             .padding(.top)
         }
         .headerProminence(.increased)
-        .navigationTitle("Save count")
+        .navigationTitle(LocString.saveDetailViewNavigationTitle())
         .navigationBarTitleDisplayMode(.large)
     }
 }

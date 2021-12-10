@@ -27,7 +27,7 @@ struct SavedEntryListView: View {
         NavigationView {
             Group {
                 if savedEntryStore.savedEntries.isEmpty {
-                    Text("No saved entries")
+                    Text(LocString.savedEntryListViewNoSavedEntries())
                 } else {
                     List(savedEntryStore.savedEntries) { countEntry in
                         CountEntryView(
@@ -60,14 +60,20 @@ struct SavedEntryListView: View {
 
                                 Spacer()
 
-                                RoundedActionButton("Cancel", color: .grayAsh) {
+                                RoundedActionButton(
+                                    LocString.buttonCancelTitle(),
+                                    color: .grayAsh
+                                ) {
                                     isEditing.toggle()
                                     savedEntryStore.resetSelection()
                                 }
                             }
                             .padding(.vertical)
                         } else {
-                            RoundedActionButton("Edit", color: .blueAtmosphere) {
+                            RoundedActionButton(
+                                LocString.buttonEditTitle(),
+                                color: .blueAtmosphere
+                            ) {
                                 isEditing.toggle()
                             }
                             .padding(.vertical)
@@ -77,7 +83,7 @@ struct SavedEntryListView: View {
             }
             // FIXME: Double navigation title
             .navigationBarTitleDisplayMode(.large)
-            .navigationTitle("Saved entries")
+            .navigationTitle(LocString.savedEntryListViewNavigationTitle())
         }
         .onDisappear {
             isEditing = false

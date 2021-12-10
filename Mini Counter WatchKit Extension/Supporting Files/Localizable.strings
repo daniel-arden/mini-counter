@@ -1,0 +1,36 @@
+/* 
+  Localizable.strings
+  Mini Counter
+
+  Created by Daniel Arden on 10.12.2021.
+  
+*/
+
+// MARK: - General
+
+// Button
+"button.cancel.title" = "CANCEL";
+"button.edit.title" = "EDIT";
+"button.reset.title" = "RESET";
+"button.save.title" = "SAVE";
+"button.saveCount.title" = "SAVE COUNT";
+
+// Alert
+"alert.resetCounter.title" = "Reset Counter";
+"alert.resetCounter.caption" = "Are you sure you want to reset the counter to zero?\n\nThis action cannot be undone.";
+
+// MARK: - Views
+
+// SaveDetailView
+"saveDetailView.countDescription" = "Count description";
+"saveDetailView.keepingTrackOf" = "What were you keeping track of? (optional)";
+"saveDetailView.navigationTitle" = "Save count";
+
+// SavedEntryListView
+"savedEntryListView.noSavedEntries" = "No saved entries";
+"savedEntryListView.navigationTitle" = "Saved entries";
+
+// Settings
+"settingsView.counterStride.headerTitle" = "COUNTER STRIDE";
+"settingsView.counterColor.headerTitle" = "COUNTER COLOR";
+"settingsView.navigationTitle" = "Settings";

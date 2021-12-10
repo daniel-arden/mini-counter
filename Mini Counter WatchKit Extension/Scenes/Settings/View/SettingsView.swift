@@ -26,7 +26,7 @@ struct SettingsView: View {
         }
         .headerProminence(.increased)
         .navigationBarTitleDisplayMode(.large)
-        .navigationTitle("Settings")
+        .navigationTitle(LocString.settingsViewNavigationTitle())
     }
 }
 
@@ -35,12 +35,12 @@ struct SettingsView: View {
 private extension SettingsView {
     @ViewBuilder
     private var strideSectionHeader: some View {
-        Text("COUNTER STRIDE")
+        Text(LocString.settingsViewCounterStrideHeaderTitle())
     }
 
     @ViewBuilder
     private var counterColorSectionHeader: some View {
-        Text("COUNTER COLOR")
+        Text(LocString.settingsViewCounterColorHeaderTitle())
     }
 }
 

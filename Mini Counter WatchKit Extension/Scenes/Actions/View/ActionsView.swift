@@ -43,20 +43,27 @@ struct ActionsView: View {
                     .frame(maxHeight: 44)
                 }
 
-                RoundedActionButton("Save Count", color: .greenSourCandy) {
+                RoundedActionButton(
+                    LocString.buttonSaveCountTitle(),
+                    color: .greenSourCandy
+                ) {
                     actionsRouter.route(to: \.saveDetail)
                 }
             }
             .alert(isPresented: $showResetCountAlert) {
                 Alert(
-                    title: Text("Reset Counter"),
-                    message: Text("Are you sure you want to reset the counter to zero?\n\nThis action cannot be undone."),
-                    primaryButton: .destructive(Text("RESET")) {
+                    title: Text(LocString.alertResetCounterTitle()),
+                    message: Text(LocString.alertResetCounterCaption()),
+                    primaryButton: .destructive(
+                        Text(LocString.buttonResetTitle())
+                    ) {
                         mainStore.selectTabIndexPublisher.send(1)
                         counterStore.resetCounter()
                         showResetCountAlert.toggle()
                     },
-                    secondaryButton: .cancel(Text("CANCEL")) {
+                    secondaryButton: .cancel(
+                        Text(LocString.buttonCancelTitle())
+                    ) {
                         showResetCountAlert.toggle()
                     }
                 )

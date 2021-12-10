@@ -47,6 +47,8 @@
 		5A7A71AF2740601B0085C7FF /* UserDefaults+Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7A71AE2740601B0085C7FF /* UserDefaults+Keys.swift */; };
 		5A7A71B2274078820085C7FF /* CounterStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7A71B1274078820085C7FF /* CounterStore.swift */; };
 		5AA631E3276375FC00CE932E /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA631E2276375FC00CE932E /* R.generated.swift */; };
+		5AA631E5276376DD00CE932E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5AA631E4276376DD00CE932E /* Localizable.strings */; };
+		5AA631E82763777500CE932E /* LocString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA631E72763777500CE932E /* LocString.swift */; };
 		5AAD734827485D8400024FB9 /* MainStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AAD734727485D8400024FB9 /* MainStore.swift */; };
 		5AAD734D274A5E4300024FB9 /* SaveDetailStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AAD734C274A5E4300024FB9 /* SaveDetailStore.swift */; };
 		5AAE04E1274E1DF100B1EB10 /* SavedEntryDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AAE04E0274E1DF100B1EB10 /* SavedEntryDetailView.swift */; };
@@ -146,6 +148,8 @@
 		5A7A71AE2740601B0085C7FF /* UserDefaults+Keys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+Keys.swift"; sourceTree = "<group>"; };
 		5A7A71B1274078820085C7FF /* CounterStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterStore.swift; sourceTree = "<group>"; };
 		5AA631E2276375FC00CE932E /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
+		5AA631E4276376DD00CE932E /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		5AA631E72763777500CE932E /* LocString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocString.swift; sourceTree = "<group>"; };
 		5AAD734727485D8400024FB9 /* MainStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainStore.swift; sourceTree = "<group>"; };
 		5AAD734C274A5E4300024FB9 /* SaveDetailStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SaveDetailStore.swift; sourceTree = "<group>"; };
 		5AAE04E0274E1DF100B1EB10 /* SavedEntryDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedEntryDetailView.swift; sourceTree = "<group>"; };
@@ -283,6 +287,7 @@
 				5A2E38112732D304009D1FAD /* Info.plist */,
 				5A2E380C2732D304009D1FAD /* Assets.xcassets */,
 				5A2E38082732D303009D1FAD /* Mini_CounterApp.swift */,
+				5AA631E4276376DD00CE932E /* Localizable.strings */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
@@ -295,6 +300,7 @@
 				5A2E38372732D97D009D1FAD /* Extensions */,
 				5A2E382B2732D6DC009D1FAD /* Models */,
 				5A3F6C4C273C0B2800DDCBB4 /* Misc */,
+				5AA631E62763776800CE932E /* Types */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -565,6 +571,14 @@
 			path = Counter;
 			sourceTree = "<group>";
 		};
+		5AA631E62763776800CE932E /* Types */ = {
+			isa = PBXGroup;
+			children = (
+				5AA631E72763777500CE932E /* LocString.swift */,
+			);
+			path = Types;
+			sourceTree = "<group>";
+		};
 		5AAD734627485D7400024FB9 /* Main */ = {
 			isa = PBXGroup;
 			children = (
@@ -739,6 +753,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5A2E38102732D304009D1FAD /* Preview Assets.xcassets in Resources */,
+				5AA631E5276376DD00CE932E /* Localizable.strings in Resources */,
 				5A097676273B1201007695D3 /* Colors.xcassets in Resources */,
 				5A2E380D2732D304009D1FAD /* Assets.xcassets in Resources */,
 			);
@@ -885,6 +900,7 @@
 				5A7A719F274000DC0085C7FF /* CircularImageButton.swift in Sources */,
 				5A2E38342732D80E009D1FAD /* ActionsView.swift in Sources */,
 				5A7A71A1274000E90085C7FF /* CircularButtonStyle.swift in Sources */,
+				5AA631E82763777500CE932E /* LocString.swift in Sources */,
 				5A7A71AB27405D140085C7FF /* Constants.swift in Sources */,
 				5AA631E3276375FC00CE932E /* R.generated.swift in Sources */,
 				5A3093F82750DB4900CD1F3B /* CountEntryDetailStore.swift in Sources */,
