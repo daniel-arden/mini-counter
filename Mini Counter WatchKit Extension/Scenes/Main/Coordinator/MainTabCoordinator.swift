@@ -11,16 +11,18 @@ import SwiftUI
 
 final class MainTabCoordinator: TabCoordinatable {
     // MARK: Stores
+
     private let mainStore = MainStore()
     private let counterStore = CounterStore()
     private let savedEntryStore = SavedEntryStore()
 
     // MARK: Coordinator Properties
+
     var child = TabChild(
         startingItems: [
             \MainTabCoordinator.actions,
             \MainTabCoordinator.counter,
-            \MainTabCoordinator.list
+            \MainTabCoordinator.list,
         ],
         activeTab: Constants.defaultSelectedMainTabIndex
     )
@@ -28,11 +30,13 @@ final class MainTabCoordinator: TabCoordinatable {
     @Route(tabItem: makeActionsTab) var actions = makeActions
     @Route(tabItem: makeCounterTab) var counter = makeCounter
     @Route(tabItem: makeListTab) var list = makeList
-    
+
     // MARK: Private Properties
+
     private var cancellables = Set<AnyCancellable>()
-    
+
     // MARK: Init
+
     init() {
         bindToMainStore()
     }
@@ -85,6 +89,7 @@ extension MainTabCoordinator {
 }
 
 // MARK: - Bind To Stores
+
 extension MainTabCoordinator {
     func bindToMainStore() {
         mainStore.resetCounterPublisher
@@ -102,6 +107,7 @@ extension MainTabCoordinator {
 }
 
 // MARK: - Helpers
+
 private extension MainTabCoordinator {
     func selectTab(at index: Int) {
         child.activeTab = index

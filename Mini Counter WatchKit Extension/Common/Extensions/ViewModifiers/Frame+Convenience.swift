@@ -55,7 +55,7 @@ extension View {
     func maxFrame() -> some View {
         modifier(MaxFrame())
     }
-    
+
     func squareFrame(_ dimension: CGFloat) -> some View {
         modifier(SquareFrame(dimension: dimension))
     }

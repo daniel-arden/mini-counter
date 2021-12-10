@@ -9,19 +9,22 @@ import SwiftUI
 
 struct SettingsCounterColorView: View {
     // MARK: Stores
+
     @ObservedObject private var settingsStore: SettingsStore
-    
+
     // MARK: Private Properties
+
     private static let colorDotDimension: CGFloat = 24
     private static let colorDotPadding: CGFloat = 2
     private static let gridItemDimension: CGFloat = Self.colorDotDimension + Self.colorDotPadding
-    
+
     private let gridItems: [GridItem] = Array(
         repeating: GridItem(.fixed(Self.gridItemDimension)),
         count: 4
     )
 
     // MARK: Init
+
     init(settingsStore: SettingsStore) {
         self.settingsStore = settingsStore
     }
@@ -41,10 +44,11 @@ struct SettingsCounterColorView: View {
 }
 
 // MARK: - Preview
+
 #if DEBUG
-struct SettingsCounterColorView_Previews: PreviewProvider {
-    static var previews: some View {
-        SettingsCounterColorView(settingsStore: .init())
+    struct SettingsCounterColorView_Previews: PreviewProvider {
+        static var previews: some View {
+            SettingsCounterColorView(settingsStore: .init())
+        }
     }
-}
 #endif

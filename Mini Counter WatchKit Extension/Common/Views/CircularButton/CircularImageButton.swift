@@ -9,11 +9,11 @@ import SwiftUI
 
 struct CircularImageButton: View {
     @Environment(\.isEnabled) private var isEnabled: Bool
-    
+
     private let systemImageName: String
     private let color: Color
     private let action: () -> Void
-    
+
     init(
         _ systemImageName: String,
         color: Color,
@@ -23,7 +23,7 @@ struct CircularImageButton: View {
         self.color = color
         self.action = action
     }
-    
+
     var body: some View {
         Button(action: action) {
             Image(systemName: systemImageName)
@@ -34,12 +34,13 @@ struct CircularImageButton: View {
 }
 
 // MARK: - Preview
+
 #if DEBUG
-struct CircularButton_Previews: PreviewProvider {
-    static var previews: some View {
-        CircularImageButton("minus", color: .greenSourCandy, action: {})
-        .squareFrame(32)
-        .previewLayout(.sizeThatFits)
+    struct CircularButton_Previews: PreviewProvider {
+        static var previews: some View {
+            CircularImageButton("minus", color: .greenSourCandy, action: {})
+                .squareFrame(32)
+                .previewLayout(.sizeThatFits)
+        }
     }
-}
 #endif

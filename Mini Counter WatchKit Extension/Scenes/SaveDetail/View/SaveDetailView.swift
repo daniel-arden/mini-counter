@@ -9,13 +9,16 @@ import SwiftUI
 
 struct SaveDetailView: View {
     // MARK: Stores
+
     @ObservedObject private var mainStore: MainStore
     @ObservedObject private var saveDetailStore: SaveDetailStore
-    
+
     // MARK: - Private Properties
+
     @EnvironmentObject private var saveDetailRouter: SaveDetailCoordinator.Router
-    
+
     // MARK: Init
+
     init(
         mainStore: MainStore,
         saveDetailStore: SaveDetailStore
@@ -23,7 +26,7 @@ struct SaveDetailView: View {
         self.mainStore = mainStore
         self.saveDetailStore = saveDetailStore
     }
-    
+
     var body: some View {
         ScrollView {
             Text("\(saveDetailStore.counterCount)")
@@ -36,17 +39,17 @@ struct SaveDetailView: View {
                 )
                 .foregroundColor(saveDetailStore.counterColor.color)
                 .padding(.vertical)
-            
+
             Divider()
                 .padding()
-            
+
             Text("What were you keeping track of? (optional)")
                 .font(.system(.body))
-                    .padding(.vertical)
-            
+                .padding(.vertical)
+
             TextField("Count description", text: $saveDetailStore.description)
                 .padding(.vertical)
-            
+
             RoundedActionButton("SAVE", color: .greenSourCandy) {
                 saveDetailStore.saveCount()
                 mainStore.resetCounterPublisher.send()
@@ -54,7 +57,6 @@ struct SaveDetailView: View {
                 saveDetailRouter.dismissCoordinator()
             }
             .padding(.top)
-            
         }
         .headerProminence(.increased)
         .navigationTitle("Save count")
@@ -63,16 +65,17 @@ struct SaveDetailView: View {
 }
 
 // MARK: - Preview
+
 #if DEBUG
-struct SaveDetailView_Previews: PreviewProvider {
-    static var previews: some View {
-        SaveDetailView(
-            mainStore: .init(),
-            saveDetailStore: .init(
+    struct SaveDetailView_Previews: PreviewProvider {
+        static var previews: some View {
+            SaveDetailView(
                 mainStore: .init(),
-                counterCount: 999
+                saveDetailStore: .init(
+                    mainStore: .init(),
+                    counterCount: 999
+                )
             )
-        )
+        }
     }
-}
 #endif

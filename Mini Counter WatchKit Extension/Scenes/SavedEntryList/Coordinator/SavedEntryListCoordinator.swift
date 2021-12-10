@@ -10,15 +10,18 @@ import SwiftUI
 
 final class SavedEntryListCoordinator: NavigationCoordinatable {
     // MARK: Stores
+
     @ObservedObject private var savedEntryStore: SavedEntryStore
-    
+
     // MARK: Coordinator Properties
+
     let stack = NavigationStack(initial: \SavedEntryListCoordinator.start)
 
     @Root var start = makeStart
     @Root(.push) var savedEntryDetail = makeSavedEntryDetail
 
     // MARK: Init
+
     init(savedEntryStore: SavedEntryStore) {
         self.savedEntryStore = savedEntryStore
     }
@@ -36,7 +39,7 @@ private extension SavedEntryListCoordinator {
     @ViewBuilder func makeStart() -> some View {
         SavedEntryListView(savedEntryStore: savedEntryStore)
     }
-    
+
     func makeSavedEntryDetail(countEntry: CountEntry) -> SavedEntryDetailCoordinator {
         SavedEntryDetailCoordinator(
             countEntryDetailStore: CountEntryDetailStore(countEntry: countEntry)

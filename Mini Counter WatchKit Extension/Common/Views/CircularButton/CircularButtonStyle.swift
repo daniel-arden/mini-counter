@@ -9,7 +9,7 @@ import SwiftUI
 
 struct CircularButtonStyle: ButtonStyle {
     let color: Color
-    
+
     func makeBody(configuration: Configuration) -> some View {
         configuration.label
             .font(.headline)

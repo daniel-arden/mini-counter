@@ -12,7 +12,7 @@ final class SaveDetailStore: ObservableObject {
     @ObservedObject private var mainStore: MainStore
     @State var description = ""
     let counterCount: Int
-    
+
     init(
         mainStore: MainStore,
         counterCount: Int

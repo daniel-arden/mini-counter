@@ -13,7 +13,7 @@ struct RoundedActionImageButton: View {
     private let systemImageName: String
     private let color: Color
     private let action: () -> Void
-    
+
     init(
         _ systemImageName: String,
         color: Color,
@@ -47,6 +47,7 @@ struct RoundedActionImageButton: View {
 }
 
 // MARK: - Preview
+
 #if DEBUG
     struct OvalActionImageButton_Previews: PreviewProvider {
         static var previews: some View {

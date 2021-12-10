@@ -17,9 +17,9 @@ struct SettingsView: View {
     var body: some View {
         List {
             Section(header: strideSectionHeader) {
-               SettingsCounterStrideView(settingsStore: settingsStore)
+                SettingsCounterStrideView(settingsStore: settingsStore)
             }
-            
+
             Section(header: counterColorSectionHeader) {
                 SettingsCounterColorView(settingsStore: settingsStore)
             }
@@ -31,12 +31,13 @@ struct SettingsView: View {
 }
 
 // MARK: - Supplementary Views
+
 private extension SettingsView {
     @ViewBuilder
     private var strideSectionHeader: some View {
         Text("COUNTER STRIDE")
     }
-    
+
     @ViewBuilder
     private var counterColorSectionHeader: some View {
         Text("COUNTER COLOR")

@@ -10,10 +10,12 @@ import SwiftUI
 
 final class ActionsCoordinator: NavigationCoordinatable {
     // MARK: Stores
+
     @ObservedObject private var mainStore: MainStore
     @ObservedObject private var counterStore: CounterStore
 
     // MARK: Coordinator Properties
+
     let stack = NavigationStack(initial: \ActionsCoordinator.start)
 
     @Root var start = makeStart
@@ -21,6 +23,7 @@ final class ActionsCoordinator: NavigationCoordinatable {
     @Route(.push) var saveDetail = makeSaveDetail
 
     // MARK: Init
+
     init(
         mainStore: MainStore,
         counterStore: CounterStore
@@ -49,7 +52,7 @@ private extension ActionsCoordinator {
     func makeSettings() -> SettingsCoordinator {
         SettingsCoordinator()
     }
-    
+
     func makeSaveDetail() -> SaveDetailCoordinator {
         SaveDetailCoordinator(
             mainStore: mainStore,

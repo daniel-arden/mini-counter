@@ -9,9 +9,11 @@ import SwiftUI
 
 struct CounterView: View {
     // MARK: Stores
+
     @ObservedObject private var counterStore: CounterStore
-    
+
     // MARK: Init
+
     init(counterStore: CounterStore) {
         self.counterStore = counterStore
     }

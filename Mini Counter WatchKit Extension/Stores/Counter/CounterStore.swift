@@ -14,6 +14,7 @@ final class CounterStore: ObservableObject {
 }
 
 // MARK: - Helpers
+
 extension CounterStore {
     func resetCounter() {
         counterValue = 0.0

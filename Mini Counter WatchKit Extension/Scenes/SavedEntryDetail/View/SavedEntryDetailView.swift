@@ -16,14 +16,15 @@ struct SavedEntryDetailView: View {
 }
 
 // MARK: - Preview
+
 #if DEBUG
-struct SavedEntryDetailView_Previews: PreviewProvider {
-    static var previews: some View {
-        SavedEntryDetailView(
-            countEntryDetailStore: .init(
-                countEntry: .mockData[0]
+    struct SavedEntryDetailView_Previews: PreviewProvider {
+        static var previews: some View {
+            SavedEntryDetailView(
+                countEntryDetailStore: .init(
+                    countEntry: .mockData[0]
+                )
             )
-        )
+        }
     }
-}
 #endif

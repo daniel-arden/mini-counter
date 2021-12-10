@@ -9,13 +9,16 @@ import SwiftUI
 
 struct SavedEntryListView: View {
     // MARK: Stores
+
     @ObservedObject private var savedEntryStore: SavedEntryStore
-    
+
     // MARK: Private Properties
+
     @EnvironmentObject private var savedEntryListRouter: SavedEntryListCoordinator.Router
     @State private var isEditing = false
-    
+
     // MARK: Init
+
     init(savedEntryStore: SavedEntryStore) {
         self.savedEntryStore = savedEntryStore
     }

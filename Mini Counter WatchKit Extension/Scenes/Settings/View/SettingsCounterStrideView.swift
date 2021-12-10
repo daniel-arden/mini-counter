@@ -9,7 +9,7 @@ import SwiftUI
 
 struct SettingsCounterStrideView: View {
     @ObservedObject private var settingsStore: SettingsStore
-    
+
     init(settingsStore: SettingsStore) {
         self.settingsStore = settingsStore
     }
@@ -21,12 +21,12 @@ struct SettingsCounterStrideView: View {
             }
             .squareFrame(32)
             .disabled(settingsStore.isStrideAtLowerBound)
-            
+
             Text("\(settingsStore.counterStride)")
                 .font(.title)
                 .maxWidth()
                 .padding()
-            
+
             CircularImageButton("plus", color: .greenSourCandy) {
                 settingsStore.incrementStride()
             }
@@ -38,10 +38,11 @@ struct SettingsCounterStrideView: View {
 }
 
 // MARK: - Preview
+
 #if DEBUG
-struct SettingsCounterStrideView_Previews: PreviewProvider {
-    static var previews: some View {
-        SettingsCounterStrideView(settingsStore: .init())
+    struct SettingsCounterStrideView_Previews: PreviewProvider {
+        static var previews: some View {
+            SettingsCounterStrideView(settingsStore: .init())
+        }
     }
-}
 #endif

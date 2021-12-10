@@ -54,9 +54,3 @@ private extension SaveDetailCoordinator {
 // MARK: - NameDescribable
 
 extension SaveDetailCoordinator: NameDescribable {}
-
-// MARK: - SwiftFormat Test
-
-extension SaveDetailCoordinator: SomeProtocol {}
-
-protocol SomeProtocol {}

@@ -28,7 +28,7 @@ struct ColorDotView: View {
                             .stroke(lineWidth: geometry.size.height / 12.0)
                             .foregroundColor(counterColor.color)
                     }
-                    
+
                     Circle()
                         .fill(counterColor.color)
                         .padding(geometry.size.height / 10.0)
@@ -41,16 +41,17 @@ struct ColorDotView: View {
 }
 
 // MARK: - Preview
-#if DEBUG
-struct ColorDotView_Previews: PreviewProvider {
-    static var previews: some View {
-        ColorDotView(counterColor: .redRage, selectedColor: .constant(.purpleMedium))
-            .squareFrame(48)
-            .previewLayout(.sizeThatFits)
 
-        ColorDotView(counterColor: .yellowDanger, selectedColor: .constant(.yellowDanger))
-            .squareFrame(48)
-            .previewLayout(.sizeThatFits)
+#if DEBUG
+    struct ColorDotView_Previews: PreviewProvider {
+        static var previews: some View {
+            ColorDotView(counterColor: .redRage, selectedColor: .constant(.purpleMedium))
+                .squareFrame(48)
+                .previewLayout(.sizeThatFits)
+
+            ColorDotView(counterColor: .yellowDanger, selectedColor: .constant(.yellowDanger))
+                .squareFrame(48)
+                .previewLayout(.sizeThatFits)
+        }
     }
-}
 #endif

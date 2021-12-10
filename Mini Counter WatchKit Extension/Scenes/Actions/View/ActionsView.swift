@@ -9,14 +9,17 @@ import SwiftUI
 
 struct ActionsView: View {
     // MARK: Stores
+
     @ObservedObject private var mainStore: MainStore
     @ObservedObject private var counterStore: CounterStore
-    
+
     // MARK: Private Properties
+
     @EnvironmentObject private var actionsRouter: ActionsCoordinator.Router
     @State private var showResetCountAlert = false
-    
+
     // MARK: Init
+
     init(
         mainStore: MainStore,
         counterStore: CounterStore

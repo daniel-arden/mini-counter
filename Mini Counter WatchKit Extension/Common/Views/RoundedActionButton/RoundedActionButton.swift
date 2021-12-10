@@ -13,7 +13,7 @@ struct RoundedActionButton: View {
     private let title: String
     private let color: Color
     private let action: () -> Void
-    
+
     init(
         _ title: String,
         color: Color,
@@ -29,7 +29,7 @@ struct RoundedActionButton: View {
             title.uppercased(),
             action: action
         )
-            .buttonStyle(.bordered)
+        .buttonStyle(.bordered)
         /*
          Below, there is a workaround for getting the
          system button on watchOS to be colored with a tint color.

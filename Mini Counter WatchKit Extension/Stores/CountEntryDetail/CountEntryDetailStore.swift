@@ -11,6 +11,7 @@ final class CountEntryDetailStore: ObservableObject {
     let countEntry: CountEntry
 
     // MARK: Init
+
     init(countEntry: CountEntry) {
         self.countEntry = countEntry
     }

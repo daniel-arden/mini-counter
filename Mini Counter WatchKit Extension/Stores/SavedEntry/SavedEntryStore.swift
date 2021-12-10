@@ -13,6 +13,7 @@ final class SavedEntryStore: ObservableObject {
 }
 
 // MARK: - Helpers
+
 extension SavedEntryStore {
     func toggleSelectionOnID(_ uuid: UUID) {
         if selection.contains(uuid) {
@@ -21,18 +22,18 @@ extension SavedEntryStore {
             selection.insert(uuid)
         }
     }
-    
+
     func resetSelection() {
         selection.removeAll()
     }
-    
+
     func removeSelectedEntries() {
         selection.forEach { selectedEntryID in
             savedEntries.removeAll { countEntry in
                 countEntry.id == selectedEntryID
             }
         }
-        
+
         resetSelection()
     }
 }

@@ -17,7 +17,7 @@ enum CounterColor: String, CaseIterable, Identifiable {
     case purpleMedium
     case redRage
     case yellowDanger
-    
+
     var color: Color {
         switch self {
         case .white:
@@ -38,7 +38,7 @@ enum CounterColor: String, CaseIterable, Identifiable {
             return .yellowDanger
         }
     }
-    
+
     var id: String {
         rawValue
     }

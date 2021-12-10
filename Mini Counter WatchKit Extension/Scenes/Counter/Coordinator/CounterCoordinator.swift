@@ -10,13 +10,15 @@ import SwiftUI
 
 final class CounterCoordinator: NavigationCoordinatable {
     // MARK: Stores
+
     @ObservedObject private var counterStore: CounterStore
-    
+
     // MARK: Coordinator Properties
+
     let stack = NavigationStack(initial: \CounterCoordinator.start)
-    
+
     @Root var start = makeStart
-    
+
     // MARK: Init
 
     init(counterStore: CounterStore) {
