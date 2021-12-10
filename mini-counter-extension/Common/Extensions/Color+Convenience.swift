@@ -8,11 +8,11 @@
 import SwiftUI
 
 extension Color {
-    static let blueAtmosphere = Color("Blue Atmosphere")
-    static let grayAsh = Color("Gray Ash")
-    static let greenSourCandy = Color("Green Sour Candy")
-    static let orangeFire = Color("Orange Fire")
-    static let purpleMedium = Color("Purple Medium")
-    static let redRage = Color("Red Rage")
-    static let yellowDanger = Color("Yellow Danger")
+    static let blueAtmosphere = R.color.blueAtmosphere.color
+    static let grayAsh = R.color.grayAsh.color
+    static let greenSourCandy = R.color.greenSourCandy.color
+    static let orangeFire = R.color.orangeFire.color
+    static let purpleMedium = R.color.purpleMedium.color
+    static let redRage = R.color.redRage.color
+    static let yellowDanger = R.color.yellowDanger.color
 }
