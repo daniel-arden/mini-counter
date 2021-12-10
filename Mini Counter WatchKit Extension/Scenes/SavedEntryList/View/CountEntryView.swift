@@ -15,19 +15,25 @@ struct CountEntryView: View {
 
     var body: some View {
         Button(action: onTapAction) {
-            if !countEntry.label.isEmpty {
-                Text(countEntry.label)
+            Group {
+                if !countEntry.label.isEmpty {
+                    HStack {
+                        Text(countEntry.label)
 
-                Spacer(minLength: 8)
+                        Spacer(minLength: 8)
 
-                Text("\(countEntry.count)")
-                    .fontWeight(.bold)
-            } else {
-                Text("\(countEntry.count)")
-                    .fontWeight(.bold)
+                        Text("\(countEntry.count)")
+                            .fontWeight(.bold)
+                    }
+                } else {
+                    Text("\(countEntry.count)")
+                        .fontWeight(.bold)
+                }
             }
+            .maxWidth()
+            // Setting the contentShape to Rectangle makes the full width tappable
+            .contentShape(Rectangle())
         }
-        .maxWidth()
         .buttonStyle(.plain)
         .foregroundColor(isSelected ? .redRage : .white)
         .animation(.easeInOut, value: isEditing)
