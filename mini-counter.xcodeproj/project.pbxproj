@@ -7,13 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0E39FEB32251F49D13CDF052 /* Pods_mini_counter_WatchKit_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69C3F71B12F2E4B4CB7D2F60 /* Pods_mini_counter_WatchKit_App.framework */; };
 		5A0230D7273C18BF00E05BDF /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0230D6273C18BF00E05BDF /* SettingsView.swift */; };
 		5A097676273B1201007695D3 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A097675273B1201007695D3 /* Colors.xcassets */; };
 		5A1E17CC27416E4900C3747E /* SettingsCounterColorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1E17CB27416E4900C3747E /* SettingsCounterColorView.swift */; };
 		5A1E17D12741A5EF00C3747E /* ColorDotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1E17D02741A5EF00C3747E /* ColorDotView.swift */; };
-		5A2E37F72732D301009D1FAD /* Mini Counter WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 5A2E37F62732D301009D1FAD /* Mini Counter WatchKit App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		5A2E37F72732D301009D1FAD /* mini-counter WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 5A2E37F62732D301009D1FAD /* mini-counter WatchKit App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		5A2E37FC2732D302009D1FAD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A2E37FB2732D302009D1FAD /* Assets.xcassets */; };
-		5A2E38022732D303009D1FAD /* Mini Counter WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 5A2E38012732D303009D1FAD /* Mini Counter WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		5A2E38022732D303009D1FAD /* mini-counter WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 5A2E38012732D303009D1FAD /* mini-counter WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		5A2E38092732D303009D1FAD /* Mini_CounterApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A2E38082732D303009D1FAD /* Mini_CounterApp.swift */; };
 		5A2E380B2732D303009D1FAD /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A2E380A2732D303009D1FAD /* ComplicationController.swift */; };
 		5A2E380D2732D304009D1FAD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A2E380C2732D304009D1FAD /* Assets.xcassets */; };
@@ -54,9 +55,8 @@
 		5AAE04E1274E1DF100B1EB10 /* SavedEntryDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AAE04E0274E1DF100B1EB10 /* SavedEntryDetailView.swift */; };
 		5AAE04E4274E1E7000B1EB10 /* SavedEntryDetailCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AAE04E3274E1E7000B1EB10 /* SavedEntryDetailCoordinator.swift */; };
 		5AD8B5442745AB0D00547A70 /* CounterColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AD8B5432745AB0D00547A70 /* CounterColor.swift */; };
-		8491E7F06C28254DF7E901FB /* Pods_Mini_Counter_WatchKit_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D698C67FE793E67DB62DD4E /* Pods_Mini_Counter_WatchKit_App.framework */; };
-		AB43045E649A34DBAEB8A5FC /* Pods_Mini_Counter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9771FB907592601CA05E1D5B /* Pods_Mini_Counter.framework */; };
-		B8FC4ABCB0B115CE276A5CFC /* Pods_Mini_Counter_WatchKit_Extension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 532E977CBAF64EEA000449EB /* Pods_Mini_Counter_WatchKit_Extension.framework */; };
+		77C1E82270B7EA787E43328E /* Pods_mini_counter_WatchKit_Extension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0EE2527C6BFC99671D716E46 /* Pods_mini_counter_WatchKit_Extension.framework */; };
+		B68552C0AD5E8214FC55A9F7 /* Pods_mini_counter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00A43A37AFC40F1C3F641819 /* Pods_mini_counter.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,7 +83,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				5A2E38022732D303009D1FAD /* Mini Counter WatchKit Extension.appex in Embed App Extensions */,
+				5A2E38022732D303009D1FAD /* mini-counter WatchKit Extension.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -94,7 +94,7 @@
 			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
 			dstSubfolderSpec = 16;
 			files = (
-				5A2E37F72732D301009D1FAD /* Mini Counter WatchKit App.app in Embed Watch Content */,
+				5A2E37F72732D301009D1FAD /* mini-counter WatchKit App.app in Embed Watch Content */,
 			);
 			name = "Embed Watch Content";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -102,20 +102,23 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		00A43A37AFC40F1C3F641819 /* Pods_mini_counter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_mini_counter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		03FA1A707F2ABA6126053124 /* Pods-Mini Counter WatchKit Extension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mini Counter WatchKit Extension.debug.xcconfig"; path = "Target Support Files/Pods-Mini Counter WatchKit Extension/Pods-Mini Counter WatchKit Extension.debug.xcconfig"; sourceTree = "<group>"; };
+		0EE2527C6BFC99671D716E46 /* Pods_mini_counter_WatchKit_Extension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_mini_counter_WatchKit_Extension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		15FC12F6A9EF78662B71071B /* Pods-Mini Counter WatchKit Extension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mini Counter WatchKit Extension.release.xcconfig"; path = "Target Support Files/Pods-Mini Counter WatchKit Extension/Pods-Mini Counter WatchKit Extension.release.xcconfig"; sourceTree = "<group>"; };
+		16DB94A96D8DF9AB2786AE55 /* Pods-mini-counter WatchKit Extension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mini-counter WatchKit Extension.debug.xcconfig"; path = "Target Support Files/Pods-mini-counter WatchKit Extension/Pods-mini-counter WatchKit Extension.debug.xcconfig"; sourceTree = "<group>"; };
+		17C93EC5C243E771538EB8D8 /* Pods-mini-counter.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mini-counter.debug.xcconfig"; path = "Target Support Files/Pods-mini-counter/Pods-mini-counter.debug.xcconfig"; sourceTree = "<group>"; };
 		18686A0F23D722ADF77CEBE7 /* Pods-Mini Counter.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mini Counter.debug.xcconfig"; path = "Target Support Files/Pods-Mini Counter/Pods-Mini Counter.debug.xcconfig"; sourceTree = "<group>"; };
 		1D2E39248A55BE6FD7715993 /* Pods-Mini Counter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mini Counter.release.xcconfig"; path = "Target Support Files/Pods-Mini Counter/Pods-Mini Counter.release.xcconfig"; sourceTree = "<group>"; };
-		1D698C67FE793E67DB62DD4E /* Pods_Mini_Counter_WatchKit_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mini_Counter_WatchKit_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		532E977CBAF64EEA000449EB /* Pods_Mini_Counter_WatchKit_Extension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mini_Counter_WatchKit_Extension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		29F04DA9D57DA51321D7FB5A /* Pods-mini-counter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mini-counter.release.xcconfig"; path = "Target Support Files/Pods-mini-counter/Pods-mini-counter.release.xcconfig"; sourceTree = "<group>"; };
 		5A0230D6273C18BF00E05BDF /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		5A097675273B1201007695D3 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		5A1E17CB27416E4900C3747E /* SettingsCounterColorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCounterColorView.swift; sourceTree = "<group>"; };
 		5A1E17D02741A5EF00C3747E /* ColorDotView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorDotView.swift; sourceTree = "<group>"; };
-		5A2E37F22732D301009D1FAD /* Mini Counter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mini Counter.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		5A2E37F62732D301009D1FAD /* Mini Counter WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mini Counter WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5A2E37F22732D301009D1FAD /* mini-counter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "mini-counter.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5A2E37F62732D301009D1FAD /* mini-counter WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "mini-counter WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A2E37FB2732D302009D1FAD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		5A2E38012732D303009D1FAD /* Mini Counter WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Mini Counter WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5A2E38012732D303009D1FAD /* mini-counter WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "mini-counter WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A2E38082732D303009D1FAD /* Mini_CounterApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mini_CounterApp.swift; sourceTree = "<group>"; };
 		5A2E380A2732D303009D1FAD /* ComplicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationController.swift; sourceTree = "<group>"; };
 		5A2E380C2732D304009D1FAD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -156,8 +159,11 @@
 		5AAE04E3274E1E7000B1EB10 /* SavedEntryDetailCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedEntryDetailCoordinator.swift; sourceTree = "<group>"; };
 		5AD8B5432745AB0D00547A70 /* CounterColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterColor.swift; sourceTree = "<group>"; };
 		6639BC9C7EB44D71F6EDB34E /* Pods-Mini Counter WatchKit App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mini Counter WatchKit App.release.xcconfig"; path = "Target Support Files/Pods-Mini Counter WatchKit App/Pods-Mini Counter WatchKit App.release.xcconfig"; sourceTree = "<group>"; };
-		9771FB907592601CA05E1D5B /* Pods_Mini_Counter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mini_Counter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		69C3F71B12F2E4B4CB7D2F60 /* Pods_mini_counter_WatchKit_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_mini_counter_WatchKit_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6BE9F1BF757630A3A288240E /* Pods-mini-counter WatchKit Extension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mini-counter WatchKit Extension.release.xcconfig"; path = "Target Support Files/Pods-mini-counter WatchKit Extension/Pods-mini-counter WatchKit Extension.release.xcconfig"; sourceTree = "<group>"; };
+		A9C2E49C43A3E45E5D3C8AF2 /* Pods-mini-counter WatchKit App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mini-counter WatchKit App.release.xcconfig"; path = "Target Support Files/Pods-mini-counter WatchKit App/Pods-mini-counter WatchKit App.release.xcconfig"; sourceTree = "<group>"; };
 		C74A75E6FBF9A58118EBC747 /* Pods-Mini Counter WatchKit App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mini Counter WatchKit App.debug.xcconfig"; path = "Target Support Files/Pods-Mini Counter WatchKit App/Pods-Mini Counter WatchKit App.debug.xcconfig"; sourceTree = "<group>"; };
+		F8519FF54177B79C34986F69 /* Pods-mini-counter WatchKit App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mini-counter WatchKit App.debug.xcconfig"; path = "Target Support Files/Pods-mini-counter WatchKit App/Pods-mini-counter WatchKit App.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,7 +172,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5A7A717E273EF0020085C7FF /* Stinsen in Frameworks */,
-				B8FC4ABCB0B115CE276A5CFC /* Pods_Mini_Counter_WatchKit_Extension.framework in Frameworks */,
+				77C1E82270B7EA787E43328E /* Pods_mini_counter_WatchKit_Extension.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -174,7 +180,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8491E7F06C28254DF7E901FB /* Pods_Mini_Counter_WatchKit_App.framework in Frameworks */,
+				0E39FEB32251F49D13CDF052 /* Pods_mini_counter_WatchKit_App.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -183,7 +189,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5A7A717B273EEF240085C7FF /* Stinsen in Frameworks */,
-				AB43045E649A34DBAEB8A5FC /* Pods_Mini_Counter.framework in Frameworks */,
+				B68552C0AD5E8214FC55A9F7 /* Pods_mini_counter.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -199,6 +205,12 @@
 				6639BC9C7EB44D71F6EDB34E /* Pods-Mini Counter WatchKit App.release.xcconfig */,
 				03FA1A707F2ABA6126053124 /* Pods-Mini Counter WatchKit Extension.debug.xcconfig */,
 				15FC12F6A9EF78662B71071B /* Pods-Mini Counter WatchKit Extension.release.xcconfig */,
+				17C93EC5C243E771538EB8D8 /* Pods-mini-counter.debug.xcconfig */,
+				29F04DA9D57DA51321D7FB5A /* Pods-mini-counter.release.xcconfig */,
+				F8519FF54177B79C34986F69 /* Pods-mini-counter WatchKit App.debug.xcconfig */,
+				A9C2E49C43A3E45E5D3C8AF2 /* Pods-mini-counter WatchKit App.release.xcconfig */,
+				16DB94A96D8DF9AB2786AE55 /* Pods-mini-counter WatchKit Extension.debug.xcconfig */,
+				6BE9F1BF757630A3A288240E /* Pods-mini-counter WatchKit Extension.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -233,8 +245,8 @@
 		5A2E37EB2732D300009D1FAD = {
 			isa = PBXGroup;
 			children = (
-				5A2E37FA2732D301009D1FAD /* Mini Counter WatchKit App */,
-				5A2E38052732D303009D1FAD /* Mini Counter WatchKit Extension */,
+				5A2E37FA2732D301009D1FAD /* mini-counter-app */,
+				5A2E38052732D303009D1FAD /* mini-counter-extension */,
 				5A2E37F32732D301009D1FAD /* Products */,
 				5A7A717C273EF0020085C7FF /* Frameworks */,
 				318E485CE12DBF9FFB3AEE47 /* Pods */,
@@ -245,23 +257,23 @@
 		5A2E37F32732D301009D1FAD /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				5A2E37F22732D301009D1FAD /* Mini Counter.app */,
-				5A2E37F62732D301009D1FAD /* Mini Counter WatchKit App.app */,
-				5A2E38012732D303009D1FAD /* Mini Counter WatchKit Extension.appex */,
+				5A2E37F22732D301009D1FAD /* mini-counter.app */,
+				5A2E37F62732D301009D1FAD /* mini-counter WatchKit App.app */,
+				5A2E38012732D303009D1FAD /* mini-counter WatchKit Extension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		5A2E37FA2732D301009D1FAD /* Mini Counter WatchKit App */ = {
+		5A2E37FA2732D301009D1FAD /* mini-counter-app */ = {
 			isa = PBXGroup;
 			children = (
 				5A2E37FB2732D302009D1FAD /* Assets.xcassets */,
 				5A097675273B1201007695D3 /* Colors.xcassets */,
 			);
-			path = "Mini Counter WatchKit App";
+			path = "mini-counter-app";
 			sourceTree = "<group>";
 		};
-		5A2E38052732D303009D1FAD /* Mini Counter WatchKit Extension */ = {
+		5A2E38052732D303009D1FAD /* mini-counter-extension */ = {
 			isa = PBXGroup;
 			children = (
 				5A7A71A62740532A0085C7FF /* Stores */,
@@ -269,7 +281,7 @@
 				5A3F6C42273C0A4B00DDCBB4 /* Scenes */,
 				5A2E381F2732D32D009D1FAD /* Supporting Files */,
 			);
-			path = "Mini Counter WatchKit Extension";
+			path = "mini-counter-extension";
 			sourceTree = "<group>";
 		};
 		5A2E380E2732D304009D1FAD /* Preview Content */ = {
@@ -453,9 +465,9 @@
 		5A7A717C273EF0020085C7FF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				9771FB907592601CA05E1D5B /* Pods_Mini_Counter.framework */,
-				1D698C67FE793E67DB62DD4E /* Pods_Mini_Counter_WatchKit_App.framework */,
-				532E977CBAF64EEA000449EB /* Pods_Mini_Counter_WatchKit_Extension.framework */,
+				00A43A37AFC40F1C3F641819 /* Pods_mini_counter.framework */,
+				69C3F71B12F2E4B4CB7D2F60 /* Pods_mini_counter_WatchKit_App.framework */,
+				0EE2527C6BFC99671D716E46 /* Pods_mini_counter_WatchKit_Extension.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -623,9 +635,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		5A2E37F12732D301009D1FAD /* Mini Counter */ = {
+		5A2E37F12732D301009D1FAD /* mini-counter */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 5A2E381C2732D304009D1FAD /* Build configuration list for PBXNativeTarget "Mini Counter" */;
+			buildConfigurationList = 5A2E381C2732D304009D1FAD /* Build configuration list for PBXNativeTarget "mini-counter" */;
 			buildPhases = (
 				A823F845CA0AC6F3E5A22E7B /* [CP] Check Pods Manifest.lock */,
 				5A2E37F02732D301009D1FAD /* Resources */,
@@ -637,17 +649,17 @@
 			dependencies = (
 				5A2E37F92732D301009D1FAD /* PBXTargetDependency */,
 			);
-			name = "Mini Counter";
+			name = "mini-counter";
 			packageProductDependencies = (
 				5A7A717A273EEF240085C7FF /* Stinsen */,
 			);
 			productName = "Mini Counter";
-			productReference = 5A2E37F22732D301009D1FAD /* Mini Counter.app */;
+			productReference = 5A2E37F22732D301009D1FAD /* mini-counter.app */;
 			productType = "com.apple.product-type.application.watchapp2-container";
 		};
-		5A2E37F52732D301009D1FAD /* Mini Counter WatchKit App */ = {
+		5A2E37F52732D301009D1FAD /* mini-counter WatchKit App */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 5A2E38182732D304009D1FAD /* Build configuration list for PBXNativeTarget "Mini Counter WatchKit App" */;
+			buildConfigurationList = 5A2E38182732D304009D1FAD /* Build configuration list for PBXNativeTarget "mini-counter WatchKit App" */;
 			buildPhases = (
 				57608A5F495D871022F95D06 /* [CP] Check Pods Manifest.lock */,
 				5A2E37F42732D301009D1FAD /* Resources */,
@@ -659,14 +671,14 @@
 			dependencies = (
 				5A2E38042732D303009D1FAD /* PBXTargetDependency */,
 			);
-			name = "Mini Counter WatchKit App";
+			name = "mini-counter WatchKit App";
 			productName = "Mini Counter WatchKit App";
-			productReference = 5A2E37F62732D301009D1FAD /* Mini Counter WatchKit App.app */;
+			productReference = 5A2E37F62732D301009D1FAD /* mini-counter WatchKit App.app */;
 			productType = "com.apple.product-type.application.watchapp2";
 		};
-		5A2E38002732D303009D1FAD /* Mini Counter WatchKit Extension */ = {
+		5A2E38002732D303009D1FAD /* mini-counter WatchKit Extension */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 5A2E38142732D304009D1FAD /* Build configuration list for PBXNativeTarget "Mini Counter WatchKit Extension" */;
+			buildConfigurationList = 5A2E38142732D304009D1FAD /* Build configuration list for PBXNativeTarget "mini-counter WatchKit Extension" */;
 			buildPhases = (
 				EEF4533AE7789F4166D8823E /* [CP] Check Pods Manifest.lock */,
 				5AA631E12763748600CE932E /* R.swift */,
@@ -680,12 +692,12 @@
 			);
 			dependencies = (
 			);
-			name = "Mini Counter WatchKit Extension";
+			name = "mini-counter WatchKit Extension";
 			packageProductDependencies = (
 				5A7A717D273EF0020085C7FF /* Stinsen */,
 			);
 			productName = "Mini Counter WatchKit Extension";
-			productReference = 5A2E38012732D303009D1FAD /* Mini Counter WatchKit Extension.appex */;
+			productReference = 5A2E38012732D303009D1FAD /* mini-counter WatchKit Extension.appex */;
 			productType = "com.apple.product-type.watchkit2-extension";
 		};
 /* End PBXNativeTarget section */
@@ -709,7 +721,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 5A2E37EF2732D300009D1FAD /* Build configuration list for PBXProject "Mini Counter" */;
+			buildConfigurationList = 5A2E37EF2732D300009D1FAD /* Build configuration list for PBXProject "mini-counter" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -725,9 +737,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				5A2E37F12732D301009D1FAD /* Mini Counter */,
-				5A2E37F52732D301009D1FAD /* Mini Counter WatchKit App */,
-				5A2E38002732D303009D1FAD /* Mini Counter WatchKit Extension */,
+				5A2E37F12732D301009D1FAD /* mini-counter */,
+				5A2E37F52732D301009D1FAD /* mini-counter WatchKit App */,
+				5A2E38002732D303009D1FAD /* mini-counter WatchKit Extension */,
 			);
 		};
 /* End PBXProject section */
@@ -777,7 +789,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Mini Counter WatchKit App-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-mini-counter WatchKit App-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -829,15 +841,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Mini Counter WatchKit Extension/Pods-Mini Counter WatchKit Extension-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-mini-counter WatchKit Extension/Pods-mini-counter WatchKit Extension-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Mini Counter WatchKit Extension/Pods-Mini Counter WatchKit Extension-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-mini-counter WatchKit Extension/Pods-mini-counter WatchKit Extension-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Mini Counter WatchKit Extension/Pods-Mini Counter WatchKit Extension-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-mini-counter WatchKit Extension/Pods-mini-counter WatchKit Extension-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		A823F845CA0AC6F3E5A22E7B /* [CP] Check Pods Manifest.lock */ = {
@@ -855,7 +867,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Mini Counter-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-mini-counter-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -877,7 +889,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Mini Counter WatchKit Extension-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-mini-counter WatchKit Extension-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -937,12 +949,12 @@
 /* Begin PBXTargetDependency section */
 		5A2E37F92732D301009D1FAD /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 5A2E37F52732D301009D1FAD /* Mini Counter WatchKit App */;
+			target = 5A2E37F52732D301009D1FAD /* mini-counter WatchKit App */;
 			targetProxy = 5A2E37F82732D301009D1FAD /* PBXContainerItemProxy */;
 		};
 		5A2E38042732D303009D1FAD /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 5A2E38002732D303009D1FAD /* Mini Counter WatchKit Extension */;
+			target = 5A2E38002732D303009D1FAD /* mini-counter WatchKit Extension */;
 			targetProxy = 5A2E38032732D303009D1FAD /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -1064,16 +1076,16 @@
 		};
 		5A2E38152732D304009D1FAD /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 03FA1A707F2ABA6126053124 /* Pods-Mini Counter WatchKit Extension.debug.xcconfig */;
+			baseConfigurationReference = 16DB94A96D8DF9AB2786AE55 /* Pods-mini-counter WatchKit Extension.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Mini Counter WatchKit Extension/Supporting FIles/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"mini-counter-extension/Supporting FIles/Preview Content\"";
 				DEVELOPMENT_TEAM = 543MGA3H89;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Mini Counter WatchKit Extension/Supporting Files/Info.plist";
+				INFOPLIST_FILE = "mini-counter-extension/Supporting Files/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "Mini Counter WatchKit Extension";
 				INFOPLIST_KEY_CLKComplicationPrincipalClass = ComplicationController;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
@@ -1084,7 +1096,7 @@
 					"@executable_path/../../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.arden.Mini-Counter.watchkitapp.watchkitextension";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.arden.mini-counter.watchkitapp.watchkitextension";
 				PRODUCT_NAME = "${TARGET_NAME}";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -1097,16 +1109,16 @@
 		};
 		5A2E38162732D304009D1FAD /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 15FC12F6A9EF78662B71071B /* Pods-Mini Counter WatchKit Extension.release.xcconfig */;
+			baseConfigurationReference = 6BE9F1BF757630A3A288240E /* Pods-mini-counter WatchKit Extension.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Mini Counter WatchKit Extension/Supporting FIles/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"mini-counter-extension/Supporting FIles/Preview Content\"";
 				DEVELOPMENT_TEAM = 543MGA3H89;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Mini Counter WatchKit Extension/Supporting Files/Info.plist";
+				INFOPLIST_FILE = "mini-counter-extension/Supporting Files/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "Mini Counter WatchKit Extension";
 				INFOPLIST_KEY_CLKComplicationPrincipalClass = ComplicationController;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
@@ -1117,7 +1129,7 @@
 					"@executable_path/../../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.arden.Mini-Counter.watchkitapp.watchkitextension";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.arden.mini-counter.watchkitapp.watchkitextension";
 				PRODUCT_NAME = "${TARGET_NAME}";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -1130,7 +1142,7 @@
 		};
 		5A2E38192732D304009D1FAD /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C74A75E6FBF9A58118EBC747 /* Pods-Mini Counter WatchKit App.debug.xcconfig */;
+			baseConfigurationReference = F8519FF54177B79C34986F69 /* Pods-mini-counter WatchKit App.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -1143,7 +1155,7 @@
 				INFOPLIST_KEY_CFBundleDisplayName = "Mini Counter WatchKit App";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.arden.Mini-Counter.watchkitapp";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.arden.mini-counter.watchkitapp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -1156,7 +1168,7 @@
 		};
 		5A2E381A2732D304009D1FAD /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6639BC9C7EB44D71F6EDB34E /* Pods-Mini Counter WatchKit App.release.xcconfig */;
+			baseConfigurationReference = A9C2E49C43A3E45E5D3C8AF2 /* Pods-mini-counter WatchKit App.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -1169,7 +1181,7 @@
 				INFOPLIST_KEY_CFBundleDisplayName = "Mini Counter WatchKit App";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.arden.Mini-Counter.watchkitapp";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.arden.mini-counter.watchkitapp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -1182,13 +1194,13 @@
 		};
 		5A2E381D2732D304009D1FAD /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 18686A0F23D722ADF77CEBE7 /* Pods-Mini Counter.debug.xcconfig */;
+			baseConfigurationReference = 17C93EC5C243E771538EB8D8 /* Pods-mini-counter.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 543MGA3H89;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.arden.Mini-Counter";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.arden.mini-counter";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 			};
@@ -1196,13 +1208,13 @@
 		};
 		5A2E381E2732D304009D1FAD /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1D2E39248A55BE6FD7715993 /* Pods-Mini Counter.release.xcconfig */;
+			baseConfigurationReference = 29F04DA9D57DA51321D7FB5A /* Pods-mini-counter.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 543MGA3H89;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.arden.Mini-Counter";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.arden.mini-counter";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 			};
@@ -1211,7 +1223,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		5A2E37EF2732D300009D1FAD /* Build configuration list for PBXProject "Mini Counter" */ = {
+		5A2E37EF2732D300009D1FAD /* Build configuration list for PBXProject "mini-counter" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				5A2E38122732D304009D1FAD /* Debug */,
@@ -1220,7 +1232,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		5A2E38142732D304009D1FAD /* Build configuration list for PBXNativeTarget "Mini Counter WatchKit Extension" */ = {
+		5A2E38142732D304009D1FAD /* Build configuration list for PBXNativeTarget "mini-counter WatchKit Extension" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				5A2E38152732D304009D1FAD /* Debug */,
@@ -1229,7 +1241,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		5A2E38182732D304009D1FAD /* Build configuration list for PBXNativeTarget "Mini Counter WatchKit App" */ = {
+		5A2E38182732D304009D1FAD /* Build configuration list for PBXNativeTarget "mini-counter WatchKit App" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				5A2E38192732D304009D1FAD /* Debug */,
@@ -1238,7 +1250,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		5A2E381C2732D304009D1FAD /* Build configuration list for PBXNativeTarget "Mini Counter" */ = {
+		5A2E381C2732D304009D1FAD /* Build configuration list for PBXNativeTarget "mini-counter" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				5A2E381D2732D304009D1FAD /* Debug */,

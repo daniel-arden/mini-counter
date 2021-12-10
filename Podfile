@@ -1,7 +1,7 @@
 # Uncomment the next line to define a global platform for your project
 # platform :ios, '9.0'
 
-target 'Mini Counter' do
+target 'mini-counter' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
 
@@ -9,7 +9,7 @@ target 'Mini Counter' do
 
 end
 
-target 'Mini Counter WatchKit App' do
+target 'mini-counter WatchKit App' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
 
@@ -17,7 +17,7 @@ target 'Mini Counter WatchKit App' do
 
 end
 
-target 'Mini Counter WatchKit Extension' do
+target 'mini-counter WatchKit Extension' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
 
