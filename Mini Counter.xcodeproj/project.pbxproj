@@ -617,6 +617,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5A2E38142732D304009D1FAD /* Build configuration list for PBXNativeTarget "Mini Counter WatchKit Extension" */;
 			buildPhases = (
+				5AC6EB652762B1E40063CB67 /* SwiftLint */,
 				5A2E37FD2732D303009D1FAD /* Sources */,
 				5A2E37FE2732D303009D1FAD /* Frameworks */,
 				5A2E37FF2732D303009D1FAD /* Resources */,
@@ -704,6 +705,27 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5AC6EB652762B1E40063CB67 /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nif which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		5A2E37FD2732D303009D1FAD /* Sources */ = {

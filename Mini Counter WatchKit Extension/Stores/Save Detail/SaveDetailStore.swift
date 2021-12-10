@@ -24,9 +24,7 @@ final class SaveDetailStore: ObservableObject {
 
 extension SaveDetailStore {
     func saveCount() {
-        /*
-         TODO: Remove the mainStore from here and save the data persistently instead
-         */
+        // TODO: Remove the mainStore from here and save the data persistently instead
         let countEntry = CountEntry(count: counterCount, label: description)
         mainStore.savedEntries.append(countEntry)
     }

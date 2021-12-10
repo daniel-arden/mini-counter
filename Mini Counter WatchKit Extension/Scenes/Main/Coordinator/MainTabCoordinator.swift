@@ -20,7 +20,7 @@ final class MainTabCoordinator: TabCoordinatable {
         startingItems: [
             \MainTabCoordinator.actions,
             \MainTabCoordinator.counter,
-            \MainTabCoordinator.list,
+            \MainTabCoordinator.list
         ],
         activeTab: Constants.defaultSelectedMainTabIndex
     )
