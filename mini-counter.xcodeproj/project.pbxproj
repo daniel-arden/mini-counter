@@ -279,29 +279,29 @@
 				5A7A71A62740532A0085C7FF /* Stores */,
 				5A2E38212732D34A009D1FAD /* Common */,
 				5A3F6C42273C0A4B00DDCBB4 /* Scenes */,
-				5A2E381F2732D32D009D1FAD /* Supporting Files */,
+				5A2E381F2732D32D009D1FAD /* SupportingFiles */,
 			);
 			path = "mini-counter-extension";
 			sourceTree = "<group>";
 		};
-		5A2E380E2732D304009D1FAD /* Preview Content */ = {
+		5A2E380E2732D304009D1FAD /* PreviewContent */ = {
 			isa = PBXGroup;
 			children = (
 				5A2E380F2732D304009D1FAD /* Preview Assets.xcassets */,
 			);
-			path = "Preview Content";
+			path = PreviewContent;
 			sourceTree = "<group>";
 		};
-		5A2E381F2732D32D009D1FAD /* Supporting Files */ = {
+		5A2E381F2732D32D009D1FAD /* SupportingFiles */ = {
 			isa = PBXGroup;
 			children = (
-				5A2E380E2732D304009D1FAD /* Preview Content */,
+				5A2E380E2732D304009D1FAD /* PreviewContent */,
 				5A2E38112732D304009D1FAD /* Info.plist */,
 				5A2E380C2732D304009D1FAD /* Assets.xcassets */,
 				5A2E38082732D303009D1FAD /* Mini_CounterApp.swift */,
 				5AA631E4276376DD00CE932E /* Localizable.strings */,
 			);
-			path = "Supporting Files";
+			path = SupportingFiles;
 			sourceTree = "<group>";
 		};
 		5A2E38212732D34A009D1FAD /* Common */ = {
@@ -1081,11 +1081,11 @@
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"mini-counter-extension/Supporting FIles/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"mini-counter-extension/SupportingFIles/PreviewContent\"";
 				DEVELOPMENT_TEAM = 543MGA3H89;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "mini-counter-extension/Supporting Files/Info.plist";
+				INFOPLIST_FILE = "mini-counter-extension/SupportingFiles/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "Mini Counter WatchKit Extension";
 				INFOPLIST_KEY_CLKComplicationPrincipalClass = ComplicationController;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
@@ -1114,11 +1114,11 @@
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"mini-counter-extension/Supporting FIles/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"mini-counter-extension/SupportingFIles/PreviewContent\"";
 				DEVELOPMENT_TEAM = 543MGA3H89;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "mini-counter-extension/Supporting Files/Info.plist";
+				INFOPLIST_FILE = "mini-counter-extension/SupportingFiles/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "Mini Counter WatchKit Extension";
 				INFOPLIST_KEY_CLKComplicationPrincipalClass = ComplicationController;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
