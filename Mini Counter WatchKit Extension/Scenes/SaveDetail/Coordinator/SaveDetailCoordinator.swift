@@ -10,15 +10,18 @@ import SwiftUI
 
 final class SaveDetailCoordinator: NavigationCoordinatable {
     // MARK: Stores
+
     private let mainStore: MainStore
     private let saveDetailStore: SaveDetailStore
 
     // MARK: Coordinator Properties
+
     let stack = NavigationStack(initial: \SaveDetailCoordinator.start)
-    
+
     @Root var start = makeStart
-    
+
     // MARK: Init
+
     init(
         mainStore: MainStore,
         counterCount: Int
@@ -31,13 +34,14 @@ final class SaveDetailCoordinator: NavigationCoordinatable {
     }
 
     #if DEBUG
-    deinit {
-        print("Deinit \(Self.typeName)")
-    }
+        deinit {
+            print("Deinit \(Self.typeName)")
+        }
     #endif
 }
 
 // MARK: - Factories
+
 private extension SaveDetailCoordinator {
     @ViewBuilder func makeStart() -> some View {
         SaveDetailView(
@@ -48,4 +52,11 @@ private extension SaveDetailCoordinator {
 }
 
 // MARK: - NameDescribable
+
 extension SaveDetailCoordinator: NameDescribable {}
+
+// MARK: - SwiftFormat Test
+
+extension SaveDetailCoordinator: SomeProtocol {}
+
+protocol SomeProtocol {}
