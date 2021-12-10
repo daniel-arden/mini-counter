@@ -9,6 +9,6 @@ import Combine
 
 final class MainStore: ObservableObject {
     let resetCounterPublisher = PassthroughSubject<Void, Never>()
-    let selectTabIndexPublisher = PassthroughSubject<Int, Never>()
+    let selectTabIndexPublisher = PassthroughSubject<Int, Never>() // TODO: Refactor this so that it rather uses an enum value or is not necessary
     @Published var savedEntries = [CountEntry]()
 }
