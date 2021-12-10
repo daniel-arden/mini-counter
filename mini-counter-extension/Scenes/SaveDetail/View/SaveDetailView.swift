@@ -16,6 +16,7 @@ struct SaveDetailView: View {
     // MARK: - Private Properties
 
     @EnvironmentObject private var saveDetailRouter: SaveDetailCoordinator.Router
+    @State private var description = ""
 
     // MARK: Init
 
@@ -49,12 +50,12 @@ struct SaveDetailView: View {
 
             TextField(
                 LocString.saveDetailViewCountDescription(),
-                text: $saveDetailStore.description
+                text: $description
             )
             .padding(.vertical)
 
             RoundedActionButton(LocString.buttonSaveTitle(), color: .greenSourCandy) {
-                saveDetailStore.saveCount()
+                saveDetailStore.saveCount(description: description)
                 mainStore.resetCounterPublisher.send()
                 mainStore.selectTabIndexPublisher.send(1)
                 saveDetailRouter.dismissCoordinator()
