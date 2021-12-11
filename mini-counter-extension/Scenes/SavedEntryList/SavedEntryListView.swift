@@ -10,18 +10,11 @@ import SwiftUI
 struct SavedEntryListView: View {
     // MARK: Stores
 
-    @ObservedObject private var savedEntryStore: SavedEntryStore
+    @EnvironmentObject private var savedEntryStore: SavedEntryStore
 
     // MARK: Private Properties
 
-    @EnvironmentObject private var savedEntryListRouter: SavedEntryListCoordinator.Router
     @State private var isEditing = false
-
-    // MARK: Init
-
-    init(savedEntryStore: SavedEntryStore) {
-        self.savedEntryStore = savedEntryStore
-    }
 
     var body: some View {
         NavigationView {
@@ -30,17 +23,28 @@ struct SavedEntryListView: View {
                     Text(LocString.savedEntryListViewNoSavedEntries())
                 } else {
                     List(savedEntryStore.savedEntries) { countEntry in
-                        CountEntryView(
-                            countEntry: countEntry,
-                            isEditing: $isEditing,
-                            isSelected: savedEntryStore.selection.contains(countEntry.id)
-                        ) {
+                        Group {
                             if isEditing {
-                                withAnimation {
+                                Button {
                                     savedEntryStore.toggleSelectionOnID(countEntry.id)
+                                } label: {
+                                    countEntryLabel(countEntry)
                                 }
+                                .buttonStyle(.plain)
+                                .foregroundColor(
+                                    savedEntryStore.selection.contains(countEntry.id) ?
+                                        .redRage :
+                                        .white
+                                )
+                                .animation(.easeInOut, value: isEditing)
+
                             } else {
-                                savedEntryListRouter.route(to: \.savedEntryDetail, countEntry)
+                                NavigationLink {
+                                    SavedEntryDetailView(countEntry: countEntry)
+                                        .environmentObject(savedEntryStore)
+                                } label: {
+                                    countEntryLabel(countEntry)
+                                }
                             }
                         }
                         .animation(.default, value: savedEntryStore.savedEntries)
@@ -81,7 +85,6 @@ struct SavedEntryListView: View {
                     }
                 }
             }
-            // FIXME: Double navigation title
             .navigationBarTitleDisplayMode(.large)
             .navigationTitle(LocString.savedEntryListViewNavigationTitle())
         }
@@ -92,12 +95,39 @@ struct SavedEntryListView: View {
     }
 }
 
+// MARK: - Supplementary Views
+
+private extension SavedEntryListView {
+    @ViewBuilder
+    private func countEntryLabel(_ countEntry: CountEntry) -> some View {
+        Group {
+            if !countEntry.label.isEmpty {
+                HStack {
+                    Text(countEntry.label)
+
+                    Spacer(minLength: 8)
+
+                    Text("\(countEntry.count)")
+                        .fontWeight(.bold)
+                }
+            } else {
+                Text("\(countEntry.count)")
+                    .fontWeight(.bold)
+            }
+        }
+        .maxWidth()
+        // Setting the contentShape to Rectangle makes the full width tappable
+        // Taken from this SO answer: https://stackoverflow.com/a/65101136/10876104
+        .contentShape(Rectangle())
+    }
+}
+
 // MARK: - Preview
 
 #if DEBUG
     struct ListView_Previews: PreviewProvider {
         static var previews: some View {
-            SavedEntryListView(savedEntryStore: .init())
+            SavedEntryListView()
         }
     }
 #endif

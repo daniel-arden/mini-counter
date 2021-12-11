@@ -8,11 +8,7 @@
 import SwiftUI
 
 struct SettingsView: View {
-    @ObservedObject private var settingsStore: SettingsStore
-
-    init(settingsStore: SettingsStore) {
-        self.settingsStore = settingsStore
-    }
+    @EnvironmentObject private var settingsStore: SettingsStore
 
     var body: some View {
         List {
@@ -49,7 +45,7 @@ private extension SettingsView {
 #if DEBUG
     struct SettingsView_Previews: PreviewProvider {
         static var previews: some View {
-            SettingsView(settingsStore: .init())
+            SettingsView()
         }
     }
 #endif

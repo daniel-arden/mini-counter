@@ -14,7 +14,9 @@ struct CountEntryView: View {
     let onTapAction: () -> Void
 
     var body: some View {
-        Button(action: onTapAction) {
+        Button {
+            print("meh")
+        } label: {
             Group {
                 if !countEntry.label.isEmpty {
                     HStack {
