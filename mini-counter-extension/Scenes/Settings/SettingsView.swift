@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct SettingsView: View {
-    @EnvironmentObject private var settingsStore: SettingsStore
+    @StateObject private var settingsStore = SettingsStore()
 
     var body: some View {
         List {

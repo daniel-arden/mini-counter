@@ -8,13 +8,14 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State private var selectedIndex = Constants.defaultSelectedMainTabIndex
+    // MARK: Stores
 
-    // TODO: Refactor the stores below so that they are in proper places
     @StateObject private var mainStore = MainStore()
     @StateObject private var counterStore = CounterStore()
-    @StateObject private var savedEntryStore = SavedEntryStore()
-    @StateObject private var settingsStore = SettingsStore()
+
+    // MARK: Private Properties
+
+    @State private var selectedIndex = Constants.defaultSelectedMainTabIndex
 
     var body: some View {
         TabView(selection: $selectedIndex) {
@@ -29,12 +30,10 @@ struct ContentView: View {
         }
         .environmentObject(mainStore)
         .environmentObject(counterStore)
-        .environmentObject(savedEntryStore)
-        .environmentObject(settingsStore)
-        .onReceive(mainStore.selectTabIndexPublisher) { newSelectedIndex in
-            selectedIndex = newSelectedIndex
+        .onReceive(mainStore.selectTabIndexPublisher) {
+            selectedIndex = $0
         }
-        .onReceive(mainStore.resetCounterPublisher) { _ in
+        .onReceive(mainStore.resetCounterPublisher) {
             counterStore.resetCounter()
         }
     }
