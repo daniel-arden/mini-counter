@@ -10,7 +10,7 @@ import SwiftUI
 struct SettingsCounterColorView: View {
     // MARK: Stores
 
-    @ObservedObject private var settingsStore: SettingsStore
+    @EnvironmentObject private var settingsStore: SettingsStore
 
     // MARK: Private Properties
 
@@ -22,12 +22,6 @@ struct SettingsCounterColorView: View {
         repeating: GridItem(.fixed(Self.gridItemDimension)),
         count: 4
     )
-
-    // MARK: Init
-
-    init(settingsStore: SettingsStore) {
-        self.settingsStore = settingsStore
-    }
 
     var body: some View {
         LazyVGrid(columns: gridItems) {
@@ -48,7 +42,7 @@ struct SettingsCounterColorView: View {
 #if DEBUG
     struct SettingsCounterColorView_Previews: PreviewProvider {
         static var previews: some View {
-            SettingsCounterColorView(settingsStore: .init())
+            SettingsCounterColorView()
         }
     }
 #endif
