@@ -14,7 +14,20 @@ struct SavedEntryDetailView: View {
 
     var body: some View {
         NavigationView {
-            Text("Saved Entry Detail count: \(countEntry.count) label: \(countEntry.label)")
+            ScrollView {
+                Text("\(countEntry.count)")
+                    .font(
+                        .system(
+                            size: 70,
+                            weight: .bold,
+                            design: .monospaced
+                        )
+                    )
+                    .foregroundColor(savedEntryStore.counterColor.color)
+                    .padding(.vertical)
+
+                Divider()
+            }
         }
         .navigationBarTitleDisplayMode(.large)
         .navigationTitle(countEntry.label)

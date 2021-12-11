@@ -376,6 +376,7 @@
 		5A3F6C44273C0A6300DDCBB4 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				5A7A2EA927652E8C004FBB6E /* New Group */,
 				5A1E17CF2741A5E500C3747E /* ColorDotView */,
 				5A7A719D274000CD0085C7FF /* CircularButton */,
 				5A2E383D2732DD94009D1FAD /* RoundedActionButton */,
@@ -398,6 +399,13 @@
 				5A607F3C27609C6700CBEEB2 /* SavedEntryStore.swift */,
 			);
 			path = SavedEntry;
+			sourceTree = "<group>";
+		};
+		5A7A2EA927652E8C004FBB6E /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "New Group";
 			sourceTree = "<group>";
 		};
 		5A7A717C273EF0020085C7FF /* Frameworks */ = {
