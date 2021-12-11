@@ -23,32 +23,30 @@ struct SavedEntryListView: View {
                     Text(LocString.savedEntryListViewNoSavedEntries())
                 } else {
                     List(savedEntryStore.savedEntries) { countEntry in
-                        Group {
-                            if isEditing {
-                                Button {
-                                    savedEntryStore.toggleSelectionOnID(countEntry.id)
-                                } label: {
-                                    countEntryLabel(countEntry)
-                                }
-                                .buttonStyle(.plain)
-                                .foregroundColor(
-                                    savedEntryStore.selection.contains(countEntry.id) ?
-                                        .redRage :
-                                        .white
-                                )
-                                .animation(.easeInOut, value: isEditing)
+                        if isEditing {
+                            Button {
+                                savedEntryStore.toggleSelectionOnID(countEntry.id)
+                            } label: {
+                                countEntryLabel(countEntry)
+                            }
+                            .buttonStyle(.plain)
+                            .foregroundColor(
+                                savedEntryStore.selection.contains(countEntry.id) ?
+                                    .redRage :
+                                    .white
+                            )
+                            .animation(.easeInOut, value: isEditing)
 
-                            } else {
-                                NavigationLink {
-                                    SavedEntryDetailView(countEntry: countEntry)
-                                        .environmentObject(savedEntryStore)
-                                } label: {
-                                    countEntryLabel(countEntry)
-                                }
+                        } else {
+                            NavigationLink {
+                                SavedEntryDetailView(countEntry: countEntry)
+                                    .environmentObject(savedEntryStore)
+                            } label: {
+                                countEntryLabel(countEntry)
                             }
                         }
-                        .animation(.default, value: savedEntryStore.savedEntries)
                     }
+                    .animation(.default, value: savedEntryStore.savedEntries)
                     .toolbar {
                         // TODO: Add animation for when toolbar buttons change
                         if isEditing {
