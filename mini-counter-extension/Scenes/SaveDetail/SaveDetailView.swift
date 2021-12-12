@@ -13,10 +13,14 @@ struct SaveDetailView: View {
     @EnvironmentObject private var mainStore: MainStore
     @EnvironmentObject private var counterStore: CounterStore
 
-    // MARK: - Private Properties
+    // MARK: Private Properties
 
     @Environment(\.presentationMode) private var presentationMode
-    @State private var description = ""
+    @State private var description: String
+
+    init(countDescription: String) {
+        _description = .init(wrappedValue: countDescription)
+    }
 
     var body: some View {
         ScrollView {
@@ -62,7 +66,7 @@ struct SaveDetailView: View {
 #if DEBUG
     struct SaveDetailView_Previews: PreviewProvider {
         static var previews: some View {
-            SaveDetailView()
+            SaveDetailView(countDescription: "Cats are fluffy!")
         }
     }
 #endif

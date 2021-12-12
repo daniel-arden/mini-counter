@@ -30,6 +30,10 @@
 
 // MARK: - Views
 
+// EditDescriptionView
+"editDescriptionView.countDescription" = "Count description";
+"editDescriptionView.navigationTitle" = "Edit description";
+
 // SaveDetailView
 "saveDetailView.countDescription" = "Count description";
 "saveDetailView.keepingTrackOf" = "What were you keeping track of? (optional)";

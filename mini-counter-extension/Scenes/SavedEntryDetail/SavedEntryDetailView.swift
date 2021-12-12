@@ -55,13 +55,14 @@ struct SavedEntryDetailView: View {
                         .font(.headline)
                         .foregroundColor(.accentColor)
 
-                    Text(countEntry.label.isEmpty ? "-" : countEntry.label)
+                    Text(countEntry.description.isEmpty ? "-" : countEntry.description)
                 }
                 .padding(.vertical)
 
                 VStack(spacing: 4) {
                     NavigationLink(LocString.buttonEditDescriptionTitle()) {
                         EditDescriptionView(countEntry: countEntry)
+                            .environmentObject(savedEntryStore)
                     }
                     .buttonStyle(.bordered)
                     .tint(.greenSourCandy.opacity(10))
@@ -85,6 +86,7 @@ struct SavedEntryDetailView: View {
                             ) {
                                 presentationMode.wrappedValue.dismiss()
                                 counterStore.counterValue = Double(countEntry.count)
+                                counterStore.countDescription = countEntry.description
                                 mainStore.selectTabIndexPublisher.send(1)
                                 savedEntryStore.removeEntry(id: countEntry.id)
                             },
@@ -126,7 +128,7 @@ struct SavedEntryDetailView: View {
             }
         }
         .navigationBarTitleDisplayMode(.large)
-        .navigationTitle(countEntry.label)
+        .navigationTitle(countEntry.description)
     }
 }
 

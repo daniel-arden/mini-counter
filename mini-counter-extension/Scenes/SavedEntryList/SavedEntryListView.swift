@@ -99,9 +99,9 @@ private extension SavedEntryListView {
     @ViewBuilder
     private func countEntryLabel(_ countEntry: CountEntry) -> some View {
         Group {
-            if !countEntry.label.isEmpty {
+            if !countEntry.description.isEmpty {
                 HStack {
-                    Text(countEntry.label)
+                    Text(countEntry.description)
 
                     Spacer(minLength: 8)
 
