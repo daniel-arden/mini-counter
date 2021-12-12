@@ -9,8 +9,13 @@ import Foundation
 
 struct CountEntry: Identifiable, Equatable {
     let id = UUID()
+    let saveDate = Date()
     let count: Int
     let label: String
+
+    var formattedDate: String {
+        saveDate.formatted(date: .abbreviated, time: .shortened)
+    }
 }
 
 extension CountEntry {

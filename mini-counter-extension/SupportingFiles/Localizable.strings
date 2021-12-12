@@ -10,14 +10,23 @@
 
 // Button
 "button.cancel.title" = "CANCEL";
+"button.deleteEntry.title" = "DELETE ENTRY";
 "button.edit.title" = "EDIT";
+"button.editDescription.title" = "EDIT DESCRIPTION";
+"button.remove.title" = "REMOVE";
 "button.reset.title" = "RESET";
+"button.revert.title" = "REVERT";
+"button.revertCount.title" = "REVERT COUNT";
 "button.save.title" = "SAVE";
 "button.saveCount.title" = "SAVE COUNT";
 
 // Alert
+"alert.deleteEntry.title" = "Delete Entry";
+"alert.deleteEntry.caption" = "Are you sure you want to remove this entry?\n\nThis action cannot be undone.";
 "alert.resetCounter.title" = "Reset Counter";
 "alert.resetCounter.caption" = "Are you sure you want to reset the counter to zero?\n\nThis action cannot be undone.";
+"alert.revertCount.title" = "Revert Count";
+"alert.revertCount.caption" = "This action assigns the saved count back to the counter and removes it from the saved entries list. Are you sure you want to revert the count?\n\nThis action cannot be undone.";
 
 // MARK: - Views
 
@@ -29,6 +38,10 @@
 // SavedEntryListView
 "savedEntryListView.noSavedEntries" = "No saved entries";
 "savedEntryListView.navigationTitle" = "Saved entries";
+
+// SavedEntryDetailView
+"savedEntryDetailView.saveDate" = "Save date";
+"savedEntryDetailView.description" = "Description";
 
 // Settings
 "settingsView.counterStride.headerTitle" = "COUNTER STRIDE";

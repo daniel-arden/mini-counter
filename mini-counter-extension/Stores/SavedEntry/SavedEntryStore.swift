@@ -37,4 +37,8 @@ extension SavedEntryStore {
 
         resetSelection()
     }
+
+    func removeEntry(id: UUID) {
+        savedEntries.removeAll { $0.id == id }
+    }
 }
