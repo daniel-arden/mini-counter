@@ -10,7 +10,7 @@ import SwiftUI
 struct SavedEntryListView: View {
     // MARK: Stores
 
-    @StateObject private var savedEntryStore = SavedEntryStore()
+    @EnvironmentObject private var savedEntryStore: SavedEntryStore
 
     // MARK: Private Properties
 

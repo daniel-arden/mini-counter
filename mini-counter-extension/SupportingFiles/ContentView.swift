@@ -12,6 +12,7 @@ struct ContentView: View {
 
     @StateObject private var mainStore = MainStore()
     @StateObject private var counterStore = CounterStore()
+    @StateObject private var savedEntryStore = SavedEntryStore()
 
     // MARK: Private Properties
 
@@ -30,6 +31,7 @@ struct ContentView: View {
         }
         .environmentObject(mainStore)
         .environmentObject(counterStore)
+        .environmentObject(savedEntryStore)
         .onReceive(mainStore.selectTabIndexPublisher) {
             selectedIndex = $0
         }
