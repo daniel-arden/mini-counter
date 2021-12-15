@@ -40,7 +40,7 @@ struct ActionsView: View {
                 }
 
                 NavigationLink(LocString.buttonSaveCountTitle()) {
-                    SaveDetailView(countDescription: counterStore.countDescription)
+                    SaveDetailView()
                 }
                 .buttonStyle(.bordered)
                 .tint(.greenSourCandy.opacity(10))

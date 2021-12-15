@@ -12,7 +12,7 @@ final class CounterStore: ObservableObject {
     @AppStorage(UserDefaults.Key.counterColor.rawValue) var counterColor = Constants.defaultCounterColor
     @Published var counterValue = 0.0
     /// Serves as a storage for a reverted count
-    @Published var countDescription = ""
+    @State var countDescription = ""
 }
 
 // MARK: - Helpers
