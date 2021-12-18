@@ -28,6 +28,7 @@ struct SavedEntryListView: View {
                                 savedEntryStore.toggleSelectionOnID(countEntry.id)
                             } label: {
                                 countEntryLabel(countEntry)
+                                    .center(.vertical)
                             }
                             .buttonStyle(.plain)
                             .foregroundColor(
@@ -43,6 +44,7 @@ struct SavedEntryListView: View {
                                     .environmentObject(savedEntryStore)
                             } label: {
                                 countEntryLabel(countEntry)
+                                    .center(.vertical)
                             }
                         }
                     }
