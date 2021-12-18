@@ -10,7 +10,7 @@ import SwiftUI
 struct SavedEntryListView: View {
     // MARK: Stores
 
-    @StateObject private var savedEntryStore = SavedEntryStore()
+    @EnvironmentObject private var savedEntryStore: SavedEntryStore
 
     // MARK: Private Properties
 
@@ -28,6 +28,7 @@ struct SavedEntryListView: View {
                                 savedEntryStore.toggleSelectionOnID(countEntry.id)
                             } label: {
                                 countEntryLabel(countEntry)
+                                    .center(.vertical)
                             }
                             .buttonStyle(.plain)
                             .foregroundColor(
@@ -43,43 +44,13 @@ struct SavedEntryListView: View {
                                     .environmentObject(savedEntryStore)
                             } label: {
                                 countEntryLabel(countEntry)
+                                    .center(.vertical)
                             }
                         }
                     }
                     .animation(.default, value: savedEntryStore.savedEntries)
                     .toolbar {
-                        // TODO: Add animation for when toolbar buttons change
-                        if isEditing {
-                            HStack {
-                                RoundedActionImageButton("trash.fill", color: .redRage) {
-                                    withAnimation {
-                                        savedEntryStore.removeSelectedEntries()
-                                    }
-
-                                    isEditing.toggle()
-                                }
-                                .disabled(savedEntryStore.selection.isEmpty)
-
-                                Spacer()
-
-                                RoundedActionButton(
-                                    LocString.buttonCancelTitle(),
-                                    color: .grayAsh
-                                ) {
-                                    isEditing.toggle()
-                                    savedEntryStore.resetSelection()
-                                }
-                            }
-                            .padding(.vertical)
-                        } else {
-                            RoundedActionButton(
-                                LocString.buttonEditTitle(),
-                                color: .blueAtmosphere
-                            ) {
-                                isEditing.toggle()
-                            }
-                            .padding(.vertical)
-                        }
+                        toolbar
                     }
                 }
             }
@@ -117,6 +88,42 @@ private extension SavedEntryListView {
         // Setting the contentShape to Rectangle makes the full width tappable
         // Taken from this SO answer: https://stackoverflow.com/a/65101136/10876104
         .contentShape(Rectangle())
+    }
+
+    @ViewBuilder
+    private var toolbar: some View {
+        if isEditing {
+            HStack {
+                RoundedActionImageButton("trash.fill", color: .redRage) {
+                    withAnimation {
+                        savedEntryStore.removeSelectedEntries()
+                    }
+
+                    isEditing.toggle()
+                }
+                .disabled(savedEntryStore.selection.isEmpty)
+
+                Spacer()
+
+                RoundedActionButton(
+                    LocString.buttonCancelTitle(),
+                    color: .grayAsh
+                ) {
+                    isEditing.toggle()
+                    savedEntryStore.resetSelection()
+                }
+            }
+            .padding(.vertical)
+        } else {
+            RoundedActionButton(
+                LocString.buttonEditTitle(),
+                color: .blueAtmosphere
+            ) {
+                isEditing.toggle()
+            }
+
+            .padding(.vertical)
+        }
     }
 }
 
