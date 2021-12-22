@@ -23,31 +23,12 @@ struct SavedEntryListView: View {
                     Text(LocString.savedEntryListViewNoSavedEntries())
                 } else {
                     List(savedEntryStore.savedEntries) { countEntry in
-                        if isEditing {
-                            Button {
-                                savedEntryStore.toggleSelectionOnID(countEntry.id)
-                            } label: {
-                                countEntryLabel(countEntry)
-                                    .center(.vertical)
-                            }
-                            .buttonStyle(.plain)
-                            .foregroundColor(
-                                savedEntryStore.selection.contains(countEntry.id) ?
-                                    .redRage :
-                                    .white
-                            )
-                            .animation(.easeInOut, value: isEditing)
-
-                        } else {
-                            NavigationLink {
-                                SavedEntryDetailView(countEntry: countEntry)
-                                    .environmentObject(savedEntryStore)
-                            } label: {
-                                countEntryLabel(countEntry)
-                                    .center(.vertical)
-                            }
-                        }
+                        CountEntryButtonView(
+                            isEditing: $isEditing,
+                            countEntry: countEntry
+                        )
                     }
+                    .environmentObject(savedEntryStore)
                     .animation(.default, value: savedEntryStore.savedEntries)
                     .toolbar {
                         toolbar
@@ -68,29 +49,6 @@ struct SavedEntryListView: View {
 
 private extension SavedEntryListView {
     @ViewBuilder
-    private func countEntryLabel(_ countEntry: CountEntry) -> some View {
-        Group {
-            if !countEntry.description.isEmpty {
-                HStack {
-                    Text(countEntry.description)
-
-                    Spacer(minLength: 8)
-
-                    Text("\(countEntry.count)")
-                        .fontWeight(.bold)
-                }
-            } else {
-                Text("\(countEntry.count)")
-                    .fontWeight(.bold)
-            }
-        }
-        .maxWidth()
-        // Setting the contentShape to Rectangle makes the full width tappable
-        // Taken from this SO answer: https://stackoverflow.com/a/65101136/10876104
-        .contentShape(Rectangle())
-    }
-
-    @ViewBuilder
     private var toolbar: some View {
         if isEditing {
             HStack {
@@ -102,6 +60,7 @@ private extension SavedEntryListView {
                     isEditing.toggle()
                 }
                 .disabled(savedEntryStore.selection.isEmpty)
+                .accessibilityLabel(LocString.savedEntryListViewA11yTrashLabel())
 
                 Spacer()
 
@@ -112,6 +71,7 @@ private extension SavedEntryListView {
                     isEditing.toggle()
                     savedEntryStore.resetSelection()
                 }
+                .accessibilityLabel(LocString.savedEntryListViewA11yCancelLabel())
             }
             .padding(.vertical)
         } else {
@@ -121,7 +81,6 @@ private extension SavedEntryListView {
             ) {
                 isEditing.toggle()
             }
-
             .padding(.vertical)
         }
     }

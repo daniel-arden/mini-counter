@@ -48,6 +48,12 @@
 "colorDotView.a11y.action.hint" = "Interact with to change counter color to %@";
 "colorDotView.a11y.currentlySelected.label" = "%@, currently selected";
 
+// CountEntryButtonView
+"countEntryButtonView.a11y.selected.suffix" = ", selected";
+"countEntryButtonView.a11y.notSelected.suffix" = ", not selected";
+"countEntryButtonView.a11y.selectionToggle.hint" = "Interact with to toggle selection of the focused count entry";
+"countEntryButtonView.a11y.entryDetail.hint" = "Interact with to go to the detail of the focused count";
+
 // CounterView
 "counterView.a11y.count.label" = "Current count: %d";
 "counterView.a11y.count.hint" = "Rotate the digital crown to increment or decrement the value";
@@ -63,6 +69,8 @@
 "saveDetailView.navigationTitle" = "Save count";
 
 // SavedEntryListView
+"savedEntryListView.a11y.trash.label" = "Remove selected entries";
+"savedEntryListView.a11y.cancel.label" = "Cancel selection and quit editing mode";
 "savedEntryListView.noSavedEntries" = "No saved entries";
 "savedEntryListView.navigationTitle" = "Saved entries";
 
