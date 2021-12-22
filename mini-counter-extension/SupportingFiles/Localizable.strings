@@ -57,6 +57,7 @@
 "editDescriptionView.navigationTitle" = "Edit description";
 
 // SaveDetailView
+"saveDetailView.a11y.currentCount.label" = "Count to be saved: %d";
 "saveDetailView.countDescription" = "Count description";
 "saveDetailView.keepingTrackOf" = "What were you keeping track of? (optional)";
 "saveDetailView.navigationTitle" = "Save count";

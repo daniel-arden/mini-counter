@@ -29,6 +29,11 @@ struct SaveDetailView: View {
                 )
                 .foregroundColor(counterStore.counterColor.color)
                 .padding(.vertical)
+                .accessibilityLabel(
+                    LocString.saveDetailViewA11yCurrentCountLabel(
+                        counterStore.counterValue.roundedInt
+                    )
+                )
 
             Divider()
                 .padding()
@@ -39,7 +44,7 @@ struct SaveDetailView: View {
 
             TextField(
                 LocString.saveDetailViewCountDescription(),
-                text: counterStore.$countDescription
+                text: $counterStore.countDescription
             )
             .padding(.vertical)
 
