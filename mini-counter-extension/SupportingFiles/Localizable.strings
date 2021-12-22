@@ -30,6 +30,10 @@
 
 // MARK: - Views
 
+// ActionsView
+"actionsView.a11y.settings.title" = "Settings";
+"actionsView.a11y.reset.title" = "Reset count";
+
 // EditDescriptionView
 "editDescriptionView.countDescription" = "Count description";
 "editDescriptionView.navigationTitle" = "Edit description";
