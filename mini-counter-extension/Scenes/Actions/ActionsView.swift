@@ -28,18 +28,17 @@ struct ActionsView: View {
                             .resizable()
                             .aspectRatio(1.0, contentMode: .fit)
                     }
-                    .accessibilityLabel(LocString.actionsViewA11ySettingsTitle())
                     .buttonStyle(.bordered)
                     .tint(.blueAtmosphere.opacity(10))
                     .foregroundColor(.white)
-                    .frame(maxHeight: 44)
+                    .accessibilityLabel(LocString.actionsViewA11ySettingsTitle())
 
                     RoundedActionImageButton("arrow.clockwise.circle.fill", color: .orangeFire) {
                         showResetCountAlert.toggle()
                     }
                     .accessibilityLabel(LocString.actionsViewA11yResetTitle())
-                    .frame(maxHeight: 44)
                 }
+                .frame(maxHeight: 44)
 
                 NavigationLink(LocString.buttonSaveCountTitle()) {
                     SaveDetailView()

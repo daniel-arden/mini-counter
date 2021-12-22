@@ -20,6 +20,16 @@
 "button.save.title" = "SAVE";
 "button.saveCount.title" = "SAVE COUNT";
 
+// CounterColor
+"counterColor.white.name" = "White";
+"counterColor.blueAtmosphere.name" = "Blue Atmosphere";
+"counterColor.grayAsh.name" = "Gray Ash";
+"counterColor.greenSourCandy.name" = "Green Sour Candy";
+"counterColor.orangeFire.name" = "Orange Fire";
+"counterColor.purpleMedium.name" = "Purple Medium";
+"counterColor.redRage.name" = "Red Rage";
+"counterColor.yellowDanger.name" = "Yellow Danger";
+
 // Alert
 "alert.deleteEntry.title" = "Delete Entry";
 "alert.deleteEntry.caption" = "Are you sure you want to remove this entry?\n\nThis action cannot be undone.";
@@ -33,6 +43,10 @@
 // ActionsView
 "actionsView.a11y.settings.title" = "Settings";
 "actionsView.a11y.reset.title" = "Reset count";
+
+// ColorDotView
+"colorDotView.a11y.action.hint" = "Interact with to change counter color to %@";
+"colorDotView.a11y.currentlySelected.label" = "%@, currently selected.";
 
 // EditDescriptionView
 "editDescriptionView.countDescription" = "Count description";
@@ -53,5 +67,13 @@
 
 // Settings
 "settingsView.counterStride.headerTitle" = "COUNTER STRIDE";
+"settingsView.counterStride.footerTitle" = "Counter stride specifies the incremental or decremental value of one counter addition or deduction step when rotating the digital crown.";
 "settingsView.counterColor.headerTitle" = "COUNTER COLOR";
 "settingsView.navigationTitle" = "Settings";
+
+// SettingsCounterStrideView
+"settingsCounterStrideView.a11y.stride.label" = "Current counter stride: %d";
+"settingsCounterStrideView.a11y.minus.hint" = "Interact with to decrement counter stride.";
+"settingsCounterStrideView.a11y.minus.label" = "Minus";
+"settingsCounterStrideView.a11y.plus.hint" = "Interact with to increment counter stride.";
+"settingsCounterStrideView.a11y.plus.label" = "Plus";

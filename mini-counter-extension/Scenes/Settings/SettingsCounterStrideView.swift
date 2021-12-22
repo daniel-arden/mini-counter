@@ -19,17 +19,26 @@ struct SettingsCounterStrideView: View {
             }
             .squareFrame(32)
             .disabled(settingsStore.isStrideAtLowerBound)
+            .accessibilityLabel(LocString.settingsCounterStrideViewA11yMinusLabel())
+            .accessibilityHint(LocString.settingsCounterStrideViewA11yMinusHint())
 
             Text("\(settingsStore.counterStride)")
                 .font(.title)
                 .maxWidth()
                 .padding()
+                .accessibilityLabel(
+                    LocString.settingsCounterStrideViewA11yStrideLabel(
+                        settingsStore.counterStride
+                    )
+                )
 
             CircularImageButton("plus", color: .greenSourCandy) {
                 settingsStore.incrementStride()
             }
             .squareFrame(32)
             .disabled(settingsStore.isStringAtUpperBound)
+            .accessibilityLabel(LocString.settingsCounterStrideViewA11yPlusLabel())
+            .accessibilityHint(LocString.settingsCounterStrideViewA11yPlusHint())
         }
         .padding()
     }
