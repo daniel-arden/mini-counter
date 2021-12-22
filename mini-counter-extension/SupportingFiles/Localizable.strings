@@ -46,11 +46,11 @@
 
 // ColorDotView
 "colorDotView.a11y.action.hint" = "Interact with to change counter color to %@";
-"colorDotView.a11y.currentlySelected.label" = "%@, currently selected.";
+"colorDotView.a11y.currentlySelected.label" = "%@, currently selected";
 
 // CounterView
 "counterView.a11y.count.label" = "Current count: %d";
-"counterView.a11y.count.hint" = "Rotate the digital crown to increment or decrement the value.";
+"counterView.a11y.count.hint" = "Rotate the digital crown to increment or decrement the value";
 
 // EditDescriptionView
 "editDescriptionView.countDescription" = "Count description";
@@ -77,7 +77,7 @@
 
 // SettingsCounterStrideView
 "settingsCounterStrideView.a11y.stride.label" = "Current counter stride: %d";
-"settingsCounterStrideView.a11y.minus.hint" = "Interact with to decrement counter stride.";
+"settingsCounterStrideView.a11y.minus.hint" = "Interact with to decrement counter stride";
 "settingsCounterStrideView.a11y.minus.label" = "Minus";
-"settingsCounterStrideView.a11y.plus.hint" = "Interact with to increment counter stride.";
+"settingsCounterStrideView.a11y.plus.hint" = "Interact with to increment counter stride";
 "settingsCounterStrideView.a11y.plus.label" = "Plus";
