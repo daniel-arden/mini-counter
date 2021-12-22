@@ -37,6 +37,12 @@ struct CounterView: View {
             )
             .maxFrame()
             .id(counterStore.counterStride)
+            .accessibilityLabel(
+                LocString.counterViewA11yCountLabel(
+                    counterStore.counterValue.roundedInt
+                )
+            )
+            .accessibilityHint(LocString.counterViewA11yCountHint())
     }
 }
 

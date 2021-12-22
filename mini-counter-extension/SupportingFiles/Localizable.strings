@@ -48,6 +48,10 @@
 "colorDotView.a11y.action.hint" = "Interact with to change counter color to %@";
 "colorDotView.a11y.currentlySelected.label" = "%@, currently selected.";
 
+// CounterView
+"counterView.a11y.count.label" = "Current count: %d";
+"counterView.a11y.count.hint" = "Rotate the digital crown to increment or decrement the value.";
+
 // EditDescriptionView
 "editDescriptionView.countDescription" = "Count description";
 "editDescriptionView.navigationTitle" = "Edit description";
