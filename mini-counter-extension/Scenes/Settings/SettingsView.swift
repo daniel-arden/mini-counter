@@ -8,22 +8,21 @@
 import SwiftUI
 
 struct SettingsView: View {
-    @ObservedObject private var settingsStore: SettingsStore
+    // MARK: Stores
 
-    init(settingsStore: SettingsStore) {
-        self.settingsStore = settingsStore
-    }
+    @StateObject private var settingsStore = SettingsStore()
 
     var body: some View {
         List {
             Section(header: strideSectionHeader) {
-                SettingsCounterStrideView(settingsStore: settingsStore)
+                SettingsCounterStrideView()
             }
 
             Section(header: counterColorSectionHeader) {
-                SettingsCounterColorView(settingsStore: settingsStore)
+                SettingsCounterColorView()
             }
         }
+        .environmentObject(settingsStore)
         .headerProminence(.increased)
         .navigationBarTitleDisplayMode(.large)
         .navigationTitle(LocString.settingsViewNavigationTitle())
@@ -49,7 +48,7 @@ private extension SettingsView {
 #if DEBUG
     struct SettingsView_Previews: PreviewProvider {
         static var previews: some View {
-            SettingsView(settingsStore: .init())
+            SettingsView()
         }
     }
 #endif

@@ -8,11 +8,9 @@
 import SwiftUI
 
 struct SettingsCounterStrideView: View {
-    @ObservedObject private var settingsStore: SettingsStore
+    // MARK: Stores
 
-    init(settingsStore: SettingsStore) {
-        self.settingsStore = settingsStore
-    }
+    @EnvironmentObject private var settingsStore: SettingsStore
 
     var body: some View {
         HStack {
@@ -42,7 +40,7 @@ struct SettingsCounterStrideView: View {
 #if DEBUG
     struct SettingsCounterStrideView_Previews: PreviewProvider {
         static var previews: some View {
-            SettingsCounterStrideView(settingsStore: .init())
+            SettingsCounterStrideView()
         }
     }
 #endif

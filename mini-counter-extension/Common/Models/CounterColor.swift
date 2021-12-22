@@ -5,7 +5,7 @@
 //  Created by Daniel Arden on 17.11.2021.
 //
 
-import struct SwiftUI.Color
+import SwiftUI
 
 // Thanks to Nick for help here :)
 enum CounterColor: String, CaseIterable, Identifiable {

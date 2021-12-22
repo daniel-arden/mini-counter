@@ -12,9 +12,7 @@ import SwiftUI
 struct Mini_CounterApp: App {
     var body: some Scene {
         WindowGroup {
-            NavigationView {
-                MainTabCoordinator().view()
-            }
+            ContentView()
         }
     }
 }

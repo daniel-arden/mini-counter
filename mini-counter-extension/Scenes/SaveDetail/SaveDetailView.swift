@@ -10,26 +10,17 @@ import SwiftUI
 struct SaveDetailView: View {
     // MARK: Stores
 
-    @ObservedObject private var mainStore: MainStore
-    @ObservedObject private var saveDetailStore: SaveDetailStore
+    @EnvironmentObject private var mainStore: MainStore
+    @EnvironmentObject private var counterStore: CounterStore
 
     // MARK: - Private Properties
 
-    @EnvironmentObject private var saveDetailRouter: SaveDetailCoordinator.Router
-
-    // MARK: Init
-
-    init(
-        mainStore: MainStore,
-        saveDetailStore: SaveDetailStore
-    ) {
-        self.mainStore = mainStore
-        self.saveDetailStore = saveDetailStore
-    }
+    @Environment(\.presentationMode) private var presentationMode
+    @State private var description = ""
 
     var body: some View {
         ScrollView {
-            Text("\(saveDetailStore.counterCount)")
+            Text("\(counterStore.counterValue.roundedInt)")
                 .font(
                     .system(
                         size: 70,
@@ -37,7 +28,7 @@ struct SaveDetailView: View {
                         design: .monospaced
                     )
                 )
-                .foregroundColor(saveDetailStore.counterColor.color)
+                .foregroundColor(counterStore.counterColor.color)
                 .padding(.vertical)
 
             Divider()
@@ -49,15 +40,14 @@ struct SaveDetailView: View {
 
             TextField(
                 LocString.saveDetailViewCountDescription(),
-                text: $saveDetailStore.description
+                text: $description
             )
             .padding(.vertical)
 
             RoundedActionButton(LocString.buttonSaveTitle(), color: .greenSourCandy) {
-                saveDetailStore.saveCount()
+                mainStore.saveCounterCount(counterStore.counterValue.roundedInt, description: description)
                 mainStore.resetCounterPublisher.send()
-                mainStore.selectTabIndexPublisher.send(1)
-                saveDetailRouter.dismissCoordinator()
+                presentationMode.wrappedValue.dismiss()
             }
             .padding(.top)
         }
@@ -72,13 +62,7 @@ struct SaveDetailView: View {
 #if DEBUG
     struct SaveDetailView_Previews: PreviewProvider {
         static var previews: some View {
-            SaveDetailView(
-                mainStore: .init(),
-                saveDetailStore: .init(
-                    mainStore: .init(),
-                    counterCount: 999
-                )
-            )
+            SaveDetailView()
         }
     }
 #endif

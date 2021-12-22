@@ -10,31 +10,27 @@ import SwiftUI
 struct ActionsView: View {
     // MARK: Stores
 
-    @ObservedObject private var mainStore: MainStore
-    @ObservedObject private var counterStore: CounterStore
+    @EnvironmentObject private var mainStore: MainStore
+    @EnvironmentObject private var counterStore: CounterStore
 
     // MARK: Private Properties
 
-    @EnvironmentObject private var actionsRouter: ActionsCoordinator.Router
     @State private var showResetCountAlert = false
-
-    // MARK: Init
-
-    init(
-        mainStore: MainStore,
-        counterStore: CounterStore
-    ) {
-        self.mainStore = mainStore
-        self.counterStore = counterStore
-    }
 
     var body: some View {
         NavigationView {
-            VStack(spacing: 8) {
+            VStack(spacing: 16) {
                 HStack(spacing: 8) {
-                    RoundedActionImageButton("gearshape.fill", color: .blueAtmosphere) {
-                        actionsRouter.route(to: \.settings)
+                    NavigationLink {
+                        SettingsView()
+                    } label: {
+                        Image(systemName: "gearshape.fill")
+                            .resizable()
+                            .aspectRatio(1.0, contentMode: .fit)
                     }
+                    .buttonStyle(.bordered)
+                    .tint(.blueAtmosphere.opacity(10))
+                    .foregroundColor(.white)
                     .frame(maxHeight: 44)
 
                     RoundedActionImageButton("arrow.clockwise.circle.fill", color: .orangeFire) {
@@ -43,12 +39,13 @@ struct ActionsView: View {
                     .frame(maxHeight: 44)
                 }
 
-                RoundedActionButton(
-                    LocString.buttonSaveCountTitle(),
-                    color: .greenSourCandy
-                ) {
-                    actionsRouter.route(to: \.saveDetail)
+                NavigationLink(LocString.buttonSaveCountTitle()) {
+                    SaveDetailView()
                 }
+                .buttonStyle(.bordered)
+                .tint(.greenSourCandy.opacity(10))
+                .foregroundColor(.white)
+                .frame(maxHeight: 44)
             }
             .alert(isPresented: $showResetCountAlert) {
                 Alert(
@@ -77,10 +74,7 @@ struct ActionsView: View {
 #if DEBUG
     struct ActionsView_Previews: PreviewProvider {
         static var previews: some View {
-            ActionsView(
-                mainStore: .init(),
-                counterStore: .init()
-            )
+            ActionsView()
         }
     }
 #endif

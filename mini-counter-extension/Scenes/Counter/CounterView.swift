@@ -10,16 +10,12 @@ import SwiftUI
 struct CounterView: View {
     // MARK: Stores
 
-    @ObservedObject private var counterStore: CounterStore
+    @EnvironmentObject private var counterStore: CounterStore
 
     // MARK: Init
 
-    init(counterStore: CounterStore) {
-        self.counterStore = counterStore
-    }
-
     var body: some View {
-        Text("\(Int(counterStore.counterValue.rounded()))")
+        Text("\(counterStore.counterValue.roundedInt)")
             .font(
                 .system(
                     size: 100,
@@ -49,7 +45,7 @@ struct CounterView: View {
 #if DEBUG
     struct CounterView_Previews: PreviewProvider {
         static var previews: some View {
-            CounterView(counterStore: .init())
+            CounterView()
         }
     }
 #endif

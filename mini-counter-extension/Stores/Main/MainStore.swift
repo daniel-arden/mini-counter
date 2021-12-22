@@ -12,3 +12,11 @@ final class MainStore: ObservableObject {
     let selectTabIndexPublisher = PassthroughSubject<Int, Never>() // TODO: Refactor this so that it rather uses an enum value or is not necessary
     @Published var savedEntries = [CountEntry]()
 }
+
+extension MainStore {
+    func saveCounterCount(_ counterCount: Int, description: String) {
+        let countEntry = CountEntry(count: counterCount, label: description)
+        // TODO: Save the data into a persistent storage
+        savedEntries.append(countEntry)
+    }
+}
