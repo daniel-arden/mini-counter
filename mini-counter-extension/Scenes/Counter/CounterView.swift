@@ -12,8 +12,6 @@ struct CounterView: View {
 
     @EnvironmentObject private var counterStore: CounterStore
 
-    // MARK: Init
-
     var body: some View {
         Text("\(counterStore.counterValue.roundedInt)")
             .font(
