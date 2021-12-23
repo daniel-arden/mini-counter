@@ -56,7 +56,7 @@ struct ActionsView: View {
                     primaryButton: .destructive(
                         Text(LocString.buttonResetTitle())
                     ) {
-                        mainStore.selectTabIndexPublisher.send(1)
+                        mainStore.selectTab(.counterView)
                         counterStore.resetCounter()
                         showResetCountAlert.toggle()
                     },

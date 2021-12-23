@@ -14,10 +14,14 @@ final class MainStore: ObservableObject {
 
     let moc = PersistenceController.shared.container.viewContext
     let resetCounterPublisher = PassthroughSubject<Void, Never>()
-    let selectTabIndexPublisher = PassthroughSubject<Int, Never>() // TODO: Refactor this so that it rather uses an enum value or is not necessary
+    let tabDidSelect = PassthroughSubject<ContentViewTab, Never>()
 }
 
 extension MainStore {
+    func selectTab(_ contentViewTab: ContentViewTab) {
+        tabDidSelect.send(contentViewTab)
+    }
+
     func saveCounterCount(_ counterCount: Int, label: String) {
         let newCountEntry = CountEntry(context: moc)
         newCountEntry.saveDate = Date()

@@ -89,7 +89,7 @@ struct SavedEntryDetailView: View {
                                 presentationMode.wrappedValue.dismiss()
                                 counterStore.counterValue = Double(countEntry.count)
                                 counterStore.countLabel = countEntry.label
-                                mainStore.selectTabIndexPublisher.send(1)
+                                mainStore.selectTab(.counterView)
                                 mainStore.removeEntries([countEntry])
                             },
                             secondaryButton: .cancel(

@@ -13,12 +13,12 @@ enum Constants {
 
     // MARK: Tabs
 
-    static let defaultSelectedMainTabIndex: Int = 1
+    static let defaultSelectedContentViewTabIndex = ContentViewTab.counterView.rawValue
 
     // MARK: Counter
 
     static let counterStrideRange = 1 ... 10
     static let counterValueRange = 0 ... 999
-    static let defaultCounterStride = 1
+    static let defaultCounterStride = Constants.counterStrideRange.lowerBound
     static let defaultCounterColor = CounterColor.white
 }
