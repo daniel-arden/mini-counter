@@ -11,5 +11,6 @@ extension UserDefaults {
     enum Key: String {
         case counterStride
         case counterColor
+        case counterValue
     }
 }

@@ -10,7 +10,7 @@ import SwiftUI
 final class CounterStore: ObservableObject {
     @AppStorage(UserDefaults.Key.counterStride.rawValue) var counterStride = Constants.defaultCounterStride
     @AppStorage(UserDefaults.Key.counterColor.rawValue) var counterColor = Constants.defaultCounterColor
-    @Published var counterValue = 0.0
+    @AppStorage(UserDefaults.Key.counterValue.rawValue) var counterValue = 0.0
     /// Serves as a storage for a reverted count
     var countLabel = ""
 }
