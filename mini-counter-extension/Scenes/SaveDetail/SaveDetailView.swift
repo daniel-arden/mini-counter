@@ -16,6 +16,7 @@ struct SaveDetailView: View {
     // MARK: Private Properties
 
     @Environment(\.presentationMode) private var presentationMode
+    @State private var countLabel = ""
 
     var body: some View {
         ScrollView {
@@ -44,19 +45,22 @@ struct SaveDetailView: View {
 
             TextField(
                 LocString.saveDetailViewCountDescription(),
-                text: $counterStore.countDescription
+                text: $countLabel
             )
             .padding(.vertical)
 
             RoundedActionButton(LocString.buttonSaveTitle(), color: .greenSourCandy) {
                 mainStore.saveCounterCount(
                     counterStore.counterValue.roundedInt,
-                    description: counterStore.countDescription
+                    label: countLabel
                 )
                 mainStore.resetCounterPublisher.send()
                 presentationMode.wrappedValue.dismiss()
             }
             .padding(.top)
+        }
+        .onLoad {
+            countLabel = counterStore.countLabel
         }
         .headerProminence(.increased)
         .navigationTitle(LocString.saveDetailViewNavigationTitle())

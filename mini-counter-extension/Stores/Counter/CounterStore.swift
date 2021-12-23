@@ -12,7 +12,7 @@ final class CounterStore: ObservableObject {
     @AppStorage(UserDefaults.Key.counterColor.rawValue) var counterColor = Constants.defaultCounterColor
     @Published var counterValue = 0.0
     /// Serves as a storage for a reverted count
-    @State var countDescription = ""
+    var countLabel = ""
 }
 
 // MARK: - Helpers
@@ -20,6 +20,6 @@ final class CounterStore: ObservableObject {
 extension CounterStore {
     func resetCounter() {
         counterValue = 0.0
-        countDescription = ""
+        countLabel = ""
     }
 }

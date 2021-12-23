@@ -5,6 +5,7 @@
 //  Created by Daniel Arden on 10.12.2021.
 //
 
+import CoreData
 import SwiftUI
 
 struct ContentView: View {
@@ -17,6 +18,9 @@ struct ContentView: View {
     // MARK: Private Properties
 
     @State private var selectedIndex = Constants.defaultSelectedMainTabIndex
+    private var moc: NSManagedObjectContext {
+        mainStore.moc
+    }
 
     var body: some View {
         TabView(selection: $selectedIndex) {
@@ -32,6 +36,7 @@ struct ContentView: View {
         .environmentObject(mainStore)
         .environmentObject(counterStore)
         .environmentObject(savedEntryStore)
+        .environment(\.managedObjectContext, moc)
         .onReceive(mainStore.selectTabIndexPublisher) {
             selectedIndex = $0
         }

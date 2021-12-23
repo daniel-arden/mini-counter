@@ -10,6 +10,8 @@
 		0E39FEB32251F49D13CDF052 /* Pods_mini_counter_WatchKit_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69C3F71B12F2E4B4CB7D2F60 /* Pods_mini_counter_WatchKit_App.framework */; };
 		5A0230D7273C18BF00E05BDF /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0230D6273C18BF00E05BDF /* SettingsView.swift */; };
 		5A054A692773AE6800264B78 /* CountEntryButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A054A682773AE6800264B78 /* CountEntryButtonView.swift */; };
+		5A054A6F2773B97700264B78 /* mini-counter.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5A054A6D2773B97700264B78 /* mini-counter.xcdatamodeld */; };
+		5A054A902773BA6300264B78 /* PersistenceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A054A8F2773BA6300264B78 /* PersistenceController.swift */; };
 		5A097676273B1201007695D3 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A097675273B1201007695D3 /* Colors.xcassets */; };
 		5A1E17CC27416E4900C3747E /* SettingsCounterColorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1E17CB27416E4900C3747E /* SettingsCounterColorView.swift */; };
 		5A1E17D12741A5EF00C3747E /* ColorDotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1E17D02741A5EF00C3747E /* ColorDotView.swift */; };
@@ -29,6 +31,7 @@
 		5A2E384F2732F039009D1FAD /* Color+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A2E384E2732F039009D1FAD /* Color+Convenience.swift */; };
 		5A2E38552734757A009D1FAD /* CountEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A2E38542734757A009D1FAD /* CountEntry.swift */; };
 		5A45F2DE276E483500508B44 /* View+Center.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A45F2DD276E483500508B44 /* View+Center.swift */; };
+		5A4869592774CEA800EA9D58 /* ViewDidLoad.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A4869582774CEA800EA9D58 /* ViewDidLoad.swift */; };
 		5A607F3D27609C6700CBEEB2 /* SavedEntryStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A607F3C27609C6700CBEEB2 /* SavedEntryStore.swift */; };
 		5A7A2EAE27660FD9004FBB6E /* EditDescriptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7A2EAD27660FD9004FBB6E /* EditDescriptionView.swift */; };
 		5A7A719C273FFCD00085C7FF /* SaveDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7A719B273FFCD00085C7FF /* SaveDetailView.swift */; };
@@ -106,6 +109,8 @@
 		29F04DA9D57DA51321D7FB5A /* Pods-mini-counter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mini-counter.release.xcconfig"; path = "Target Support Files/Pods-mini-counter/Pods-mini-counter.release.xcconfig"; sourceTree = "<group>"; };
 		5A0230D6273C18BF00E05BDF /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		5A054A682773AE6800264B78 /* CountEntryButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountEntryButtonView.swift; sourceTree = "<group>"; };
+		5A054A6E2773B97700264B78 /* mini-counter.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "mini-counter.xcdatamodel"; sourceTree = "<group>"; };
+		5A054A8F2773BA6300264B78 /* PersistenceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceController.swift; sourceTree = "<group>"; };
 		5A097675273B1201007695D3 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		5A1E17CB27416E4900C3747E /* SettingsCounterColorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCounterColorView.swift; sourceTree = "<group>"; };
 		5A1E17D02741A5EF00C3747E /* ColorDotView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorDotView.swift; sourceTree = "<group>"; };
@@ -127,6 +132,7 @@
 		5A2E384E2732F039009D1FAD /* Color+Convenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Convenience.swift"; sourceTree = "<group>"; };
 		5A2E38542734757A009D1FAD /* CountEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountEntry.swift; sourceTree = "<group>"; };
 		5A45F2DD276E483500508B44 /* View+Center.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Center.swift"; sourceTree = "<group>"; };
+		5A4869582774CEA800EA9D58 /* ViewDidLoad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewDidLoad.swift; sourceTree = "<group>"; };
 		5A607F3C27609C6700CBEEB2 /* SavedEntryStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedEntryStore.swift; sourceTree = "<group>"; };
 		5A7A2EAD27660FD9004FBB6E /* EditDescriptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditDescriptionView.swift; sourceTree = "<group>"; };
 		5A7A719B273FFCD00085C7FF /* SaveDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveDetailView.swift; sourceTree = "<group>"; };
@@ -277,6 +283,7 @@
 				5A2E380C2732D304009D1FAD /* Assets.xcassets */,
 				5A2E38082732D303009D1FAD /* Mini_CounterApp.swift */,
 				5AA631ED2763CB0300CE932E /* ContentView.swift */,
+				5A054A6D2773B97700264B78 /* mini-counter.xcdatamodeld */,
 				5AA631E4276376DD00CE932E /* Localizable.strings */,
 			);
 			path = SupportingFiles;
@@ -345,6 +352,7 @@
 			children = (
 				5A2E383B2732D9B0009D1FAD /* Frame+Convenience.swift */,
 				5A45F2DD276E483500508B44 /* View+Center.swift */,
+				5A4869582774CEA800EA9D58 /* ViewDidLoad.swift */,
 			);
 			path = ViewModifiers;
 			sourceTree = "<group>";
@@ -387,6 +395,7 @@
 			children = (
 				5A2E380A2732D303009D1FAD /* ComplicationController.swift */,
 				5A7A71AA27405D140085C7FF /* Constants.swift */,
+				5A054A8F2773BA6300264B78 /* PersistenceController.swift */,
 			);
 			path = Misc;
 			sourceTree = "<group>";
@@ -776,11 +785,14 @@
 				5A2E384D2732EE08009D1FAD /* RoundedActionImageButton.swift in Sources */,
 				5AA631EA2763822500CE932E /* ColorResource+Color.swift in Sources */,
 				5A2E38552734757A009D1FAD /* CountEntry.swift in Sources */,
+				5A054A6F2773B97700264B78 /* mini-counter.xcdatamodeld in Sources */,
 				5AA631EE2763CB0300CE932E /* ContentView.swift in Sources */,
 				5A7A71B2274078820085C7FF /* CounterStore.swift in Sources */,
 				5A7A2EAE27660FD9004FBB6E /* EditDescriptionView.swift in Sources */,
 				5A607F3D27609C6700CBEEB2 /* SavedEntryStore.swift in Sources */,
+				5A4869592774CEA800EA9D58 /* ViewDidLoad.swift in Sources */,
 				5A7A71A9274053430085C7FF /* SettingsStore.swift in Sources */,
+				5A054A902773BA6300264B78 /* PersistenceController.swift in Sources */,
 				5A7A71A5274005ED0085C7FF /* SettingsCounterStrideView.swift in Sources */,
 				5A2E382E2732D756009D1FAD /* CounterView.swift in Sources */,
 				5A054A692773AE6800264B78 /* CountEntryButtonView.swift in Sources */,
@@ -1105,6 +1117,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		5A054A6D2773B97700264B78 /* mini-counter.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				5A054A6E2773B97700264B78 /* mini-counter.xcdatamodel */,
+			);
+			currentVersion = 5A054A6E2773B97700264B78 /* mini-counter.xcdatamodel */;
+			path = "mini-counter.xcdatamodeld";
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 5A2E37EC2732D300009D1FAD /* Project object */;
 }

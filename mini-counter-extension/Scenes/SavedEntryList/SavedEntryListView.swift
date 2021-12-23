@@ -10,26 +10,28 @@ import SwiftUI
 struct SavedEntryListView: View {
     // MARK: Stores
 
+    @EnvironmentObject private var mainStore: MainStore
     @EnvironmentObject private var savedEntryStore: SavedEntryStore
 
     // MARK: Private Properties
 
     @State private var isEditing = false
+    @FetchRequest(sortDescriptors: [SortDescriptor(\.saveDate, order: .reverse)])
+    private var savedEntries: FetchedResults<CountEntry>
 
     var body: some View {
         NavigationView {
             Group {
-                if savedEntryStore.savedEntries.isEmpty {
+                if savedEntries.isEmpty {
                     Text(LocString.savedEntryListViewNoSavedEntries())
                 } else {
-                    List(savedEntryStore.savedEntries) { countEntry in
+                    List(savedEntries) { countEntry in
                         CountEntryButtonView(
                             isEditing: $isEditing,
                             countEntry: countEntry
                         )
                     }
                     .environmentObject(savedEntryStore)
-                    .animation(.default, value: savedEntryStore.savedEntries)
                     .toolbar {
                         toolbar
                     }
@@ -54,7 +56,7 @@ private extension SavedEntryListView {
             HStack {
                 RoundedActionImageButton("trash.fill", color: .redRage) {
                     withAnimation {
-                        savedEntryStore.removeSelectedEntries()
+                        mainStore.removeEntries(savedEntryStore.selection)
                     }
 
                     isEditing.toggle()

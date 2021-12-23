@@ -22,7 +22,7 @@ struct EditDescriptionView: View {
 
     init(countEntry: CountEntry) {
         self.countEntry = countEntry
-        _description = .init(initialValue: countEntry.description)
+        _description = .init(initialValue: countEntry.label)
     }
 
     var body: some View {
@@ -52,7 +52,7 @@ struct EditDescriptionView: View {
 #if DEBUG
     struct EditDescriptionView_Previews: PreviewProvider {
         static var previews: some View {
-            EditDescriptionView(countEntry: .mockData[1])
+            EditDescriptionView(countEntry: .init())
         }
     }
 #endif

@@ -56,7 +56,7 @@ struct SavedEntryDetailView: View {
                         .font(.headline)
                         .foregroundColor(.accentColor)
 
-                    Text(countEntry.description.isEmpty ? "-" : countEntry.description)
+                    Text(countEntry.label.isEmpty ? "-" : countEntry.label)
                 }
                 .padding(.vertical)
                 .accessibilityElement(children: .combine)
@@ -88,9 +88,9 @@ struct SavedEntryDetailView: View {
                             ) {
                                 presentationMode.wrappedValue.dismiss()
                                 counterStore.counterValue = Double(countEntry.count)
-                                counterStore.countDescription = countEntry.description
+                                counterStore.countLabel = countEntry.label
                                 mainStore.selectTabIndexPublisher.send(1)
-                                savedEntryStore.removeEntry(id: countEntry.id)
+                                mainStore.removeEntries([countEntry])
                             },
                             secondaryButton: .cancel(
                                 Text(LocString.buttonCancelTitle())
@@ -116,7 +116,7 @@ struct SavedEntryDetailView: View {
                                 showDeleteEntryAlert.toggle()
                                 presentationMode.wrappedValue.dismiss()
                                 withAnimation {
-                                    savedEntryStore.removeEntry(id: countEntry.id)
+                                    mainStore.removeEntries([countEntry])
                                 }
                             },
                             secondaryButton: .cancel(
@@ -130,7 +130,7 @@ struct SavedEntryDetailView: View {
             }
         }
         .navigationBarTitleDisplayMode(.large)
-        .navigationTitle(countEntry.description)
+        .navigationTitle(countEntry.label)
     }
 }
 
@@ -139,7 +139,7 @@ struct SavedEntryDetailView: View {
 #if DEBUG
     struct SavedEntryDetailView_Previews: PreviewProvider {
         static var previews: some View {
-            SavedEntryDetailView(countEntry: .mockData[0])
+            SavedEntryDetailView(countEntry: .init())
         }
     }
 #endif

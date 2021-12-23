@@ -36,6 +36,7 @@ struct ActionsView: View {
                     RoundedActionImageButton("arrow.clockwise.circle.fill", color: .orangeFire) {
                         showResetCountAlert.toggle()
                     }
+                    .disabled(counterStore.counterValue == 0)
                     .accessibilityLabel(LocString.actionsViewA11yResetTitle())
                 }
                 .frame(maxHeight: 44)
