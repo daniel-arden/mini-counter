@@ -16,7 +16,9 @@ struct SavedEntryListView: View {
     // MARK: Private Properties
 
     @State private var isEditing = false
-    @FetchRequest(sortDescriptors: [SortDescriptor(\.saveDate, order: .reverse)])
+    @FetchRequest(
+        sortDescriptors: CountEntry.sortDescriptors()
+    )
     private var savedEntries: FetchedResults<CountEntry>
 
     var body: some View {
@@ -58,7 +60,7 @@ private extension SavedEntryListView {
                     withAnimation {
                         mainStore.removeEntries(savedEntryStore.selection)
                     }
-
+                    savedEntryStore.resetSelection()
                     isEditing.toggle()
                 }
                 .disabled(savedEntryStore.selection.isEmpty)

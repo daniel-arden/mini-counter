@@ -17,3 +17,11 @@ final class CountEntry: NSManagedObject, Identifiable {
         saveDate.formatted(date: .abbreviated, time: .shortened)
     }
 }
+
+// MARK: - Sort Descriptors
+
+extension CountEntry {
+    static func sortDescriptors() -> [SortDescriptor<CountEntry>] {
+        [SortDescriptor(\.saveDate, order: .reverse)]
+    }
+}
