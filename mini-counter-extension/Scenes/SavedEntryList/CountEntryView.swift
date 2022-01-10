@@ -64,7 +64,6 @@ struct CountEntryView: View {
 // MARK: - Supplementary Views
 
 private extension CountEntryView {
-    @ViewBuilder
     func countEntryLabel(_ countEntry: CountEntry) -> some View {
         Group {
             if !countEntry.label.isEmpty {
