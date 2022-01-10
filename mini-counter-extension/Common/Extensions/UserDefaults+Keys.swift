@@ -12,5 +12,6 @@ extension UserDefaults {
         case counterStride
         case counterColor
         case counterValue
+        case counterLabel
     }
 }

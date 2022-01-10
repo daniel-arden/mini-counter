@@ -45,4 +45,14 @@ extension MainStore {
             // TODO: Error handling
         }
     }
+
+    func removeEntry(_ savedEntry: CountEntry) {
+        moc.delete(savedEntry)
+
+        do {
+            try moc.save()
+        } catch {
+            // TODO: Error handling
+        }
+    }
 }

@@ -19,7 +19,6 @@ struct SavedEntryDetailView: View {
     @Environment(\.presentationMode) private var presentationMode
     @State private var showDeleteEntryAlert = false
     @State private var showRevertCountAlert = false
-    @State private var shouldRemoveCountEntryOnDisappear = false
 
     // MARK: Public Properties
 
@@ -89,9 +88,8 @@ struct SavedEntryDetailView: View {
                             ) {
                                 presentationMode.wrappedValue.dismiss()
                                 counterStore.counterValue = Double(countEntry.count)
-                                counterStore.countLabel = countEntry.label
-                                mainStore.selectTab(.counterView)
-                                mainStore.removeEntries([countEntry])
+                                counterStore.counterLabel = countEntry.label
+                                // TODO: Remove + Revert the entry here
                             },
                             secondaryButton: .cancel(
                                 Text(LocString.buttonCancelTitle())
@@ -116,7 +114,7 @@ struct SavedEntryDetailView: View {
                             ) {
                                 showDeleteEntryAlert.toggle()
                                 presentationMode.wrappedValue.dismiss()
-                                shouldRemoveCountEntryOnDisappear.toggle()
+                                // TODO: Remove the entry here
                             },
                             secondaryButton: .cancel(
                                 Text(LocString.buttonCancelTitle())
@@ -127,13 +125,6 @@ struct SavedEntryDetailView: View {
                     }
                 }
             }
-        }
-        .onDisappear {
-            guard shouldRemoveCountEntryOnDisappear else {
-                return
-            }
-
-            mainStore.removeEntries([countEntry])
         }
         .navigationBarTitleDisplayMode(.large)
         .navigationTitle(countEntry.label)

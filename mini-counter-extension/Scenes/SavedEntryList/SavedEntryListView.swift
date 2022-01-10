@@ -28,7 +28,7 @@ struct SavedEntryListView: View {
                     Text(LocString.savedEntryListViewNoSavedEntries())
                 } else {
                     List(savedEntries) { countEntry in
-                        CountEntryButtonView(
+                        CountEntryView(
                             isEditing: $isEditing,
                             countEntry: countEntry
                         )

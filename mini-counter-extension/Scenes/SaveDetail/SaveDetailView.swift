@@ -60,7 +60,7 @@ struct SaveDetailView: View {
             .padding(.top)
         }
         .onLoad {
-            countLabel = counterStore.countLabel
+            countLabel = counterStore.counterLabel
         }
         .headerProminence(.increased)
         .navigationTitle(LocString.saveDetailViewNavigationTitle())

@@ -1,5 +1,5 @@
 //
-//  CountEntryButtonView.swift
+//  CountEntryView.swift
 //  mini-counter WatchKit Extension
 //
 //  Created by Daniel Arden on 22.12.2021.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct CountEntryButtonView: View {
+struct CountEntryView: View {
     // MARK: Stores
 
     @EnvironmentObject private var savedEntryStore: SavedEntryStore
@@ -63,9 +63,9 @@ struct CountEntryButtonView: View {
 
 // MARK: - Supplementary Views
 
-private extension CountEntryButtonView {
+private extension CountEntryView {
     @ViewBuilder
-    private func countEntryLabel(_ countEntry: CountEntry) -> some View {
+    func countEntryLabel(_ countEntry: CountEntry) -> some View {
         Group {
             if !countEntry.label.isEmpty {
                 HStack {
@@ -93,7 +93,7 @@ private extension CountEntryButtonView {
 #if DEBUG
     struct CountEntryButtonView_Previews: PreviewProvider {
         static var previews: some View {
-            CountEntryButtonView(
+            CountEntryView(
                 isEditing: .constant(true),
                 countEntry: .init()
             )
