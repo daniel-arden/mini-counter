@@ -1,5 +1,5 @@
 //
-//  CountEntryButtonView.swift
+//  CountEntryView.swift
 //  mini-counter WatchKit Extension
 //
 //  Created by Daniel Arden on 22.12.2021.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct CountEntryButtonView: View {
+struct CountEntryView: View {
     // MARK: Stores
 
     @EnvironmentObject private var savedEntryStore: SavedEntryStore
@@ -15,7 +15,7 @@ struct CountEntryButtonView: View {
     // MARK: Private Properties
 
     private var a11yLabelSuffix: String {
-        savedEntryStore.selection.contains(countEntry.id) ?
+        savedEntryStore.selection.contains(countEntry) ?
             LocString.countEntryButtonViewA11ySelectedSuffix() :
             LocString.countEntryButtonViewA11yNotSelectedSuffix()
     }
@@ -28,20 +28,20 @@ struct CountEntryButtonView: View {
     var body: some View {
         if isEditing {
             Button {
-                savedEntryStore.toggleSelectionOnID(countEntry.id)
+                savedEntryStore.toggleSelectionOnCountEntry(countEntry)
             } label: {
                 countEntryLabel(countEntry)
                     .center(.vertical)
             }
             .buttonStyle(.plain)
             .foregroundColor(
-                savedEntryStore.selection.contains(countEntry.id) ?
+                savedEntryStore.selection.contains(countEntry) ?
                     .redRage :
                     .white
             )
             .animation(.easeInOut, value: isEditing)
             .accessibilityLabel(
-                "\(countEntry.description) \(countEntry.count) \(a11yLabelSuffix)"
+                "\(countEntry.label) \(countEntry.count) \(a11yLabelSuffix)"
             )
             .accessibilityHint(
                 LocString.countEntryButtonViewA11ySelectionToggleHint()
@@ -63,13 +63,12 @@ struct CountEntryButtonView: View {
 
 // MARK: - Supplementary Views
 
-private extension CountEntryButtonView {
-    @ViewBuilder
-    private func countEntryLabel(_ countEntry: CountEntry) -> some View {
+private extension CountEntryView {
+    func countEntryLabel(_ countEntry: CountEntry) -> some View {
         Group {
-            if !countEntry.description.isEmpty {
+            if !countEntry.label.isEmpty {
                 HStack {
-                    Text(countEntry.description)
+                    Text(countEntry.label)
 
                     Spacer(minLength: 8)
 
@@ -93,9 +92,9 @@ private extension CountEntryButtonView {
 #if DEBUG
     struct CountEntryButtonView_Previews: PreviewProvider {
         static var previews: some View {
-            CountEntryButtonView(
+            CountEntryView(
                 isEditing: .constant(true),
-                countEntry: .mockData[0]
+                countEntry: .init()
             )
         }
     }

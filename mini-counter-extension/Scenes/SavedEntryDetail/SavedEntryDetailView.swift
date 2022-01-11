@@ -16,7 +16,7 @@ struct SavedEntryDetailView: View {
 
     // MARK: Private Properties
 
-    @Environment(\.presentationMode) private var presentationMode
+    @Environment(\.dismiss) private var dismiss
     @State private var showDeleteEntryAlert = false
     @State private var showRevertCountAlert = false
 
@@ -56,7 +56,7 @@ struct SavedEntryDetailView: View {
                         .font(.headline)
                         .foregroundColor(.accentColor)
 
-                    Text(countEntry.description.isEmpty ? "-" : countEntry.description)
+                    Text(countEntry.label.isEmpty ? "-" : countEntry.label)
                 }
                 .padding(.vertical)
                 .accessibilityElement(children: .combine)
@@ -70,8 +70,6 @@ struct SavedEntryDetailView: View {
                     .tint(.greenSourCandy.opacity(10))
                     .foregroundColor(.white)
                     .frame(maxHeight: 44)
-                    // NavigationLink has implicitly smaller padding than Button, workaround
-                    .padding(.vertical, 2)
 
                     RoundedActionButton(
                         LocString.buttonRevertCountTitle(),
@@ -86,11 +84,10 @@ struct SavedEntryDetailView: View {
                             primaryButton: .destructive(
                                 Text(LocString.buttonRevertTitle())
                             ) {
-                                presentationMode.wrappedValue.dismiss()
                                 counterStore.counterValue = Double(countEntry.count)
-                                counterStore.countDescription = countEntry.description
-                                mainStore.selectTabIndexPublisher.send(1)
-                                savedEntryStore.removeEntry(id: countEntry.id)
+                                counterStore.counterLabel = countEntry.label
+                                mainStore.removeEntry(countEntry)
+                                dismissView()
                             },
                             secondaryButton: .cancel(
                                 Text(LocString.buttonCancelTitle())
@@ -114,10 +111,8 @@ struct SavedEntryDetailView: View {
                                 Text(LocString.buttonRemoveTitle())
                             ) {
                                 showDeleteEntryAlert.toggle()
-                                presentationMode.wrappedValue.dismiss()
-                                withAnimation {
-                                    savedEntryStore.removeEntry(id: countEntry.id)
-                                }
+                                mainStore.removeEntry(countEntry)
+                                dismissView()
                             },
                             secondaryButton: .cancel(
                                 Text(LocString.buttonCancelTitle())
@@ -130,7 +125,19 @@ struct SavedEntryDetailView: View {
             }
         }
         .navigationBarTitleDisplayMode(.large)
-        .navigationTitle(countEntry.description)
+        .navigationTitle(countEntry.label)
+    }
+}
+
+// MARK: - Helpers
+
+private extension SavedEntryDetailView {
+    // FIXME: FB9840969 (watchOS NavigationView's (inside TabView) child View being dismissed from an alert renders TabView's NavigationLinks unusable)
+    // ^ Filed via https://feedbackassistant.apple.com/ as FB9840969
+    func dismissView() {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+            dismiss()
+        }
     }
 }
 
@@ -139,7 +146,7 @@ struct SavedEntryDetailView: View {
 #if DEBUG
     struct SavedEntryDetailView_Previews: PreviewProvider {
         static var previews: some View {
-            SavedEntryDetailView(countEntry: .mockData[0])
+            SavedEntryDetailView(countEntry: .init())
         }
     }
 #endif

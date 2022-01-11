@@ -9,36 +9,21 @@ import SwiftUI
 
 final class SavedEntryStore: ObservableObject {
     @AppStorage(UserDefaults.Key.counterColor.rawValue) var counterColor = Constants.defaultCounterColor
-    @Published var selection = Set<UUID>()
-    @Published var savedEntries = CountEntry.mockData // TODO: Fetch Data from persistent storage
+    @Published var selection = Set<CountEntry>()
 }
 
 // MARK: - Helpers
 
 extension SavedEntryStore {
-    func toggleSelectionOnID(_ uuid: UUID) {
-        if selection.contains(uuid) {
-            selection.remove(uuid)
+    func toggleSelectionOnCountEntry(_ countEntry: CountEntry) {
+        if selection.contains(countEntry) {
+            selection.remove(countEntry)
         } else {
-            selection.insert(uuid)
+            selection.insert(countEntry)
         }
     }
 
     func resetSelection() {
         selection.removeAll()
-    }
-
-    func removeSelectedEntries() {
-        selection.forEach { selectedEntryID in
-            savedEntries.removeAll { countEntry in
-                countEntry.id == selectedEntryID
-            }
-        }
-
-        resetSelection()
-    }
-
-    func removeEntry(id: UUID) {
-        savedEntries.removeAll { $0.id == id }
     }
 }

@@ -35,17 +35,14 @@ struct SettingsView: View {
 // MARK: - Supplementary Views
 
 private extension SettingsView {
-    @ViewBuilder
     private var strideSectionHeader: some View {
         Text(LocString.settingsViewCounterStrideHeaderTitle())
     }
 
-    @ViewBuilder
     private var strideSectionFooter: some View {
         Text(LocString.settingsViewCounterStrideFooterTitle())
     }
 
-    @ViewBuilder
     private var counterColorSectionHeader: some View {
         Text(LocString.settingsViewCounterColorHeaderTitle())
     }
