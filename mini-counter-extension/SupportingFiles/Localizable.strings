@@ -20,6 +20,16 @@
 "button.save.title" = "SAVE";
 "button.saveCount.title" = "SAVE COUNT";
 
+// CounterColor
+"counterColor.white.name" = "White";
+"counterColor.blueAtmosphere.name" = "Blue Atmosphere";
+"counterColor.grayAsh.name" = "Gray Ash";
+"counterColor.greenSourCandy.name" = "Green Sour Candy";
+"counterColor.orangeFire.name" = "Orange Fire";
+"counterColor.purpleMedium.name" = "Purple Medium";
+"counterColor.redRage.name" = "Red Rage";
+"counterColor.yellowDanger.name" = "Yellow Danger";
+
 // Alert
 "alert.deleteEntry.title" = "Delete Entry";
 "alert.deleteEntry.caption" = "Are you sure you want to remove this entry?\n\nThis action cannot be undone.";
@@ -30,16 +40,37 @@
 
 // MARK: - Views
 
+// ActionsView
+"actionsView.a11y.settings.title" = "Settings";
+"actionsView.a11y.reset.title" = "Reset count";
+
+// ColorDotView
+"colorDotView.a11y.action.hint" = "Interact with to change counter color to %@";
+"colorDotView.a11y.currentlySelected.label" = "%@, currently selected";
+
+// CountEntryButtonView
+"countEntryButtonView.a11y.selected.suffix" = ", selected";
+"countEntryButtonView.a11y.notSelected.suffix" = ", not selected";
+"countEntryButtonView.a11y.selectionToggle.hint" = "Interact with to toggle selection of the focused count entry";
+"countEntryButtonView.a11y.entryDetail.hint" = "Interact with to go to the detail of the focused count";
+
+// CounterView
+"counterView.a11y.count.label" = "Current count: %d";
+"counterView.a11y.count.hint" = "Rotate the digital crown to increment or decrement the value";
+
 // EditDescriptionView
 "editDescriptionView.countDescription" = "Count description";
 "editDescriptionView.navigationTitle" = "Edit description";
 
 // SaveDetailView
+"saveDetailView.a11y.currentCount.label" = "Count to be saved: %d";
 "saveDetailView.countDescription" = "Count description";
 "saveDetailView.keepingTrackOf" = "What were you keeping track of? (optional)";
 "saveDetailView.navigationTitle" = "Save count";
 
 // SavedEntryListView
+"savedEntryListView.a11y.trash.label" = "Remove selected entries";
+"savedEntryListView.a11y.cancel.label" = "Cancel selection and quit editing mode";
 "savedEntryListView.noSavedEntries" = "No saved entries";
 "savedEntryListView.navigationTitle" = "Saved entries";
 
@@ -49,5 +80,13 @@
 
 // Settings
 "settingsView.counterStride.headerTitle" = "COUNTER STRIDE";
+"settingsView.counterStride.footerTitle" = "Counter stride specifies the incremental or decremental value of one counter addition or deduction step when rotating the digital crown.";
 "settingsView.counterColor.headerTitle" = "COUNTER COLOR";
 "settingsView.navigationTitle" = "Settings";
+
+// SettingsCounterStrideView
+"settingsCounterStrideView.a11y.stride.label" = "Current counter stride: %d";
+"settingsCounterStrideView.a11y.minus.hint" = "Interact with to decrement counter stride";
+"settingsCounterStrideView.a11y.minus.label" = "Minus";
+"settingsCounterStrideView.a11y.plus.hint" = "Interact with to increment counter stride";
+"settingsCounterStrideView.a11y.plus.label" = "Plus";

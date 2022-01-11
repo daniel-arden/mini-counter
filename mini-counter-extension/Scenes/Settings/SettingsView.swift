@@ -14,7 +14,10 @@ struct SettingsView: View {
 
     var body: some View {
         List {
-            Section(header: strideSectionHeader) {
+            Section(
+                header: strideSectionHeader,
+                footer: strideSectionFooter
+            ) {
                 SettingsCounterStrideView()
             }
 
@@ -35,6 +38,11 @@ private extension SettingsView {
     @ViewBuilder
     private var strideSectionHeader: some View {
         Text(LocString.settingsViewCounterStrideHeaderTitle())
+    }
+
+    @ViewBuilder
+    private var strideSectionFooter: some View {
+        Text(LocString.settingsViewCounterStrideFooterTitle())
     }
 
     @ViewBuilder

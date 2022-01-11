@@ -12,8 +12,6 @@ struct CounterView: View {
 
     @EnvironmentObject private var counterStore: CounterStore
 
-    // MARK: Init
-
     var body: some View {
         Text("\(counterStore.counterValue.roundedInt)")
             .font(
@@ -37,6 +35,12 @@ struct CounterView: View {
             )
             .maxFrame()
             .id(counterStore.counterStride)
+            .accessibilityLabel(
+                LocString.counterViewA11yCountLabel(
+                    counterStore.counterValue.roundedInt
+                )
+            )
+            .accessibilityHint(LocString.counterViewA11yCountHint())
     }
 }
 

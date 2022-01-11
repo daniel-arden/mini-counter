@@ -49,6 +49,7 @@ struct SavedEntryDetailView: View {
                     Text(countEntry.formattedDate)
                 }
                 .padding(.vertical)
+                .accessibilityElement(children: .combine)
 
                 VStack(alignment: .leading, spacing: 8) {
                     Text(LocString.saveDetailViewCountDescription())
@@ -58,6 +59,7 @@ struct SavedEntryDetailView: View {
                     Text(countEntry.description.isEmpty ? "-" : countEntry.description)
                 }
                 .padding(.vertical)
+                .accessibilityElement(children: .combine)
 
                 VStack(spacing: 4) {
                     NavigationLink(LocString.buttonEditDescriptionTitle()) {

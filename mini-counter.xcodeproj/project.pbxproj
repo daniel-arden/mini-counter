@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		0E39FEB32251F49D13CDF052 /* Pods_mini_counter_WatchKit_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69C3F71B12F2E4B4CB7D2F60 /* Pods_mini_counter_WatchKit_App.framework */; };
 		5A0230D7273C18BF00E05BDF /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0230D6273C18BF00E05BDF /* SettingsView.swift */; };
+		5A054A692773AE6800264B78 /* CountEntryButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A054A682773AE6800264B78 /* CountEntryButtonView.swift */; };
 		5A097676273B1201007695D3 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A097675273B1201007695D3 /* Colors.xcassets */; };
 		5A1E17CC27416E4900C3747E /* SettingsCounterColorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1E17CB27416E4900C3747E /* SettingsCounterColorView.swift */; };
 		5A1E17D12741A5EF00C3747E /* ColorDotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1E17D02741A5EF00C3747E /* ColorDotView.swift */; };
@@ -104,6 +105,7 @@
 		1D2E39248A55BE6FD7715993 /* Pods-Mini Counter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mini Counter.release.xcconfig"; path = "Target Support Files/Pods-Mini Counter/Pods-Mini Counter.release.xcconfig"; sourceTree = "<group>"; };
 		29F04DA9D57DA51321D7FB5A /* Pods-mini-counter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mini-counter.release.xcconfig"; path = "Target Support Files/Pods-mini-counter/Pods-mini-counter.release.xcconfig"; sourceTree = "<group>"; };
 		5A0230D6273C18BF00E05BDF /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		5A054A682773AE6800264B78 /* CountEntryButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountEntryButtonView.swift; sourceTree = "<group>"; };
 		5A097675273B1201007695D3 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		5A1E17CB27416E4900C3747E /* SettingsCounterColorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCounterColorView.swift; sourceTree = "<group>"; };
 		5A1E17D02741A5EF00C3747E /* ColorDotView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorDotView.swift; sourceTree = "<group>"; };
@@ -313,6 +315,7 @@
 			isa = PBXGroup;
 			children = (
 				5A2E38352732D8B0009D1FAD /* SavedEntryListView.swift */,
+				5A054A682773AE6800264B78 /* CountEntryButtonView.swift */,
 			);
 			path = SavedEntryList;
 			sourceTree = "<group>";
@@ -780,6 +783,7 @@
 				5A7A71A9274053430085C7FF /* SettingsStore.swift in Sources */,
 				5A7A71A5274005ED0085C7FF /* SettingsCounterStrideView.swift in Sources */,
 				5A2E382E2732D756009D1FAD /* CounterView.swift in Sources */,
+				5A054A692773AE6800264B78 /* CountEntryButtonView.swift in Sources */,
 				5A2E38472732E3C5009D1FAD /* RoundedActionButton.swift in Sources */,
 				5A1E17CC27416E4900C3747E /* SettingsCounterColorView.swift in Sources */,
 			);

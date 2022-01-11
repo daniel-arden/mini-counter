@@ -42,4 +42,25 @@ enum CounterColor: String, CaseIterable, Identifiable {
     var id: String {
         rawValue
     }
+
+    var name: String {
+        switch self {
+        case .white:
+            return LocString.counterColorWhiteName()
+        case .blueAtmosphere:
+            return LocString.counterColorBlueAtmosphereName()
+        case .grayAsh:
+            return LocString.counterColorGrayAshName()
+        case .greenSourCandy:
+            return LocString.counterColorGreenSourCandyName()
+        case .orangeFire:
+            return LocString.counterColorOrangeFireName()
+        case .purpleMedium:
+            return LocString.counterColorPurpleMediumName()
+        case .redRage:
+            return LocString.counterColorRedRageName()
+        case .yellowDanger:
+            return LocString.counterColorYellowDangerName()
+        }
+    }
 }

@@ -8,13 +8,40 @@
 import SwiftUI
 
 struct ColorDotView: View {
+    // MARK: Private Properties
+
+    /// Equals to true if `counterColor` is the same as `selectedColor`
+    private var counterColorSelected: Bool {
+        $selectedColor.wrappedValue == counterColor
+    }
+
+    private var a11yLabel: String {
+        if counterColorSelected {
+            return LocString.colorDotViewA11yCurrentlySelectedLabel(
+                counterColor.name
+            )
+        } else {
+            return counterColor.name
+        }
+    }
+
+    private var a11yHint: String {
+        guard !counterColorSelected else {
+            return ""
+        }
+
+        return LocString.colorDotViewA11yActionHint(counterColor.name)
+    }
+
+    // MARK: Public Properties
+
     let counterColor: CounterColor
     @Binding var selectedColor: CounterColor
 
     var body: some View {
         GeometryReader { geometry in
             Button {
-                guard selectedColor != counterColor else {
+                guard !counterColorSelected else {
                     return
                 }
 
@@ -23,7 +50,7 @@ struct ColorDotView: View {
                 }
             } label: {
                 ZStack {
-                    if $selectedColor.wrappedValue == counterColor {
+                    if counterColorSelected {
                         Circle()
                             .stroke(lineWidth: geometry.size.height / 12.0)
                             .foregroundColor(counterColor.color)
@@ -37,6 +64,8 @@ struct ColorDotView: View {
             .buttonStyle(.plain)
         }
         .padding(.horizontal, 1)
+        .accessibilityLabel(a11yLabel)
+        .accessibilityHint(a11yHint)
     }
 }
 
