@@ -10,6 +10,7 @@ import SwiftUI
 struct EditDescriptionView: View {
     // MARK: Stores
 
+    @EnvironmentObject private var mainStore: MainStore
     @EnvironmentObject private var savedEntryStore: SavedEntryStore
 
     // MARK: Private Properties
@@ -38,7 +39,11 @@ struct EditDescriptionView: View {
                 LocString.buttonSaveTitle(),
                 color: .greenSourCandy
             ) {
-                countEntry.label = description
+                mainStore.updateCountEntryLabel(
+                    countEntry,
+                    newLabel: description
+                )
+                savedEntryStore.updateSavedEntryList.toggle()
                 dismiss()
             }
         }

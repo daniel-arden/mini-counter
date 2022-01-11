@@ -10,6 +10,7 @@ import SwiftUI
 final class SavedEntryStore: ObservableObject {
     @AppStorage(UserDefaults.Key.counterColor.rawValue) var counterColor = Constants.defaultCounterColor
     @Published var selection = Set<CountEntry>()
+    @Published var updateSavedEntryList = false
 }
 
 // MARK: - Helpers
