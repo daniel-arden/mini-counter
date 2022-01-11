@@ -70,8 +70,6 @@ struct SavedEntryDetailView: View {
                     .tint(.greenSourCandy.opacity(10))
                     .foregroundColor(.white)
                     .frame(maxHeight: 44)
-                    // NavigationLink has implicitly smaller padding than Button, workaround
-                    .padding(.vertical, 2)
 
                     RoundedActionButton(
                         LocString.buttonRevertCountTitle(),
