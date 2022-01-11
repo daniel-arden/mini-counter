@@ -16,7 +16,7 @@ struct SavedEntryDetailView: View {
 
     // MARK: Private Properties
 
-    @Environment(\.presentationMode) private var presentationMode
+    @Environment(\.dismiss) private var dismiss
     @State private var showDeleteEntryAlert = false
     @State private var showRevertCountAlert = false
 
@@ -86,10 +86,10 @@ struct SavedEntryDetailView: View {
                             primaryButton: .destructive(
                                 Text(LocString.buttonRevertTitle())
                             ) {
-                                presentationMode.wrappedValue.dismiss()
                                 counterStore.counterValue = Double(countEntry.count)
                                 counterStore.counterLabel = countEntry.label
-                                // TODO: Remove + Revert the entry here
+                                mainStore.removeEntry(countEntry)
+                                dismissView()
                             },
                             secondaryButton: .cancel(
                                 Text(LocString.buttonCancelTitle())
@@ -113,8 +113,8 @@ struct SavedEntryDetailView: View {
                                 Text(LocString.buttonRemoveTitle())
                             ) {
                                 showDeleteEntryAlert.toggle()
-                                presentationMode.wrappedValue.dismiss()
-                                // TODO: Remove the entry here
+                                mainStore.removeEntry(countEntry)
+                                dismissView()
                             },
                             secondaryButton: .cancel(
                                 Text(LocString.buttonCancelTitle())
@@ -128,6 +128,16 @@ struct SavedEntryDetailView: View {
         }
         .navigationBarTitleDisplayMode(.large)
         .navigationTitle(countEntry.label)
+    }
+}
+
+// MARK: - Helpers
+
+private extension SavedEntryDetailView {
+    func dismissView() {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+            dismiss()
+        }
     }
 }
 

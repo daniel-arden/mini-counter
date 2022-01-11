@@ -15,7 +15,7 @@ struct SaveDetailView: View {
 
     // MARK: Private Properties
 
-    @Environment(\.presentationMode) private var presentationMode
+    @Environment(\.dismiss) private var dismiss
     @State private var countLabel = ""
 
     var body: some View {
@@ -55,7 +55,7 @@ struct SaveDetailView: View {
                     label: countLabel
                 )
                 mainStore.resetCounterPublisher.send()
-                presentationMode.wrappedValue.dismiss()
+                dismiss()
             }
             .padding(.top)
         }

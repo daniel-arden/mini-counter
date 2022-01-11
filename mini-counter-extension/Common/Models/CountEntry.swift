@@ -7,16 +7,19 @@
 
 import CoreData
 
-final class CountEntry: NSManagedObject, Identifiable {
-    @NSManaged var id: UUID
-    @NSManaged var saveDate: Date
+final class CountEntry: NSManagedObject {
+    @NSManaged var saveDate: Date?
     @NSManaged var count: Int64
     @NSManaged var label: String
 
     var formattedDate: String {
-        saveDate.formatted(date: .abbreviated, time: .shortened)
+        saveDate?.formatted(date: .abbreviated, time: .shortened) ?? "-"
     }
 }
+
+// MARK: - Identifiable
+
+extension CountEntry: Identifiable {}
 
 // MARK: - Sort Descriptors
 

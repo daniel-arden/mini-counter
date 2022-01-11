@@ -26,7 +26,6 @@ extension MainStore {
         let newCountEntry = CountEntry(context: moc)
         newCountEntry.saveDate = Date()
         newCountEntry.count = Int64(counterCount)
-        newCountEntry.id = UUID()
         newCountEntry.label = label
 
         do {

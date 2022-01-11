@@ -14,7 +14,7 @@ struct EditDescriptionView: View {
 
     // MARK: Private Properties
 
-    @Environment(\.presentationMode) private var presentationMode
+    @Environment(\.dismiss) private var dismiss
     @State private var description: String
     private let countEntry: CountEntry
 
@@ -38,8 +38,8 @@ struct EditDescriptionView: View {
                 LocString.buttonSaveTitle(),
                 color: .greenSourCandy
             ) {
-                // TODO: Save new description in the persistent storage
-                presentationMode.wrappedValue.dismiss()
+                countEntry.label = description
+                dismiss()
             }
         }
         .navigationBarTitleDisplayMode(.large)
