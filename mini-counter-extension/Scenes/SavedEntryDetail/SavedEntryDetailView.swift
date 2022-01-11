@@ -132,6 +132,8 @@ struct SavedEntryDetailView: View {
 // MARK: - Helpers
 
 private extension SavedEntryDetailView {
+    // FIXME: FB9840969 (watchOS NavigationView's (inside TabView) child View being dismissed from an alert renders TabView's NavigationLinks unusable)
+    // ^ Filed via https://feedbackassistant.apple.com/ as FB9840969
     func dismissView() {
         DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
             dismiss()
