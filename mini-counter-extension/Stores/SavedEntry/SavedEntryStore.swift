@@ -8,6 +8,7 @@
 import SwiftUI
 
 final class SavedEntryStore: ObservableObject {
+    @AppStorage(UserDefaults.Key.counterColor.rawValue) var counterColor = Constants.defaultCounterColor
     @Published var selection = Set<UUID>()
     @Published var savedEntries = CountEntry.mockData // TODO: Fetch Data from persistent storage
 }
@@ -35,5 +36,9 @@ extension SavedEntryStore {
         }
 
         resetSelection()
+    }
+
+    func removeEntry(id: UUID) {
+        savedEntries.removeAll { $0.id == id }
     }
 }

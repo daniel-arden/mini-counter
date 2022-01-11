@@ -15,7 +15,7 @@ final class MainStore: ObservableObject {
 
 extension MainStore {
     func saveCounterCount(_ counterCount: Int, description: String) {
-        let countEntry = CountEntry(count: counterCount, label: description)
+        let countEntry = CountEntry(count: counterCount, description: description)
         // TODO: Save the data into a persistent storage
         savedEntries.append(countEntry)
     }

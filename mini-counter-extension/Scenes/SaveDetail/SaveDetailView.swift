@@ -13,10 +13,9 @@ struct SaveDetailView: View {
     @EnvironmentObject private var mainStore: MainStore
     @EnvironmentObject private var counterStore: CounterStore
 
-    // MARK: - Private Properties
+    // MARK: Private Properties
 
     @Environment(\.presentationMode) private var presentationMode
-    @State private var description = ""
 
     var body: some View {
         ScrollView {
@@ -40,12 +39,15 @@ struct SaveDetailView: View {
 
             TextField(
                 LocString.saveDetailViewCountDescription(),
-                text: $description
+                text: counterStore.$countDescription
             )
             .padding(.vertical)
 
             RoundedActionButton(LocString.buttonSaveTitle(), color: .greenSourCandy) {
-                mainStore.saveCounterCount(counterStore.counterValue.roundedInt, description: description)
+                mainStore.saveCounterCount(
+                    counterStore.counterValue.roundedInt,
+                    description: counterStore.countDescription
+                )
                 mainStore.resetCounterPublisher.send()
                 presentationMode.wrappedValue.dismiss()
             }
