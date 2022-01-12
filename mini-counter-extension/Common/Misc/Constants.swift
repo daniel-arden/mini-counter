@@ -5,6 +5,8 @@
 //  Created by Daniel Arden on 13.11.2021.
 //
 
+import ClockKit
+
 enum Constants {
     // MARK: Persistent Container
 
@@ -21,4 +23,13 @@ enum Constants {
     static let counterValueRange = 0 ... 999
     static let defaultCounterStride = Constants.counterStrideRange.lowerBound
     static let defaultCounterColor = CounterColor.white
+
+    // MARK: Complications
+
+    static let complicationSupportedFamilies: [CLKComplicationFamily] = [
+        .circularSmall,
+        .modularSmall,
+        .utilitarianSmall,
+        .graphicCorner
+    ]
 }

@@ -8,6 +8,8 @@
 
 // MARK: - General
 
+"complication.descriptor.title" = "Counter";
+
 // Button
 "button.cancel.title" = "CANCEL";
 "button.deleteEntry.title" = "DELETE ENTRY";
