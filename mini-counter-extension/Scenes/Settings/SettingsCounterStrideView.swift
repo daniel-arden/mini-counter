@@ -14,10 +14,9 @@ struct SettingsCounterStrideView: View {
 
     var body: some View {
         HStack {
-            CircularImageButton("minus", color: .greenSourCandy) {
+            imageButton("minus") {
                 settingsStore.decrementStride()
             }
-            .squareFrame(32)
             .disabled(settingsStore.isStrideAtLowerBound)
             .accessibilityLabel(LocString.settingsCounterStrideViewA11yMinusLabel())
             .accessibilityHint(LocString.settingsCounterStrideViewA11yMinusHint())
@@ -32,15 +31,32 @@ struct SettingsCounterStrideView: View {
                     )
                 )
 
-            CircularImageButton("plus", color: .greenSourCandy) {
+            imageButton("plus") {
                 settingsStore.incrementStride()
             }
-            .squareFrame(32)
             .disabled(settingsStore.isStringAtUpperBound)
             .accessibilityLabel(LocString.settingsCounterStrideViewA11yPlusLabel())
             .accessibilityHint(LocString.settingsCounterStrideViewA11yPlusHint())
         }
         .padding()
+    }
+}
+
+// MARK: - Supplementary Views
+
+private extension SettingsCounterStrideView {
+    func imageButton(_ systemImageName: String, action: @escaping () -> Void) -> some View {
+        Button(action: action) {
+            Image(systemName: systemImageName)
+                .resizable()
+                .aspectRatio(contentMode: .fit)
+                .maxFrame()
+                .padding()
+                .background(Color.greenSourCandy)
+                .clipShape(Circle())
+        }
+        .squareFrame(32)
+        .buttonStyle(.plain)
     }
 }
 

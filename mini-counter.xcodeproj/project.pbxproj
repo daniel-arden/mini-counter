@@ -36,8 +36,6 @@
 		5A607F3D27609C6700CBEEB2 /* SavedEntryStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A607F3C27609C6700CBEEB2 /* SavedEntryStore.swift */; };
 		5A7A2EAE27660FD9004FBB6E /* EditDescriptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7A2EAD27660FD9004FBB6E /* EditDescriptionView.swift */; };
 		5A7A719C273FFCD00085C7FF /* SaveDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7A719B273FFCD00085C7FF /* SaveDetailView.swift */; };
-		5A7A719F274000DC0085C7FF /* CircularImageButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7A719E274000DC0085C7FF /* CircularImageButton.swift */; };
-		5A7A71A1274000E90085C7FF /* CircularButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7A71A0274000E90085C7FF /* CircularButtonStyle.swift */; };
 		5A7A71A5274005ED0085C7FF /* SettingsCounterStrideView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7A71A4274005ED0085C7FF /* SettingsCounterStrideView.swift */; };
 		5A7A71A9274053430085C7FF /* SettingsStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7A71A8274053430085C7FF /* SettingsStore.swift */; };
 		5A7A71AB27405D140085C7FF /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7A71AA27405D140085C7FF /* Constants.swift */; };
@@ -138,8 +136,6 @@
 		5A607F3C27609C6700CBEEB2 /* SavedEntryStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedEntryStore.swift; sourceTree = "<group>"; };
 		5A7A2EAD27660FD9004FBB6E /* EditDescriptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditDescriptionView.swift; sourceTree = "<group>"; };
 		5A7A719B273FFCD00085C7FF /* SaveDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveDetailView.swift; sourceTree = "<group>"; };
-		5A7A719E274000DC0085C7FF /* CircularImageButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularImageButton.swift; sourceTree = "<group>"; };
-		5A7A71A0274000E90085C7FF /* CircularButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularButtonStyle.swift; sourceTree = "<group>"; };
 		5A7A71A4274005ED0085C7FF /* SettingsCounterStrideView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCounterStrideView.swift; sourceTree = "<group>"; };
 		5A7A71A8274053430085C7FF /* SettingsStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsStore.swift; sourceTree = "<group>"; };
 		5A7A71AA27405D140085C7FF /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -387,7 +383,6 @@
 			isa = PBXGroup;
 			children = (
 				5A1E17CF2741A5E500C3747E /* ColorDotView */,
-				5A7A719D274000CD0085C7FF /* CircularButton */,
 				5A2E383D2732DD94009D1FAD /* RoundedActionButton */,
 			);
 			path = Views;
@@ -435,15 +430,6 @@
 				5A7A719B273FFCD00085C7FF /* SaveDetailView.swift */,
 			);
 			path = SaveDetail;
-			sourceTree = "<group>";
-		};
-		5A7A719D274000CD0085C7FF /* CircularButton */ = {
-			isa = PBXGroup;
-			children = (
-				5A7A719E274000DC0085C7FF /* CircularImageButton.swift */,
-				5A7A71A0274000E90085C7FF /* CircularButtonStyle.swift */,
-			);
-			path = CircularButton;
 			sourceTree = "<group>";
 		};
 		5A7A71A62740532A0085C7FF /* Stores */ = {
@@ -769,10 +755,8 @@
 				5A7A719C273FFCD00085C7FF /* SaveDetailView.swift in Sources */,
 				5A2E38362732D8B0009D1FAD /* SavedEntryListView.swift in Sources */,
 				5A2E38092732D303009D1FAD /* Mini_CounterApp.swift in Sources */,
-				5A7A719F274000DC0085C7FF /* CircularImageButton.swift in Sources */,
 				5A48695B277513B000EA9D58 /* ContentViewTab.swift in Sources */,
 				5A2E38342732D80E009D1FAD /* ActionsView.swift in Sources */,
-				5A7A71A1274000E90085C7FF /* CircularButtonStyle.swift in Sources */,
 				5AA631E82763777500CE932E /* LocString.swift in Sources */,
 				5A7A71AB27405D140085C7FF /* Constants.swift in Sources */,
 				5AA631E3276375FC00CE932E /* R.generated.swift in Sources */,
